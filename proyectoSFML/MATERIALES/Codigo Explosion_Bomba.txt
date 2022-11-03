@@ -1,0 +1,73 @@
+void DibujarExplosion(Graphics ^g, Bitmap ^bmpExplosionCentro, int **matriz){
+
+		Rectangle porcionUsarCentro = Rectangle(indiceEX*anchoExplosion, indiceEY*altoExplosion, anchoExplosion, altoExplosion); // indiceY=0
+		Rectangle centro = Rectangle(x, y, 50, 50);
+		g->DrawImage(bmpExplosionCentro, centro, porcionUsarCentro, GraphicsUnit::Pixel);
+		if (matriz[y / 50][(x - 50) / 50] != 1){
+			Rectangle porcionUsarIzquierda = Rectangle(indiceEX*anchoExplosion, indiceEY + 2 * altoExplosion, anchoExplosion, altoExplosion); //indiceY = 2
+			Rectangle izquierda = Rectangle(x - 50, y, 50, 50);
+			g->DrawImage(bmpExplosionCentro, izquierda, porcionUsarIzquierda, GraphicsUnit::Pixel);
+
+			if (matriz[y / 50][(x - 50) / 50] == 3)	{ matriz[y / 50][(x - 50) / 50] = 2; }
+		}
+
+
+		if (matriz[y / 50][(x + 50) / 50] != 1){
+			Rectangle porcionUsarDerecha = Rectangle(indiceEX*anchoExplosion, indiceEY + 4 * altoExplosion, anchoExplosion, altoExplosion); //indiceY = 4
+			Rectangle derecha = Rectangle(x + 50, y, 50, 50);
+			g->DrawImage(bmpExplosionCentro, derecha, porcionUsarDerecha, GraphicsUnit::Pixel);
+
+			if (matriz[y / 50][(x + 50) / 50] == 3){ matriz[y / 50][(x + 50) / 50] = 2; }
+
+		}
+		if (matriz[y / 50][(x + 50) / 50] != 1){
+			Rectangle porcionUsarPuntaDerecha = Rectangle(indiceEX*anchoExplosion, indiceEY + 3 * altoExplosion, anchoExplosion, altoExplosion); //indiceY = 3
+			Rectangle Puntaderecha = Rectangle(x + 100, y, 50, 50);
+			g->DrawImage(bmpExplosionCentro, Puntaderecha, porcionUsarPuntaDerecha, GraphicsUnit::Pixel);
+
+			if (matriz[y / 50][(x + 100) / 50] == 3 && matriz[y / 50][(x + 50) / 50] != 1)
+			{
+
+				matriz[y / 50][(x + 100) / 50] = 2;
+			}
+		}
+
+		if (matriz[y / 50][(x - 50) / 50] != 1) {
+			Rectangle porcionUsarPuntaIzquierda = Rectangle(indiceEX*anchoExplosion, indiceEY + 1 * altoExplosion, anchoExplosion, altoExplosion); //indiceY = 1
+			Rectangle Puntaizquierda = Rectangle(x - 100, y, 50, 50);
+			g->DrawImage(bmpExplosionCentro, Puntaizquierda, porcionUsarPuntaIzquierda, GraphicsUnit::Pixel);
+
+			if (matriz[y / 50][(x - 100) / 50] == 3 && matriz[y / 50][(x - 50) / 50] != 1)
+			{
+				matriz[y / 50][(x - 100) / 50] = 2;
+			}
+		}
+
+		Rectangle porcionUsarVerticales = Rectangle(indiceEX*anchoExplosion, indiceEY + 6 * altoExplosion, anchoExplosion, altoExplosion); //indiceY = 1
+		Rectangle VerticalSuperior = Rectangle(x, y - 50, 50, 50);
+		Rectangle VerticalInferior = Rectangle(x, y + 50, 50, 50);
+
+		if (matriz[(y - 50) / 50][x / 50] != 1){ g->DrawImage(bmpExplosionCentro, VerticalSuperior, porcionUsarVerticales, GraphicsUnit::Pixel); }
+		if (matriz[(y - 50) / 50][x / 50] == 3){ matriz[(y - 50) / 50][x / 50] = 2; }
+		if (matriz[(y + 50) / 50][x / 50] != 1)	{ g->DrawImage(bmpExplosionCentro, VerticalInferior, porcionUsarVerticales, GraphicsUnit::Pixel); }
+		if (matriz[(y + 50) / 50][x / 50] == 3){ matriz[(y + 50) / 50][x / 50] = 2; }
+	
+		
+		if (matriz[(y - 50) / 50][x / 50] != 1){
+			Rectangle porcionUsarPuntaSuperior = Rectangle(indiceEX*anchoExplosion, indiceEY + 5 * altoExplosion, anchoExplosion, altoExplosion); //indiceY = 5
+			Rectangle PuntaSuperior = Rectangle(x, y - 100, 50, 50);
+			g->DrawImage(bmpExplosionCentro, PuntaSuperior, porcionUsarPuntaSuperior, GraphicsUnit::Pixel);
+
+			if (matriz[(y - 100) / 50][x / 50] == 3 && matriz[(y - 50) / 50][x / 50] != 1){ matriz[(y - 100) / 50][x / 50] = 2; }
+		}
+
+
+		if (matriz[(y + 50) / 50][x / 50] != 1)	{
+			Rectangle porcionUsarPuntaInferior = Rectangle(indiceEX*anchoExplosion, indiceEY + 7 * altoExplosion, anchoExplosion, altoExplosion); //indiceY = 7
+			Rectangle PuntaInferior = Rectangle(x, y + 100, 50, 50);
+			g->DrawImage(bmpExplosionCentro, PuntaInferior, porcionUsarPuntaInferior, GraphicsUnit::Pixel);
+			if (matriz[(y + 100) / 50][x / 50] == 3 && matriz[(y + 50) / 50][x / 50] != 1){
+				matriz[(y + 100) / 50][x / 50] = 2;
+			}
+		}
+	}
