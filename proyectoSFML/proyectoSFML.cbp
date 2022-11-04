@@ -49,13 +49,21 @@
 			<Add directory="SFML/lib" />
 		</Linker>
 		<Unit filename="Librerias.h" />
+		<Unit filename="include/Aplicacion.h" />
+		<Unit filename="include/Bloques.h" />
 		<Unit filename="include/Colisionable.h" />
 		<Unit filename="include/Enemigo.h" />
+		<Unit filename="include/GamePlay.h" />
+		<Unit filename="include/MainMenu.h" />
 		<Unit filename="include/Mapa.h" />
 		<Unit filename="include/Personaje.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Aplicacion.cpp" />
+		<Unit filename="src/Bloques.cpp" />
 		<Unit filename="src/Colisionable.cpp" />
 		<Unit filename="src/Enemigo.cpp" />
+		<Unit filename="src/GamePlay.cpp" />
+		<Unit filename="src/MainMenu.cpp" />
 		<Unit filename="src/Mapa.cpp" />
 		<Unit filename="src/Personaje.cpp" />
 		<Extensions>

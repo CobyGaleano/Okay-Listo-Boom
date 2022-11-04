@@ -13,6 +13,7 @@ using namespace std;
 #include "Mapa.h"
 #include "Enemigo.h"
 #include "Colisionable.h"
+#include "MainMenu.h"
 
 
 #endif // LIBRERIAS_H_INCLUDED
