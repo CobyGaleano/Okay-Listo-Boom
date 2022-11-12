@@ -5,10 +5,7 @@
 int main()
 {
     std::srand((unsigned)std::time(0));
-    Aplicacion app;
-
-    app.Run();
-
+    Aplicacion * app=new Aplicacion(sf::Vector2u(525,450));
 
     return 0;
 }

@@ -3,7 +3,7 @@
 Personaje::Personaje()
 {
     _frame=0;
-    _velocity={2,2};
+    _velocity={4,4};
     _texture.loadFromFile("sprite_sheets3.png");
     _sprite.setTexture(_texture);
     _sprite.setTextureRect({20,130,18,21});
