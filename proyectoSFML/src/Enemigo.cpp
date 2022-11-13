@@ -18,6 +18,12 @@ void Enemigo::draw(sf::RenderTarget& target,sf::RenderStates states)const //dibu
 
 void Enemigo::update()
 {
+    _timeRespawn --;
+    if(_timeRespawn<0)
+    {
+        _newPosition={std::rand()%525+_sprite.getGlobalBounds().width,std::rand()%450+_sprite.getGlobalBounds().height};
+    }
+
     _frame+=0.033;
 
     if (_frame>3){
@@ -29,28 +35,38 @@ void Enemigo::update()
     ///evitar que se vaya de la pantalla
      if(_sprite.getGlobalBounds().left<0)
         {
-            _sprite.setPosition(_sprite.getOrigin().x,_sprite.getPosition().y);
+            //_sprite.setPosition(_sprite.getOrigin().x,_sprite.getPosition().y);
+            _velocity.x=-_velocity.x;
         }
 
         if(_sprite.getGlobalBounds().top<0)
         {
-            _sprite.setPosition(_sprite.getPosition().x,_sprite.getOrigin().y);
+           // _sprite.setPosition(_sprite.getPosition().x,_sprite.getOrigin().y);
+           _velocity.y=-_velocity.y;
         }
 
         if(_sprite.getGlobalBounds().left+_sprite.getGlobalBounds().width>525)
         {
-            _sprite.setPosition(525-(_sprite.getGlobalBounds().width-_sprite.getOrigin().x),_sprite.getPosition().y);
+           // _sprite.setPosition(525-(_sprite.getGlobalBounds().width-_sprite.getOrigin().x),_sprite.getPosition().y);
+           _velocity.x=-_velocity.x;
         }
 
         if(_sprite.getGlobalBounds().top+_sprite.getGlobalBounds().height>450)
         {
-            _sprite.setPosition(_sprite.getPosition().x,450-(_sprite.getGlobalBounds().height-_sprite.getOrigin().y));
+            //_sprite.setPosition(_sprite.getPosition().x,450-(_sprite.getGlobalBounds().height-_sprite.getOrigin().y));
+            _velocity.y=-_velocity.y;
         }
 }
 
 void Enemigo::respawn() ///respawn del enemigo (aleatorio)
 {
-    _sprite.setPosition(std::rand()%700+_sprite.getGlobalBounds().width,std::rand()%500+_sprite.getGlobalBounds().height);
+    _sprite.setPosition(std::rand()%524+_sprite.getGlobalBounds().width,std::rand()%449+_sprite.getGlobalBounds().height);
+    _timeRespawn=60*3;
+}
+
+void Enemigo::damage()///acciones que realizar el enemigo al golpear
+{
+    respawn();
 }
 
 sf::FloatRect Enemigo::getBounds() const

@@ -2,49 +2,24 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="include\Bloques.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
+	<File name="src\Enemigo.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="275" topLine="0" />
+			<Cursor1 position="1833" topLine="6" />
 		</Cursor>
 	</File>
-	<File name="include\Personaje.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+	<File name="include\Personaje.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="434" topLine="16" />
+			<Cursor1 position="454" topLine="14" />
 		</Cursor>
 	</File>
-	<File name="src\Personaje.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="86" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Aplicacion.h" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="604" topLine="14" />
-		</Cursor>
-	</File>
-	<File name="src\Aplicacion.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2028" topLine="47" />
-		</Cursor>
-	</File>
-	<File name="include\Enemigo.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="87" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="191" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\MainMenu.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
+	<File name="include\Aplicacion.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="468" topLine="14" />
-		</Cursor>
-	</File>
-	<File name="include\Colisionable.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="248" topLine="0" />
+			<Cursor1 position="949" topLine="17" />
 		</Cursor>
 	</File>
 	<File name="Librerias.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
@@ -52,9 +27,29 @@
 			<Cursor1 position="151" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Enemigo.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+	<File name="src\Mapa.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="528" topLine="12" />
+			<Cursor1 position="59" topLine="33" />
+		</Cursor>
+	</File>
+	<File name="include\Enemigo.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="323" topLine="5" />
+		</Cursor>
+	</File>
+	<File name="src\Bomba.cpp" open="1" top="1" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="157" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="include\Bomba.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="262" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\MainMenu.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="468" topLine="14" />
 		</Cursor>
 	</File>
 	<File name="src\Colisionable.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -62,14 +57,19 @@
 			<Cursor1 position="127" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Mapa.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+	<File name="include\Colisionable.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="59" topLine="76" />
+			<Cursor1 position="248" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\Mapa.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+	<File name="include\Mapa.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="701" topLine="3" />
+			<Cursor1 position="716" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="src\Aplicacion.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="886" topLine="18" />
 		</Cursor>
 	</File>
 	<File name="src\MainMenu.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
@@ -77,14 +77,28 @@
 			<Cursor1 position="1901" topLine="60" />
 		</Cursor>
 	</File>
-	<Target name="Debug" top="src\Enemigo.cpp">
+	<File name="src\Personaje.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="202" topLine="30" />
+		</Cursor>
+	</File>
+	<File name="include\Bloques.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="275" topLine="0" />
+		</Cursor>
+	</File>
+	<Target name="Debug" top="">
 		<File name="main.cpp" />
+		<File name="include\Aplicacion.h" />
+		<File name="src\Aplicacion.cpp" />
+		<File name="Librerias.h" />
+		<File name="include\Mapa.h" />
+		<File name="src\Mapa.cpp" />
 		<File name="include\Personaje.h" />
 		<File name="src\Personaje.cpp" />
 		<File name="include\Enemigo.h" />
 		<File name="src\Enemigo.cpp" />
-		<File name="include\Colisionable.h" />
-		<File name="src\Mapa.cpp" />
-		<File name="include\Mapa.h" />
+		<File name="include\Bomba.h" />
+		<File name="src\Bomba.cpp" />
 	</Target>
 </CodeBlocks_layout_file>

@@ -5,6 +5,7 @@
 #include "Personaje.h"
 #include "Enemigo.h"
 #include "Mapa.h"
+#include "Bomba.h"
 #include <ctime>
 class Aplicacion
 {
@@ -18,6 +19,7 @@ class Aplicacion
         int _cantE;///cant de enemigos
         Enemigo* _vEnemigos;
         Mapa * _mapa;
+        Bomba *_bomba;
         bool gameOver=false;
     public:
         Aplicacion(sf::Vector2u resolucion);
@@ -30,6 +32,7 @@ class Aplicacion
         void gameLoop();
 
         int getCantEnemigos();
+        int getCantBombas();
     protected:
 
 };
