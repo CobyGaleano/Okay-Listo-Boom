@@ -35,14 +35,15 @@ void Aplicacion::gameLoop(){
             if (_evento->type == sf::Event::Closed){
                 _window->close();
             }
+        }
             ///CMD CONTROLES
             procesar_eventos();
             ///UPDATES LOGICA DEL JUEGO
             procesar_logic();
 
             ///DRAWS - RENDERS
-            renderizar();
-        }
+          renderizar();
+        
     }
 }
 void Aplicacion::procesar_eventos (){
