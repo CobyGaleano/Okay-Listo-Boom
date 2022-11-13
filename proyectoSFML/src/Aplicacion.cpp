@@ -42,8 +42,8 @@ void Aplicacion::gameLoop(){
             procesar_logic();
 
             ///DRAWS - RENDERS
-          renderizar();
-        
+            renderizar();
+
     }
 }
 void Aplicacion::procesar_eventos (){
@@ -67,7 +67,7 @@ void Aplicacion::procesar_logic (){
     std::cout<<_pj->getPos().x<<" "<<_pj->getPos().y<<endl;
     }
     _bomba->update();
-    //std::cout<<std::endl<<_bomba->getPos().x<<" "<<_bomba->getPos().y;
+    std::cout<<std::endl<<_bomba->getPos().x<<" "<<_bomba->getPos().y;
 }
 
 void Aplicacion::renderizar(){///en esta funcion va todos los draw

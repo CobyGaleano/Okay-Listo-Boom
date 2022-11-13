@@ -26,7 +26,7 @@ class Personaje: public sf::Drawable, public Colisionable
         sf::FloatRect getBounds() const override;
         void muere();
         bool getPusoBomba(){return _pusoBomba;}
-        sf::Vector2f getPos(){_sprite.getPosition();}
+        sf::Vector2f getPos(){return _sprite.getPosition();}
 
     private:
         sf::Sprite _sprite;

@@ -11,7 +11,7 @@ class Bomba: public sf::Drawable
         void respawn();
         void setPos(sf::Vector2f pos){_posicion=pos;}
         void setEstado(bool estado){_estado=estado;}
-        sf::Vector2f getPos(){_sprite.getPosition();}
+        sf::Vector2f getPos(){return _sprite.getPosition();}
 
 
     private:
