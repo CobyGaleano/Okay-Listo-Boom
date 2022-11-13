@@ -1856,7 +1856,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\personaje.h
+1668359652 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\personaje.h
 	<SFML/Graphics.hpp>
 	"Colisionable.h"
 	"../Librerias.h"
@@ -1880,10 +1880,10 @@
 	"Bomba.h"
 	<ctime>
 
-1668298842 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\bomba.h
+1668360760 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\bomba.h
 	"../Librerias.h"
 
-1668355445 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\aplicacion.cpp
+1668361149 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\aplicacion.cpp
 	"Aplicacion.h"
 
 1668228772 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\bloques.cpp
@@ -1893,7 +1893,7 @@
 	"Mapa.h"
 	"Personaje.h"
 
-1668355321 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\bomba.cpp
+1668361189 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\bomba.cpp
 	"Bomba.h"
 
 1668228772 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\colisionable.cpp
@@ -1908,6 +1908,6 @@
 1668228772 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\mapa.cpp
 	"Mapa.h"
 
-1668293630 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\personaje.cpp
+1668360277 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\personaje.cpp
 	"Personaje.h"
 

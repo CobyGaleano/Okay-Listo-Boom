@@ -25,6 +25,8 @@ class Personaje: public sf::Drawable, public Colisionable
         void draw(sf::RenderTarget& target,sf::RenderStates states)const override;
         sf::FloatRect getBounds() const override;
         void muere();
+        bool getPusoBomba(){return _pusoBomba;}
+        sf::Vector2f getPos(){_sprite.getPosition();}
 
     private:
         sf::Sprite _sprite;
@@ -34,6 +36,8 @@ class Personaje: public sf::Drawable, public Colisionable
         sf::Vector2f _movePosition={0,0};
 
         float _frame;
+        unsigned int _cantBombas;
+        bool _pusoBomba;
         PersonajeState _state=PersonajeState::Idle;
 };
 

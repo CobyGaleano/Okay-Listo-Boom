@@ -3,6 +3,8 @@
 Personaje::Personaje()
 {
     _frame=0;
+    _cantBombas=1;
+    _pusoBomba=false;
     _velocity={2,2};
     _texture.loadFromFile("sprite_sheets3.png");
     _sprite.setTexture(_texture);
@@ -123,7 +125,7 @@ void Personaje::cmd()//controlador del personaje
     _movePosition= {0,0};
     _state=PersonajeState::Idle;
 
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
         {
             _movePosition.y=-_velocity.y;
             _state=PersonajeState::m_up;
@@ -142,6 +144,14 @@ void Personaje::cmd()//controlador del personaje
         {
             _movePosition.x=_velocity.x;
             _state=PersonajeState::m_right;
+        }
+
+        ///soltar bomba
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::B))
+        {
+            _cantBombas--;
+            if(_cantBombas<0){_cantBombas=0;}
+            _pusoBomba=true;
         }
 }
 

@@ -12,7 +12,7 @@ Aplicacion::Aplicacion(sf::Vector2u resolucion)
 void Aplicacion::iniciar(){///aca se inicializan las variables y elementos que se utilizan dentro de la clase
     srand(time(0));
 
-    _window->setFramerateLimit(60); ///setea fps
+    _window->setFramerateLimit(50); ///setea fps
     _evento = new sf::Event; ///inicializar evento
     MainMenu _menu(_window->getSize().x, _window->getSize().y);///inicializar menu
     _pj = new Personaje();///inicializa personaje principal
@@ -59,14 +59,24 @@ void Aplicacion::procesar_logic (){
     {
     _vEnemigos[i].update();
     }
+    if(_pj->getPusoBomba()==true)
+    {
+    _bomba->setEstado(_pj->getPusoBomba());
+    _bomba->setPos(_pj->getPos());
+    std::cout<<_pj->getPos().x<<" "<<_pj->getPos().y<<endl;
+    }
     _bomba->update();
+    //std::cout<<std::endl<<_bomba->getPos().x<<" "<<_bomba->getPos().y;
 }
 
 void Aplicacion::renderizar(){///en esta funcion va todos los draw
     _window->clear();
     ///----DRAW-----
     _window->draw(*_mapa);
+    if(_pj->getPusoBomba()==true)
+    {
     _window->draw(*_bomba);
+    }
     _window->draw(*_pj);
      for(int i=0;i<_cantE;i++)
     {
