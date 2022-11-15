@@ -17,6 +17,7 @@ void Aplicacion::iniciar(){///aca se inicializan las variables y elementos que s
     MainMenu _menu(_window->getSize().x, _window->getSize().y);///inicializar menu
     _pj = new Personaje();///inicializa personaje principal
     _bomba=new Bomba(); ///inicializa la bomba
+    _explosion=new Explosion();///inicializa explosion
     _cantE=5+rand()%5;///random entre 5 y 10 creo
     cout << _cantE << endl;
     _vEnemigos = new Enemigo[_cantE];///cantidad de enemigos
@@ -52,9 +53,11 @@ void Aplicacion::procesar_eventos (){
     _pj->cmd();
 
 }
+
 void Aplicacion::procesar_logic (){
     ///creo que aca habria que revisar las coliciones e interactuar lo que pasa con el juego para despues mostrarlo
     ///----UPDATES-----
+    sf::Vector2f pos;
     _pj->update();
     for(int i=0;i<_cantE;i++)
     {
@@ -62,11 +65,20 @@ void Aplicacion::procesar_logic (){
     }
     if(_pj->getPusoBomba()==true)
     {
-    _bomba->setEstado(_pj->getPusoBomba());
-    _bomba->setPos(_pj->getPos());
-    std::cout<<_pj->getPos().x<<" "<<_pj->getPos().y<<endl;
+        pos=(_pj->getPos());
+        _bomba->setEstado(_pj->getPusoBomba());
+        _bomba->setPos(pos);
+        std::cout<<_pj->getPos().x<<" "<<_pj->getPos().y<<endl;
+        _pj->setPusoBomba(false);
     }
     _bomba->update();
+    _explosion->setExplosion(_bomba->getExplosion());
+    if(_explosion->getExplosion()==true)
+    {
+        _explosion->setPos(_bomba->getPos());
+        _explosion->update();
+
+    }
     std::cout<<std::endl<<_bomba->getPos().x<<" "<<_bomba->getPos().y;
 }
 
@@ -74,9 +86,13 @@ void Aplicacion::renderizar(){///en esta funcion va todos los draw
     _window->clear();
     ///----DRAW-----
     _window->draw(*_mapa);
-    if(_pj->getPusoBomba()==true)
+    if(_bomba->getEstado()==true)
     {
-    _window->draw(*_bomba);
+        _window->draw(*_bomba);
+    }
+    if(_explosion->getExplosion()==true)
+    {
+    _window->draw(*_explosion);
     }
     _window->draw(*_pj);
      for(int i=0;i<_cantE;i++)
@@ -98,4 +114,5 @@ Aplicacion::~Aplicacion(){
     delete _vEnemigos;
     delete _mapa;
     delete _bomba;
+    delete _explosion;
 }

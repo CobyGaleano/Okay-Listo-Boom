@@ -14,6 +14,7 @@ using namespace std;
 #include "Enemigo.h"
 #include "Colisionable.h"
 #include "MainMenu.h"
-
+#include "Explosion.h"
+#include "Bomba.h"
 
 #endif // LIBRERIAS_H_INCLUDED

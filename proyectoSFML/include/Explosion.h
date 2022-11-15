@@ -1,0 +1,31 @@
+#ifndef EXPLOSION_H
+#define EXPLOSION_H
+#include "../Librerias.h"
+
+class Explosion: public sf::Drawable, public Colisionable
+{
+    public:
+        Explosion();
+        sf::FloatRect getBounds() const override;
+        sf::Vector2f getPos(){return _sprite.getPosition();}
+
+        void draw(sf::RenderTarget& target,sf::RenderStates states)const override;
+        void update();
+        void setExplosion(bool flag){_explosion=flag;}
+        void setPos(sf::Vector2f pos){_posicion=pos;}
+
+        bool getExplosion(){return _explosion;}
+
+    private:
+        sf::Sprite _sprite;
+        sf::Texture _texture;
+        sf::Vector2f _posicion;
+
+        bool _explosion;
+
+        float _frame;
+        float _tiempo;
+
+};
+
+#endif // EXPLOSION_H

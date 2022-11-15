@@ -6,6 +6,8 @@
 #include "Enemigo.h"
 #include "Mapa.h"
 #include "Bomba.h"
+#include "Explosion.h"
+
 #include <ctime>
 class Aplicacion
 {
@@ -20,6 +22,7 @@ class Aplicacion
         Enemigo* _vEnemigos;
         Mapa * _mapa;
         Bomba *_bomba;
+        Explosion *_explosion;
         bool gameOver=false;
     public:
         Aplicacion(sf::Vector2u resolucion);

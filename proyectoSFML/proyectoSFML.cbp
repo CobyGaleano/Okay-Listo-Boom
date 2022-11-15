@@ -54,6 +54,7 @@
 		<Unit filename="include/Bomba.h" />
 		<Unit filename="include/Colisionable.h" />
 		<Unit filename="include/Enemigo.h" />
+		<Unit filename="include/Explosion.h" />
 		<Unit filename="include/MainMenu.h" />
 		<Unit filename="include/Mapa.h" />
 		<Unit filename="include/Personaje.h" />
@@ -63,6 +64,7 @@
 		<Unit filename="src/Bomba.cpp" />
 		<Unit filename="src/Colisionable.cpp" />
 		<Unit filename="src/Enemigo.cpp" />
+		<Unit filename="src/Explosion.cpp" />
 		<Unit filename="src/MainMenu.cpp" />
 		<Unit filename="src/Mapa.cpp" />
 		<Unit filename="src/Personaje.cpp" />
