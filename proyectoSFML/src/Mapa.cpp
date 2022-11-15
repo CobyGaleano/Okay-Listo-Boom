@@ -1,13 +1,14 @@
 #include "Mapa.h"
 
-Mapa::Mapa()
+Mapa::Mapa(sf::RenderWindow &window)
 {
     srand(time(0));
 
     ///0= espacio transitable
-    ///1= bloque indestructible
+    ///1= bloque no destruible
     ///2= bloque destruible
 
+    _ventana= &window;
 
     ///arma la matriz que ubicara los bloques en el mapa
     for(int i=0; i<CANT_FILAS; i++)
@@ -48,8 +49,16 @@ Mapa::Mapa()
                     _matriz[i][j]=0;
                 }
             }
+            if(_matriz[i][j]!=0){
+                _cantB++;
+            }
         }
     }
+
+    ///armar vector de bloques
+    cout << "Cantidad de Bloques: " << _cantB << endl;
+    _vBloques = new Bloques[_cantB];
+
     ///leer el tileset
     if(!m_tileset.loadFromFile("mapSpritesheet.png")){
         cout << "No se pudo cargar mapSpritesheet" << endl;
@@ -62,9 +71,22 @@ Mapa::Mapa()
     m_vertices.resize(15*15*16);
 
     ///cargar el array un quad por tile
+    int p=0;
     for(unsigned int i=0;i<CANT_FILAS;i++){
         for(unsigned int j=0;j<CANT_COLUMNAS;j++){
-            int tilenumber=_matriz[i][j];
+            int tilenumber;
+            if(_matriz[i][j]!=0){
+                tilenumber=_matriz[i][j];
+                sf::Vector2f pos(i,j);
+                Bloques b(tilenumber,pos);
+                _vBloques[p++]=b;
+                tilenumber=0;
+            }
+            else {
+                tilenumber=_matriz[i][j];
+            }
+
+
             int tu=tilenumber%(m_tileset.getSize().x/35);
             int tv=tilenumber/(m_tileset.getSize().x/35);
             sf::Vertex* quad =&m_vertices[(i+j*35)*4];
@@ -95,7 +117,8 @@ void Mapa::mostrar()
     }
 }
 
+
 Mapa::~Mapa()
 {
-    //dtor
+    delete[] _vBloques;
 }

@@ -25,7 +25,7 @@ void Aplicacion::iniciar(){///aca se inicializan las variables y elementos que s
     {
     _vEnemigos[i].respawn();///ubica al enemigo en el mapa
     }
-    _mapa = new Mapa;
+    _mapa = new Mapa(*_window);
 
 }
 
