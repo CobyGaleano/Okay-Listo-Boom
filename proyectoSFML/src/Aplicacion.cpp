@@ -12,7 +12,7 @@ Aplicacion::Aplicacion(sf::Vector2u resolucion)
 void Aplicacion::iniciar(){///aca se inicializan las variables y elementos que se utilizan dentro de la clase
     srand(time(0));
 
-    _window->setFramerateLimit(250); ///setea fps
+    _window->setFramerateLimit(60); ///setea fps
     _evento = new sf::Event; ///inicializar evento
     MainMenu _menu(_window->getSize().x, _window->getSize().y);///inicializar menu
     _pj = new Personaje();///inicializa personaje principal
@@ -27,6 +27,8 @@ void Aplicacion::iniciar(){///aca se inicializan las variables y elementos que s
     }
     _mapa = new Mapa(*_window);
     _cantBloques = _mapa->getCantBloques();
+
+    _bloque=new Bloques;
 }
 
 void Aplicacion::gameLoop(){
@@ -87,8 +89,8 @@ void Aplicacion::procesar_logic (){
 }
 void Aplicacion::chequearColisionPJ(){
     for(int i=0;i<_cantBloques;i++){
-        Bloques aux=_mapa->getBloque(i);
-        if(_pj->siColisiona(aux)){
+        _bloque=_mapa->getBloque(i);
+        if(_pj->siColisiona(*_bloque)){
             cout << "choca" << endl;
             _pj->setPos(posAnteriorPJ);
             break;
@@ -98,6 +100,9 @@ void Aplicacion::chequearColisionPJ(){
         if(_pj->siColisiona(_vEnemigos[i])){
             _pj->muere();
         }
+    }
+    if(_pj->siColisiona(*_explosion)){
+        _pj->muere();
     }
 }
 
@@ -135,4 +140,5 @@ Aplicacion::~Aplicacion(){
     delete _mapa;
     delete _bomba;
     delete _explosion;
+    delete _bloque;
 }

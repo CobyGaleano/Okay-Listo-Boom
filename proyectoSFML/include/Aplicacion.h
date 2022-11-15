@@ -25,7 +25,7 @@ class Aplicacion
         Enemigo* _vEnemigos;
 
         Mapa * _mapa;
-        Bloques _bloque;
+        Bloques * _bloque;
         int _cantBloques;
 
         Bomba *_bomba;

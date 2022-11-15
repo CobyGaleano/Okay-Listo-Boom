@@ -119,8 +119,9 @@ int Mapa::getCantBloques(){
     return _cantB;
 }
 
-Bloques Mapa::getBloque(int pos){
-    return _vBloques[pos];
+Bloques* Mapa::getBloque(int pos){
+    Bloques * bloq=&_vBloques[pos];
+    return bloq;
 }
 
 Mapa::~Mapa()

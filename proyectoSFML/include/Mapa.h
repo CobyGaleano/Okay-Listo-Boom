@@ -40,7 +40,7 @@ class Mapa : public sf::Drawable, public sf::Transformable
         void mostrar();
 
         int getCantBloques();
-        Bloques getBloque(int pos);
+        Bloques* getBloque(int pos);
 
         ~Mapa();
 

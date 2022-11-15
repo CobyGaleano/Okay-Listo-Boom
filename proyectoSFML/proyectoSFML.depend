@@ -896,7 +896,7 @@
 1668517058 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\colisionable.h
 	<SFML/Graphics.hpp>
 
-1668542324 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\mapa.h
+1668548535 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\mapa.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	"Bloques.h"
@@ -911,7 +911,7 @@
 1668517059 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\enemigo.cpp
 	"Enemigo.h"
 
-1668542330 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mapa.cpp
+1668548535 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mapa.cpp
 	"Mapa.h"
 
 1668545257 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\personaje.cpp
@@ -937,10 +937,10 @@
 
 1667528620 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\gameplay.h
 
-1668545713 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
+1668548563 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
 	"Aplicacion.h"
 
-1668545294 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\aplicacion.h
+1668548231 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\aplicacion.h
 	<SFML/Graphics.hpp>
 	"MainMenu.h"
 	"Personaje.h"
