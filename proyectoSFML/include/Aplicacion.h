@@ -42,7 +42,7 @@ class Aplicacion
         void procesar_eventos();///teclado
         void gameLoop();
 
-        bool chequearColisionPJ();
+        void chequearColisionPJ();
 
         int getCantEnemigos();
         int getCantBombas();

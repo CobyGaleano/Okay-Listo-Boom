@@ -173,7 +173,7 @@ void Personaje::muere()
     _frame+=0.25;
 
     _sprite.setTextureRect({72+int(_frame)*14,41,14,20});
-    _sprite.setPosition(1,1);
+    _sprite.setPosition(53,53);
     }
 
 }

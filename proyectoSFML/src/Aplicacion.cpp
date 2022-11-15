@@ -27,7 +27,6 @@ void Aplicacion::iniciar(){///aca se inicializan las variables y elementos que s
     }
     _mapa = new Mapa(*_window);
     _cantBloques = _mapa->getCantBloques();
-    _contPasos=0;
 }
 
 void Aplicacion::gameLoop(){
@@ -62,10 +61,8 @@ void Aplicacion::procesar_logic (){
     sf::Vector2f pos;
     ///UPDATE DE PJ + CHECKEAR SUS COLISIONES
     _pj->update();
-    bool colPJ=chequearColisionPJ();
-    if(colPJ){
-        _pj->setPos(posAnteriorPJ);
-    }
+    chequearColisionPJ();
+    ///UPDATE DE ENEMIGOS
     for(int i=0;i<_cantE;i++)
     {
         _vEnemigos[i].update();
@@ -88,15 +85,20 @@ void Aplicacion::procesar_logic (){
     }
     //std::cout<<std::endl<<_bomba->getPos().x<<" "<<_bomba->getPos().y;
 }
-bool Aplicacion::chequearColisionPJ(){
+void Aplicacion::chequearColisionPJ(){
     for(int i=0;i<_cantBloques;i++){
-        _bloque=_mapa->getBloque(i);
-        if(_pj->siColisiona(_bloque)){
+        Bloques aux=_mapa->getBloque(i);
+        if(_pj->siColisiona(aux)){
             cout << "choca" << endl;
-            return true;
+            _pj->setPos(posAnteriorPJ);
+            break;
         }
     }
-    return false;
+    for(int i=0;i<_cantE;i++){
+        if(_pj->siColisiona(_vEnemigos[i])){
+            _pj->muere();
+        }
+    }
 }
 
 void Aplicacion::renderizar(){///en esta funcion va todos los draw
