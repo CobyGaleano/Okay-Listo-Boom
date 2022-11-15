@@ -30,6 +30,7 @@ class Mapa : public sf::Drawable, public sf::Transformable
 
         // draw the vertex array
         target.draw(m_vertices, states);
+
         for(int i=0;i<_cantB;i++){
             _ventana->draw(_vBloques[i]);
         }
@@ -37,6 +38,10 @@ class Mapa : public sf::Drawable, public sf::Transformable
     public:
         Mapa(sf::RenderWindow &window);
         void mostrar();
+
+        int getCantBloques();
+        Bloques getBloque(int pos);
+
         ~Mapa();
 
 };

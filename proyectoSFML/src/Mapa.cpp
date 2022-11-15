@@ -60,7 +60,7 @@ Mapa::Mapa(sf::RenderWindow &window)
     _vBloques = new Bloques[_cantB];
 
     ///leer el tileset
-    if(!m_tileset.loadFromFile("mapSpritesheet.png")){
+    if(!m_tileset.loadFromFile("Fondo.png")){
         cout << "No se pudo cargar mapSpritesheet" << endl;
     }
 
@@ -72,19 +72,17 @@ Mapa::Mapa(sf::RenderWindow &window)
 
     ///cargar el array un quad por tile
     int p=0;
-    for(unsigned int i=0;i<CANT_FILAS;i++){
-        for(unsigned int j=0;j<CANT_COLUMNAS;j++){
+    for(int i=0;i<CANT_FILAS;i++){
+        for(int j=0;j<CANT_COLUMNAS;j++){
             int tilenumber;
             if(_matriz[i][j]!=0){
                 tilenumber=_matriz[i][j];
+
                 sf::Vector2f pos(i,j);
-                Bloques b(tilenumber,pos);
-                _vBloques[p++]=b;
-                tilenumber=0;
+                _vBloques[p++].armar(tilenumber,pos);
+
             }
-            else {
-                tilenumber=_matriz[i][j];
-            }
+            tilenumber=0;
 
 
             int tu=tilenumber%(m_tileset.getSize().x/35);
@@ -117,6 +115,13 @@ void Mapa::mostrar()
     }
 }
 
+int Mapa::getCantBloques(){
+    return _cantB;
+}
+
+Bloques Mapa::getBloque(int pos){
+    return _vBloques[pos];
+}
 
 Mapa::~Mapa()
 {

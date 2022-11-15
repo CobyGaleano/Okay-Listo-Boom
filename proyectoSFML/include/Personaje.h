@@ -24,6 +24,7 @@ class Personaje: public sf::Drawable, public Colisionable
         void update();
         void draw(sf::RenderTarget& target,sf::RenderStates states)const override;
         void setPusoBomba(bool estado){_pusoBomba=estado;}
+        void setPos(sf::Vector2f pos);
         sf::FloatRect getBounds() const override;
         void muere();
         bool getPusoBomba(){return _pusoBomba;}

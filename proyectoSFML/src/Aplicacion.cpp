@@ -12,7 +12,7 @@ Aplicacion::Aplicacion(sf::Vector2u resolucion)
 void Aplicacion::iniciar(){///aca se inicializan las variables y elementos que se utilizan dentro de la clase
     srand(time(0));
 
-    _window->setFramerateLimit(50); ///setea fps
+    _window->setFramerateLimit(250); ///setea fps
     _evento = new sf::Event; ///inicializar evento
     MainMenu _menu(_window->getSize().x, _window->getSize().y);///inicializar menu
     _pj = new Personaje();///inicializa personaje principal
@@ -26,7 +26,8 @@ void Aplicacion::iniciar(){///aca se inicializan las variables y elementos que s
     _vEnemigos[i].respawn();///ubica al enemigo en el mapa
     }
     _mapa = new Mapa(*_window);
-
+    _cantBloques = _mapa->getCantBloques();
+    _contPasos=0;
 }
 
 void Aplicacion::gameLoop(){
@@ -50,6 +51,7 @@ void Aplicacion::gameLoop(){
 void Aplicacion::procesar_eventos (){
     ///aca habria que procesar todos los eventos por ejemplo los del teclado
     ///----CMD-----
+    posAnteriorPJ=_pj->getPos();
     _pj->cmd();
 
 }
@@ -58,10 +60,15 @@ void Aplicacion::procesar_logic (){
     ///creo que aca habria que revisar las coliciones e interactuar lo que pasa con el juego para despues mostrarlo
     ///----UPDATES-----
     sf::Vector2f pos;
+    ///UPDATE DE PJ + CHECKEAR SUS COLISIONES
     _pj->update();
+    bool colPJ=chequearColisionPJ();
+    if(colPJ){
+        _pj->setPos(posAnteriorPJ);
+    }
     for(int i=0;i<_cantE;i++)
     {
-    _vEnemigos[i].update();
+        _vEnemigos[i].update();
     }
     if(_pj->getPusoBomba()==true)
     {
@@ -79,7 +86,17 @@ void Aplicacion::procesar_logic (){
         _explosion->update();
 
     }
-    std::cout<<std::endl<<_bomba->getPos().x<<" "<<_bomba->getPos().y;
+    //std::cout<<std::endl<<_bomba->getPos().x<<" "<<_bomba->getPos().y;
+}
+bool Aplicacion::chequearColisionPJ(){
+    for(int i=0;i<_cantBloques;i++){
+        _bloque=_mapa->getBloque(i);
+        if(_pj->siColisiona(_bloque)){
+            cout << "choca" << endl;
+            return true;
+        }
+    }
+    return false;
 }
 
 void Aplicacion::renderizar(){///en esta funcion va todos los draw
@@ -106,6 +123,7 @@ void Aplicacion::renderizar(){///en esta funcion va todos los draw
 int Aplicacion::getCantEnemigos(){
     return _cantE;  ///devuelve la cantidad de enemigos (creo que puede ser util mas adelante)
 }
+
 
 Aplicacion::~Aplicacion(){
     delete _evento;

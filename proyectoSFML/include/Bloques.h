@@ -21,11 +21,11 @@ class Bloques : public sf::Drawable, public sf::Transformable, public Colisionab
         sf::Sprite _sprite;
     public:
         Bloques();
-        Bloques(int t, sf::Vector2f pos);
+        void armar(int t, sf::Vector2f pos);
         void setEstado(bool es);
-        sf::Vector2f getPos();
+        int getTipo();
+        void draw(sf::RenderTarget& target,sf::RenderStates states)const;
         sf::FloatRect getBounds() const override;
-        void draw(sf::RenderTarget& target,sf::RenderStates states)const override;
 
 };
 

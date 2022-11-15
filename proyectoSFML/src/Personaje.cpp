@@ -10,6 +10,7 @@ Personaje::Personaje()
     _sprite.setTexture(_texture);
     _sprite.setTextureRect({20,130,18,21});
     _sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height);
+    _sprite.setPosition(sf::Vector2f(53,53));
     //ctor
 }
 
@@ -177,3 +178,6 @@ void Personaje::muere()
 
 }
 
+void Personaje::setPos(sf::Vector2f pos){
+    _sprite.setPosition(pos);
+}

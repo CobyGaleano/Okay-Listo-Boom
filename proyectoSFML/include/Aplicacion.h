@@ -5,6 +5,7 @@
 #include "Personaje.h"
 #include "Enemigo.h"
 #include "Mapa.h"
+#include "Bloques.h"
 #include "Bomba.h"
 #include "Explosion.h"
 
@@ -18,11 +19,18 @@ class Aplicacion
         sf::Event* _evento;
         MainMenu _menu;
         Personaje* _pj;
+        sf::Vector2f posAnteriorPJ;
+        int _contPasos;
         int _cantE;///cant de enemigos
         Enemigo* _vEnemigos;
+
         Mapa * _mapa;
+        Bloques _bloque;
+        int _cantBloques;
+
         Bomba *_bomba;
         Explosion *_explosion;
+
         bool gameOver=false;
     public:
         Aplicacion(sf::Vector2u resolucion);
@@ -33,6 +41,8 @@ class Aplicacion
         void procesar_logic();///logicas del juego
         void procesar_eventos();///teclado
         void gameLoop();
+
+        bool chequearColisionPJ();
 
         int getCantEnemigos();
         int getCantBombas();
