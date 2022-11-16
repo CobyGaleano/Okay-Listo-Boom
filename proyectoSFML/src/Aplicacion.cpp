@@ -20,8 +20,8 @@ void Aplicacion::iniciar(){///aca se inicializan las variables y elementos que s
     _vidasPJ=new Vida(*_window);
     _vidasPJ->setVidas(_pj->getCantVidas());
     _bomba=new Bomba(); ///inicializa la bomba
-    //_explosion=new Explosion();///inicializa explosion
     _bombaActiva=false; ///estado de bomba en el mapa
+    _explosion=new Explosion();///inicializa explosion
     ///MAPA
     _mapa = new Mapa(*_window);
     _cantBloques = _mapa->getCantBloques();
@@ -95,13 +95,13 @@ void Aplicacion::procesar_logic (){
 
     }
     _bomba->update();
-    _explosion.setExplosion(_bomba->getExplosion());
-    if(_explosion.getExplosion()==true)
+    _explosion->setExplosion(_bomba->getExplosion());
+    if(_explosion->getExplosion()==true)
     {
-        _explosion.setPos(_bomba->getPos());
+        _explosion->setPos(_bomba->getPos());
         _pj->SumarBomba();
-        _explosion.update();
-        _bomba->setExplosion(_explosion.getExplosion());
+        _explosion->update();
+        _bomba->setExplosion(_explosion->getExplosion());
 
     }
     chequearColisionExplosion();
@@ -122,7 +122,7 @@ void Aplicacion::chequearColisionPJ(){
             _pj->muere();
         }
     }
-    if(_pj->siColisiona(_explosion)){
+    if(_pj->siColisiona(*_explosion)){
         _pj->muere();
         cout << "ESTA ACA?" << endl;
         _bombaActiva=false;
@@ -132,7 +132,7 @@ void Aplicacion::chequearColisionPJ(){
 void Aplicacion::chequearColisionExplosion(){
     for(int i=0;i<_cantBloques;i++){
         _bloque=_mapa->getBloque(i);
-        if(_explosion.siColisiona(*_bloque)&& _bloque->getTipo()==2){
+        if(_explosion->siColisiona(*_bloque)&& _bloque->getTipo()==2){
             _bloque->destruir();
             break;
         }
@@ -158,9 +158,9 @@ void Aplicacion::renderizar(){///en esta funcion va todos los draw
     {
         _window->draw(*_bomba);
     }
-    if(_explosion.getExplosion()==true)
+    if(_explosion->getExplosion()==true)
     {
-        _window->draw(_explosion);
+        _window->draw(*_explosion);
     }
     _window->draw(*_vidasPJ);
     _window->draw(*_pj);
@@ -185,7 +185,7 @@ Aplicacion::~Aplicacion(){
     delete[] _vEnemigos;
     delete _mapa;
     delete _bomba;
-    //delete _explosion;
+    delete _explosion;
     delete _bloque;
     delete[] posAnteriorEnemigo;
 }

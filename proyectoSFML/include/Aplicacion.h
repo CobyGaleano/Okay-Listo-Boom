@@ -34,7 +34,7 @@ class Aplicacion
         int _cantBloques;
 
         Bomba *_bomba;
-        Explosion _explosion;
+        Explosion *_explosion;
         bool _bombaActiva;
 
         bool gameOver=false;

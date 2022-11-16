@@ -123,9 +123,9 @@ void Mapa::update(){
 }
 
 sf::Vector2f Mapa::posicionarEnemigos(int enemigo){
-    for(int j=0; j<CANT_FILAS; j++)
+    for(int j=rand()%CANT_FILAS; j<CANT_FILAS; j++)
     {
-        for(int i=0; i<CANT_COLUMNAS; i++)
+        for(int i=rand()%CANT_COLUMNAS; i<CANT_COLUMNAS; i++)
         {
             if(_matriz[i][j]==0&&(i!=1&&j!=1||i!=2&&j!=1||i!=1&&j!=2)){
                 bool hayBloque=false;

@@ -33,7 +33,7 @@ class Mapa : public sf::Drawable, public sf::Transformable
 
             for(int i=0;i<_cantB;i++){
                 if(_vBloques[i].getEstado()==true){
-                _ventana->draw(_vBloques[i]);
+                    _ventana->draw(_vBloques[i]);
                 }
             }
         }

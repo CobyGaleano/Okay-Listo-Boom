@@ -32,9 +32,6 @@ void Vida::setVidas(int c){
     stream<<c;
     ///cargar el stream en el string
     stream>>_cantidad;
-    cout << c << endl; ///int
-    cout <<_cantidad<<endl;///string
-
     _texto.setString(_cantidad);
 
 }

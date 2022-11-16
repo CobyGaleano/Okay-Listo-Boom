@@ -897,7 +897,7 @@
 1668517058 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\colisionable.h
 	<SFML/Graphics.hpp>
 
-1668621116 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\mapa.h
+1668641717 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\mapa.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	"Bloques.h"
@@ -912,7 +912,7 @@
 1668625528 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\enemigo.cpp
 	"Enemigo.h"
 
-1668635425 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mapa.cpp
+1668641717 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mapa.cpp
 	"Mapa.h"
 
 1668635723 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\personaje.cpp
@@ -930,7 +930,7 @@
 	<iostream>
 	"../Librerias.h"
 
-1668517059 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mainmenu.cpp
+1668638279 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mainmenu.cpp
 	"MainMenu.h"
 
 1667528620 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\gameplay.cpp
@@ -938,10 +938,10 @@
 
 1667528620 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\gameplay.h
 
-1668636644 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
+1668639835 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
 	"Aplicacion.h"
 
-1668635858 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\aplicacion.h
+1668639707 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\aplicacion.h
 	<SFML/Graphics.hpp>
 	"MainMenu.h"
 	"Personaje.h"
@@ -1952,6 +1952,6 @@
 	<SFML/Graphics.hpp>
 	<sstream>
 
-1668636496 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\vida.cpp
+1668638440 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\vida.cpp
 	"Vida.h"
 
