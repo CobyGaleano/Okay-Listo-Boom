@@ -32,12 +32,15 @@ class Mapa : public sf::Drawable, public sf::Transformable
         target.draw(m_vertices, states);
 
         for(int i=0;i<_cantB;i++){
+            if(_vBloques[i].getEstado()==true){
             _ventana->draw(_vBloques[i]);
+            }
         }
         }
     public:
         Mapa(sf::RenderWindow &window);
         void mostrar();
+        void update();
 
         int getCantBloques();
         Bloques* getBloque(int pos);

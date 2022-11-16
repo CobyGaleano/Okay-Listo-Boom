@@ -3,7 +3,7 @@
 Explosion::Explosion()
 {
     _frame=0;
-    _tiempo=10;
+    _tiempo=5;
     _explosion=false;
     _texture.loadFromFile("fuego.png");
     _sprite.setTexture(_texture);
@@ -19,7 +19,6 @@ void Explosion::update()
         _frame+=0.02;
         _sprite.setTextureRect({0+int(_frame)*83,0,79,79});
         _sprite.setPosition(_posicion);
-        _tiempo-=1;
     }
     if(_frame>=4)
     {
@@ -28,6 +27,8 @@ void Explosion::update()
     }
 }
 
+Explosion::~Explosion(){
+}
 
 void Explosion::draw(sf::RenderTarget& target,sf::RenderStates states)const //dibuja al enemigo
 {

@@ -888,7 +888,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1668534700 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\personaje.h
+1668577583 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\personaje.h
 	<SFML/Graphics.hpp>
 	"Colisionable.h"
 	"../Librerias.h"
@@ -896,31 +896,31 @@
 1668517058 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\colisionable.h
 	<SFML/Graphics.hpp>
 
-1668548535 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\mapa.h
+1668579817 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\mapa.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	"Bloques.h"
 
-1668517058 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\enemigo.h
+1668591060 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\enemigo.h
 	"Personaje.h"
 	"Colisionable.h"
 
 1668517059 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\colisionable.cpp
 	"Colisionable.h"
 
-1668517059 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\enemigo.cpp
+1668591467 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\enemigo.cpp
 	"Enemigo.h"
 
-1668548535 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mapa.cpp
+1668580144 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mapa.cpp
 	"Mapa.h"
 
-1668545257 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\personaje.cpp
+1668580250 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\personaje.cpp
 	"Personaje.h"
 
-1668538592 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\bloques.cpp
+1668579817 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\bloques.cpp
 	"Bloques.h"
 
-1668538592 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\bloques.h
+1668579817 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\bloques.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	"Colisionable.h"
@@ -937,10 +937,10 @@
 
 1667528620 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\gameplay.h
 
-1668548563 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
+1668591121 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
 	"Aplicacion.h"
 
-1668548231 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\aplicacion.h
+1668590662 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\aplicacion.h
 	<SFML/Graphics.hpp>
 	"MainMenu.h"
 	"Personaje.h"
@@ -1932,15 +1932,15 @@
 1668573105 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\explosion.cpp
 	"Explosion.h"
 
-1668517010 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\explosion.h
+1668585793 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\explosion.h
 	"../Librerias.h"
 
-1668517010 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\bomba.h
+1668590097 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\bomba.h
 	"../Librerias.h"
 
-1668517010 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\bomba.cpp
+1668564790 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\bomba.cpp
 	"Bomba.h"
 
-1668517010 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\explosion.cpp
+1668585818 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\explosion.cpp
 	"Explosion.h"
 

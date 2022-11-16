@@ -29,7 +29,8 @@ class Aplicacion
         int _cantBloques;
 
         Bomba *_bomba;
-        Explosion *_explosion;
+        Explosion _explosion;
+        bool _bombaActiva;
 
         bool gameOver=false;
     public:
@@ -43,6 +44,8 @@ class Aplicacion
         void gameLoop();
 
         void chequearColisionPJ();
+        void chequearColisionExplosion();
+        void chequearColisionEnemigo();
 
         int getCantEnemigos();
         int getCantBombas();

@@ -17,7 +17,8 @@ void Aplicacion::iniciar(){///aca se inicializan las variables y elementos que s
     MainMenu _menu(_window->getSize().x, _window->getSize().y);///inicializar menu
     _pj = new Personaje();///inicializa personaje principal
     _bomba=new Bomba(); ///inicializa la bomba
-    _explosion=new Explosion();///inicializa explosion
+    //_explosion=new Explosion();///inicializa explosion
+    _bombaActiva=false; ///estado de bomba en el mapa
     _cantE=5+rand()%5;///random entre 5 y 10 creo
     cout << _cantE << endl;
     _vEnemigos = new Enemigo[_cantE];///cantidad de enemigos
@@ -61,6 +62,8 @@ void Aplicacion::procesar_logic (){
     ///creo que aca habria que revisar las coliciones e interactuar lo que pasa con el juego para despues mostrarlo
     ///----UPDATES-----
     sf::Vector2f pos;
+    ///UPDATE MAPA -> chequea si se destruyo algun bloque
+    _mapa->update();
     ///UPDATE DE PJ + CHECKEAR SUS COLISIONES
     _pj->update();
     chequearColisionPJ();
@@ -69,7 +72,8 @@ void Aplicacion::procesar_logic (){
     {
         _vEnemigos[i].update();
     }
-    if(_pj->getPusoBomba()==true && _bomba->getEstado()==false)
+    ///PJ PONE BOMBA -> Por ahora solo puede poner una por vez y recien cuando explota
+     if(_pj->getPusoBomba()==true && _bomba->getEstado()==false)
     {
         _pj->RestarBombas();
         pos=(_pj->getPos());
@@ -80,34 +84,59 @@ void Aplicacion::procesar_logic (){
 
     }
     _bomba->update();
-    _explosion->setExplosion(_bomba->getExplosion());
-    if(_explosion->getExplosion()==true)
+    _explosion.setExplosion(_bomba->getExplosion());
+    if(_explosion.getExplosion()==true)
     {
-        _explosion->setPos(_bomba->getPos());
+        _explosion.setPos(_bomba->getPos());
         _pj->SumarBomba();
-        _explosion->update();
+        _explosion.update();
+        _bomba->setExplosion(_explosion.getExplosion());
 
     }
-    _bomba->setExplosion(_explosion->getExplosion());
+    chequearColisionExplosion();
     //std::cout<<std::endl<<_bomba->getPos().x<<" "<<_bomba->getPos().y;
 }
+
 void Aplicacion::chequearColisionPJ(){
     for(int i=0;i<_cantBloques;i++){
         _bloque=_mapa->getBloque(i);
-        if(_pj->siColisiona(*_bloque)){
+        if(_pj->siColisiona(*_bloque)&&_bloque->getEstado()==true){
             cout << "choca" << endl;
             _pj->setPos(posAnteriorPJ);
             break;
         }
     }
-    /*for(int i=0;i<_cantE;i++){
+    for(int i=0;i<_cantE;i++){
         if(_pj->siColisiona(_vEnemigos[i])){
             _pj->muere();
         }
     }
-    if(_pj->siColisiona(*_explosion)){
+    if(_pj->siColisiona(_explosion)){
         _pj->muere();
-    }*/
+        cout << "ESTA ACA?" << endl;
+        _bombaActiva=false;
+    }
+}
+
+void Aplicacion::chequearColisionExplosion(){
+    for(int i=0;i<_cantBloques;i++){
+        _bloque=_mapa->getBloque(i);
+        if(_explosion.siColisiona(*_bloque)&& _bloque->getTipo()==2){
+            _bloque->destruir();
+            break;
+        }
+    }
+}
+
+void Aplicacion::chequearColisionEnemigo(){
+    for(int i=0;i<_cantBloques;i++){
+        _bloque=_mapa->getBloque(i);
+        for(int j=0; j<_cantE;j++){
+            if(_vEnemigos[j].siColisiona(*_bloque)){
+                _vEnemigos[j].setPos(sf::Vector2f((_vEnemigos[j].getPos().x-1.f),(_vEnemigos[j].getPos().y-1.f)));
+            }
+        }
+    }
 }
 
 void Aplicacion::renderizar(){///en esta funcion va todos los draw
@@ -118,14 +147,14 @@ void Aplicacion::renderizar(){///en esta funcion va todos los draw
     {
         _window->draw(*_bomba);
     }
-    if(_explosion->getExplosion()==true)
+    if(_explosion.getExplosion()==true)
     {
-    _window->draw(*_explosion);
+        _window->draw(_explosion);
     }
-    _window->draw(*_pj);
+        _window->draw(*_pj);
      for(int i=0;i<_cantE;i++)
     {
-    _window->draw(_vEnemigos[i]);
+        _window->draw(_vEnemigos[i]);
     }
     ///------------
     _window->display();
@@ -143,6 +172,6 @@ Aplicacion::~Aplicacion(){
     delete _vEnemigos;
     delete _mapa;
     delete _bomba;
-    delete _explosion;
+    //delete _explosion;
     delete _bloque;
 }

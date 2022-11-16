@@ -22,11 +22,16 @@ class Bloques : public sf::Drawable, public sf::Transformable, public Colisionab
     public:
         Bloques();
         void armar(int t, sf::Vector2f pos);
-        void setEstado(bool es);
-        int getTipo();
-        void draw(sf::RenderTarget& target,sf::RenderStates states)const;
-        sf::FloatRect getBounds() const override;
+        void destruir();
 
+        bool getEstado();
+        sf::Vector2f getPos();
+
+        int getTipo();
+
+        void draw(sf::RenderTarget& target,sf::RenderStates states)const;
+
+        sf::FloatRect getBounds() const override; ///colision
 };
 
 #endif // BLOQUES_H

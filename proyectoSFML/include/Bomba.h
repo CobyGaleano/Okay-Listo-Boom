@@ -10,7 +10,7 @@ class Bomba: public sf::Drawable, public Colisionable
         sf::FloatRect getBounds() const override;
 
         void update();
-        void draw(sf::RenderTarget& target,sf::RenderStates states)const override;
+        void draw(sf::RenderTarget& target,sf::RenderStates states)const;
         void respawn();
         void setPos(sf::Vector2f pos){_posicion=pos;}
         void setEstado(bool estado){_estado=estado;}

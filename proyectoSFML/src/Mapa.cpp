@@ -115,6 +115,15 @@ void Mapa::mostrar()
     }
 }
 
+void Mapa::update(){
+    for(int i=0;i<_cantB;i++){
+        if(_vBloques[i].getEstado()==false && _vBloques[i].getTipo() == 2){
+            _matriz[(int)_vBloques[i].getPos().x][(int)_vBloques[i].getPos().y]=0;
+        }
+    }
+}
+
+
 int Mapa::getCantBloques(){
     return _cantB;
 }

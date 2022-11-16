@@ -152,9 +152,10 @@ void Personaje::cmd()//controlador del personaje
         ///soltar bomba
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::B))
         {
-            _cantBombas--;
-            if(_cantBombas<0){_cantBombas=0;}
-            _pusoBomba=true;
+            if(_cantBombas>0 && _pusoBomba==false){
+                _cantBombas--;
+                _pusoBomba=true;
+            }
         }
 }
 
@@ -170,13 +171,14 @@ sf::FloatRect Personaje::getBounds() const //obtiene coordenadas de personaje
 
 void Personaje::muere()
 {
-    while(_frame<7)
+    /*while(_frame<7)
     {
-    _frame+=0.25;
+        _frame+=0.25;
 
-    _sprite.setTextureRect({72+int(_frame)*14,41,14,20});
-    _sprite.setPosition(53,53);
-    }
+        _sprite.setTextureRect({72+int(_frame)*14,41,14,20});
+        _sprite.setPosition(53,58);
+    }*/
+    _sprite.setPosition(53,58);
 
 }
 
