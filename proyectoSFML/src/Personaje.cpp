@@ -10,7 +10,7 @@ Personaje::Personaje()
     _sprite.setTexture(_texture);
     _sprite.setTextureRect({20,130,18,21});
     _sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height);
-    _sprite.setPosition(sf::Vector2f(53,53));
+    _sprite.setPosition(sf::Vector2f(53,58));
     //ctor
 }
 
@@ -21,6 +21,7 @@ void Personaje::update()
     case PersonajeState::Idle://si el personaje no se mueve carga dicha textura
         {
             _sprite.setTextureRect({20,130,18,21});
+
         }
         break;
     case PersonajeState::m_up:
@@ -34,7 +35,6 @@ void Personaje::update()
             }
             _sprite.setTextureRect({0+int(_frame)*20,76,20,21});
             _sprite.move(_movePosition);
-
 
             }
         break;
@@ -51,6 +51,7 @@ void Personaje::update()
             _sprite.move(_movePosition);
 
 
+
         }
         break;
     case PersonajeState::m_left:
@@ -64,6 +65,7 @@ void Personaje::update()
             }
             _sprite.setTextureRect({0+int(_frame)*20,103,20,21});
             _sprite.move(_movePosition);
+
 
             if(_movePosition.x<0)///que mire hacia donde corre
             {

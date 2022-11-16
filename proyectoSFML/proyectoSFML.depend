@@ -1866,7 +1866,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1668371448 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\personaje.h
+1668574074 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\personaje.h
 	<SFML/Graphics.hpp>
 	"Colisionable.h"
 	"../Librerias.h"
@@ -1874,35 +1874,39 @@
 1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\colisionable.h
 	<SFML/Graphics.hpp>
 
-1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\mapa.h
-	"Personaje.h"
+1668569349 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\mapa.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	"Bloques.h"
 
 1668294768 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\enemigo.h
 	"Personaje.h"
 	"Colisionable.h"
 
-1668385224 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\aplicacion.h
+1668569349 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\aplicacion.h
 	<SFML/Graphics.hpp>
 	"MainMenu.h"
 	"Personaje.h"
 	"Enemigo.h"
 	"Mapa.h"
+	"Bloques.h"
 	"Bomba.h"
 	"Explosion.h"
 	<ctime>
 
-1668385544 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\bomba.h
+1668574074 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\bomba.h
 	"../Librerias.h"
 
-1668483453 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\aplicacion.cpp
+1668573242 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\aplicacion.cpp
 	"Aplicacion.h"
 
-1668228772 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\bloques.cpp
+1668569349 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\bloques.cpp
 	"Bloques.h"
 
-1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\bloques.h
-	"Mapa.h"
-	"Personaje.h"
+1668569349 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\bloques.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	"Colisionable.h"
 
 1668385395 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\bomba.cpp
 	"Bomba.h"
@@ -1916,16 +1920,16 @@
 1668228772 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\mainmenu.cpp
 	"MainMenu.h"
 
-1668228772 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\mapa.cpp
+1668569349 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\mapa.cpp
 	"Mapa.h"
 
-1668360277 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\personaje.cpp
+1668573368 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\personaje.cpp
 	"Personaje.h"
 
-1668483453 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\explosion.h
+1668573014 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\explosion.h
 	"../Librerias.h"
 
-1668483453 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\explosion.cpp
+1668573105 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\explosion.cpp
 	"Explosion.h"
 
 1668517010 s:\utn\laboratorio de computaciÛn 2\pojects\git\okay-listo-boom\proyectosfml\include\explosion.h

@@ -69,22 +69,26 @@ void Aplicacion::procesar_logic (){
     {
         _vEnemigos[i].update();
     }
-    if(_pj->getPusoBomba()==true)
+    if(_pj->getPusoBomba()==true && _bomba->getEstado()==false)
     {
+        _pj->RestarBombas();
         pos=(_pj->getPos());
         _bomba->setEstado(_pj->getPusoBomba());
         _bomba->setPos(pos);
         std::cout<<_pj->getPos().x<<" "<<_pj->getPos().y<<endl;
         _pj->setPusoBomba(false);
+
     }
     _bomba->update();
     _explosion->setExplosion(_bomba->getExplosion());
     if(_explosion->getExplosion()==true)
     {
         _explosion->setPos(_bomba->getPos());
+        _pj->SumarBomba();
         _explosion->update();
 
     }
+    _bomba->setExplosion(_explosion->getExplosion());
     //std::cout<<std::endl<<_bomba->getPos().x<<" "<<_bomba->getPos().y;
 }
 void Aplicacion::chequearColisionPJ(){
@@ -96,14 +100,14 @@ void Aplicacion::chequearColisionPJ(){
             break;
         }
     }
-    for(int i=0;i<_cantE;i++){
+    /*for(int i=0;i<_cantE;i++){
         if(_pj->siColisiona(_vEnemigos[i])){
             _pj->muere();
         }
     }
     if(_pj->siColisiona(*_explosion)){
         _pj->muere();
-    }
+    }*/
 }
 
 void Aplicacion::renderizar(){///en esta funcion va todos los draw

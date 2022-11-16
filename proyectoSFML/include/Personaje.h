@@ -25,10 +25,13 @@ class Personaje: public sf::Drawable, public Colisionable
         void draw(sf::RenderTarget& target,sf::RenderStates states)const override;
         void setPusoBomba(bool estado){_pusoBomba=estado;}
         void setPos(sf::Vector2f pos);
+        void RestarBombas(){_cantBombas--;}
+        void SumarBomba(){_cantBombas++;}
         sf::FloatRect getBounds() const override;
         void muere();
         bool getPusoBomba(){return _pusoBomba;}
         sf::Vector2f getPos(){return _sprite.getPosition();}
+        unsigned int getCantBombas(){return _cantBombas;}
 
 
     private:
