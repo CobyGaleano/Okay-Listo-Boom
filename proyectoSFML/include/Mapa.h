@@ -22,20 +22,20 @@ class Mapa : public sf::Drawable, public sf::Transformable
 
         virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
         {
-        // apply the transform
-        states.transform *= getTransform();
+            // apply the transform
+            states.transform *= getTransform();
 
-        // apply the tileset texture
-        states.texture = &m_tileset;
+            // apply the tileset texture
+            states.texture = &m_tileset;
 
-        // draw the vertex array
-        target.draw(m_vertices, states);
+            // draw the vertex array
+            target.draw(m_vertices, states);
 
-        for(int i=0;i<_cantB;i++){
-            if(_vBloques[i].getEstado()==true){
-            _ventana->draw(_vBloques[i]);
+            for(int i=0;i<_cantB;i++){
+                if(_vBloques[i].getEstado()==true){
+                _ventana->draw(_vBloques[i]);
+                }
             }
-        }
         }
     public:
         Mapa(sf::RenderWindow &window);
@@ -44,6 +44,8 @@ class Mapa : public sf::Drawable, public sf::Transformable
 
         int getCantBloques();
         Bloques* getBloque(int pos);
+
+        sf::Vector2f posicionarEnemigos(int cantE);
 
         ~Mapa();
 

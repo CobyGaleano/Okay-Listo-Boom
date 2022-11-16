@@ -58,6 +58,7 @@
 		<Unit filename="include/MainMenu.h" />
 		<Unit filename="include/Mapa.h" />
 		<Unit filename="include/Personaje.h" />
+		<Unit filename="include/Vida.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Aplicacion.cpp" />
 		<Unit filename="src/Bloques.cpp" />
@@ -68,6 +69,7 @@
 		<Unit filename="src/MainMenu.cpp" />
 		<Unit filename="src/Mapa.cpp" />
 		<Unit filename="src/Personaje.cpp" />
+		<Unit filename="src/Vida.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

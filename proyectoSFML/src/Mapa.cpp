@@ -1,5 +1,4 @@
 #include "Mapa.h"
-
 Mapa::Mapa(sf::RenderWindow &window)
 {
     srand(time(0));
@@ -119,6 +118,27 @@ void Mapa::update(){
     for(int i=0;i<_cantB;i++){
         if(_vBloques[i].getEstado()==false && _vBloques[i].getTipo() == 2){
             _matriz[(int)_vBloques[i].getPos().x][(int)_vBloques[i].getPos().y]=0;
+        }
+    }
+}
+
+sf::Vector2f Mapa::posicionarEnemigos(int enemigo){
+    for(int j=0; j<CANT_FILAS; j++)
+    {
+        for(int i=0; i<CANT_COLUMNAS; i++)
+        {
+            if(_matriz[i][j]==0&&(i!=1&&j!=1||i!=2&&j!=1||i!=1&&j!=2)){
+                bool hayBloque=false;
+                for(int x=0;x<_cantB;x++){
+                    if(_vBloques[x].getPos().x==i&& _vBloques[x].getPos().y==j){
+                        hayBloque==true;
+                    }
+                }
+                if(!hayBloque){
+                    sf::Vector2f pos(i,j);
+                    return pos;
+                }
+            }
         }
     }
 }

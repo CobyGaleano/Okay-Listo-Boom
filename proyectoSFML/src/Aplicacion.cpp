@@ -15,21 +15,28 @@ void Aplicacion::iniciar(){///aca se inicializan las variables y elementos que s
     _window->setFramerateLimit(60); ///setea fps
     _evento = new sf::Event; ///inicializar evento
     MainMenu _menu(_window->getSize().x, _window->getSize().y);///inicializar menu
-    _pj = new Personaje();///inicializa personaje principal
+    ///PERSONAJE
+    _pj = new Personaje(*_window);///inicializa personaje principal
+    _vidasPJ=new Vida(*_window);
+    _vidasPJ->setVidas(_pj->getCantVidas());
     _bomba=new Bomba(); ///inicializa la bomba
     //_explosion=new Explosion();///inicializa explosion
     _bombaActiva=false; ///estado de bomba en el mapa
+    ///MAPA
+    _mapa = new Mapa(*_window);
+    _cantBloques = _mapa->getCantBloques();
+    _bloque=new Bloques;
+    ///ENEMIGOS
     _cantE=5+rand()%5;///random entre 5 y 10 creo
     cout << _cantE << endl;
     _vEnemigos = new Enemigo[_cantE];///cantidad de enemigos
+    posAnteriorEnemigo = new sf::Vector2f[_cantE]; ///vector para posiciones de enemigos
     for(int i=0;i<_cantE;i++)
     {
-    _vEnemigos[i].respawn();///ubica al enemigo en el mapa
+        sf::Vector2f posE(_mapa->posicionarEnemigos(i));
+        _vEnemigos[i].respawn(posE);///ubica al enemigo en el mapa
     }
-    _mapa = new Mapa(*_window);
-    _cantBloques = _mapa->getCantBloques();
 
-    _bloque=new Bloques;
 }
 
 void Aplicacion::gameLoop(){
@@ -56,6 +63,7 @@ void Aplicacion::procesar_eventos (){
     posAnteriorPJ=_pj->getPos();
     _pj->cmd();
 
+
 }
 
 void Aplicacion::procesar_logic (){
@@ -66,11 +74,14 @@ void Aplicacion::procesar_logic (){
     _mapa->update();
     ///UPDATE DE PJ + CHECKEAR SUS COLISIONES
     _pj->update();
+    _vidasPJ->setVidas(_pj->getCantVidas());
     chequearColisionPJ();
     ///UPDATE DE ENEMIGOS
     for(int i=0;i<_cantE;i++)
     {
+        posAnteriorEnemigo[i]=_vEnemigos[i].getPos();
         _vEnemigos[i].update();
+        chequearColisionEnemigo();
     }
     ///PJ PONE BOMBA -> Por ahora solo puede poner una por vez y recien cuando explota
      if(_pj->getPusoBomba()==true && _bomba->getEstado()==false)
@@ -133,7 +144,7 @@ void Aplicacion::chequearColisionEnemigo(){
         _bloque=_mapa->getBloque(i);
         for(int j=0; j<_cantE;j++){
             if(_vEnemigos[j].siColisiona(*_bloque)){
-                _vEnemigos[j].setPos(sf::Vector2f((_vEnemigos[j].getPos().x-1.f),(_vEnemigos[j].getPos().y-1.f)));
+                _vEnemigos[j].setPos(posAnteriorEnemigo[j]);
             }
         }
     }
@@ -151,7 +162,8 @@ void Aplicacion::renderizar(){///en esta funcion va todos los draw
     {
         _window->draw(_explosion);
     }
-        _window->draw(*_pj);
+    _window->draw(*_vidasPJ);
+    _window->draw(*_pj);
      for(int i=0;i<_cantE;i++)
     {
         _window->draw(_vEnemigos[i]);
@@ -169,9 +181,11 @@ Aplicacion::~Aplicacion(){
     delete _evento;
     delete _window;
     delete _pj;
-    delete _vEnemigos;
+    delete _vidasPJ;
+    delete[] _vEnemigos;
     delete _mapa;
     delete _bomba;
     //delete _explosion;
     delete _bloque;
+    delete[] posAnteriorEnemigo;
 }

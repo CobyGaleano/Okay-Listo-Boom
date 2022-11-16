@@ -59,15 +59,20 @@ void Enemigo::update()
         }
 }
 
-void Enemigo::respawn() ///respawn del enemigo (aleatorio)
+void Enemigo::respawn(sf::Vector2f pos) ///respawn del enemigo (aleatorio)
 {
-    _sprite.setPosition(std::rand()%524+_sprite.getGlobalBounds().width,std::rand()%449+_sprite.getGlobalBounds().height);
+    ///_sprite.setPosition(std::rand()%524+_sprite.getGlobalBounds().width,std::rand()%449+_sprite.getGlobalBounds().height);
+    _sprite.setPosition((float)pos.x*35,(float)pos.y*30);
     _timeRespawn=60*3;
+}
+
+void Enemigo::setPos(sf::Vector2f p){
+    _sprite.setPosition(p);
 }
 
 void Enemigo::damage()///acciones que realizar el enemigo al golpear
 {
-    respawn();
+    ///respawn();
 }
 
 sf::FloatRect Enemigo::getBounds() const

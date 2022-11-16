@@ -1,7 +1,9 @@
 #include "Personaje.h"
 
-Personaje::Personaje()
+Personaje::Personaje(sf::RenderWindow &ventana)
 {
+    _ventana=&ventana;
+    _cantVidas=3;
     _frame=0;
     _cantBombas=1;
     _pusoBomba=false;
@@ -179,9 +181,15 @@ void Personaje::muere()
         _sprite.setPosition(53,58);
     }*/
     _sprite.setPosition(53,58);
-
+    _cantVidas--;
+    if(_cantVidas<0){
+        _cantVidas=0;
+    }
 }
 
 void Personaje::setPos(sf::Vector2f pos){
     _sprite.setPosition(pos);
+}
+
+Personaje::~Personaje(){
 }

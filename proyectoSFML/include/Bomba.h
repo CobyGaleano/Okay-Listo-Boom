@@ -1,5 +1,6 @@
 #ifndef BOMBA_H
 #define BOMBA_H
+#include <SFML/Graphics.hpp>
 #include "../Librerias.h"
 
 class Bomba: public sf::Drawable, public Colisionable

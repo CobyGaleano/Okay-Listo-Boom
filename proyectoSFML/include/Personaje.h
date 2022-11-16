@@ -4,6 +4,7 @@ using namespace std;
 #define PERSONAJE_H
 #include <SFML/Graphics.hpp>
 #include "Colisionable.h"
+#include "Vida.h"
 #include "../Librerias.h"
 
 enum class PersonajeState
@@ -19,7 +20,8 @@ enum class PersonajeState
 class Personaje: public sf::Drawable, public Colisionable
 {
     public:
-        Personaje();
+        Personaje(sf::RenderWindow &ventana);
+        ~Personaje();
         void cmd();
         void update();
         void draw(sf::RenderTarget& target,sf::RenderStates states)const override;
@@ -35,7 +37,7 @@ class Personaje: public sf::Drawable, public Colisionable
         sf::FloatRect getBounds() const override;
         sf::Vector2f getPos(){return _sprite.getPosition();}
 
-
+        int getCantVidas(){return _cantVidas;}
     private:
         sf::Sprite _sprite;
         sf::Texture _texture;
@@ -47,6 +49,9 @@ class Personaje: public sf::Drawable, public Colisionable
         unsigned int _cantBombas;
         bool _pusoBomba;
         PersonajeState _state=PersonajeState::Idle;
+
+        int _cantVidas;
+        sf::RenderWindow * _ventana;
 };
 
 #endif // PERSONAJE_H

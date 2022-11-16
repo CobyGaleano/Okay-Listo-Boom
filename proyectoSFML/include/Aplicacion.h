@@ -8,6 +8,7 @@
 #include "Bloques.h"
 #include "Bomba.h"
 #include "Explosion.h"
+#include "Vida.h"
 
 #include <ctime>
 class Aplicacion
@@ -18,11 +19,15 @@ class Aplicacion
         sf::RenderStates* _state;
         sf::Event* _evento;
         MainMenu _menu;
+
         Personaje* _pj;
+        Vida* _vidasPJ;
+
         sf::Vector2f posAnteriorPJ;
         int _contPasos;
         int _cantE;///cant de enemigos
         Enemigo* _vEnemigos;
+        sf::Vector2f* posAnteriorEnemigo;
 
         Mapa * _mapa;
         Bloques * _bloque;

@@ -9,13 +9,13 @@ class Enemigo: public sf::Drawable, public Colisionable
         Enemigo();
         void update();
         void draw(sf::RenderTarget& target,sf::RenderStates states)const override;
-        void respawn();
+        void respawn(sf::Vector2f pos);
         void damage();
 
         sf::Vector2f getPos(){return _sprite.getPosition();}
         sf::FloatRect getBounds() const override;
 
-        void setPos(sf::Vector2f p){_sprite.setPosition(p);}
+        void setPos(sf::Vector2f p);
 
     private:
         sf::Sprite _sprite;
