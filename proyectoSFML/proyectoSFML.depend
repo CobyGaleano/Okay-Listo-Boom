@@ -938,7 +938,7 @@
 
 1667528620 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\gameplay.h
 
-1668635952 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
+1668636644 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
 	"Aplicacion.h"
 
 1668635858 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\aplicacion.h
@@ -1947,7 +1947,7 @@
 1668585818 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\explosion.cpp
 	"Explosion.h"
 
-1668636177 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\vida.h
+1668638252 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\vida.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	<sstream>

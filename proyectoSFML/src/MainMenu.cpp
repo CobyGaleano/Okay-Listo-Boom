@@ -14,7 +14,7 @@ MainMenu::MainMenu(float ancho,float alto)
     _menu[0].setFont(_font);
     _menu[0].setFillColor(sf::Color::White);
     _menu[0].setString("PLAY");
-    _menu[0].setCharacterSize(50);
+    _menu[0].setCharacterSize(70);
     _menu[0].setPosition(sf::Vector2f(ancho/2-150,alto/(CANT_ITEMS+1)*1));
 
     _menu[1].setFont(_font);

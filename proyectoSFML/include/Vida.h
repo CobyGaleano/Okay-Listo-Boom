@@ -15,7 +15,7 @@ class Vida : public sf::Drawable
 
 
     private:
-        int _cantidad;
+        string _cantidad;
 
         sf::Sprite _sprite;
         sf::Texture _text;

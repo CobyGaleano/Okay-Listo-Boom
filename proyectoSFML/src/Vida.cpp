@@ -35,6 +35,8 @@ void Vida::setVidas(int c){
     cout << c << endl; ///int
     cout <<_cantidad<<endl;///string
 
+    _texto.setString(_cantidad);
+
 }
 
 void Vida::draw(sf::RenderTarget& target,sf::RenderStates states)const //enseña a window como dibujar
