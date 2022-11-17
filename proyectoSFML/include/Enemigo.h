@@ -23,6 +23,8 @@ class Enemigo: public sf::Drawable, public Colisionable
         sf::Vector2f _velocity;
         sf::Vector2f _newPosition;
         int _timeRespawn;
+        int _moovSelect;
+        float _timeMoov;
         float _frame;
 
 };

@@ -3,7 +3,9 @@
 Enemigo::Enemigo()
 {
     _frame=0;
-    _velocity={0.23,-0.5};
+    _velocity={0.25,0};
+    _timeMoov=0;
+    _moovSelect=std::rand()%4+1;
     _text.loadFromFile("sprite_sheets3.png");
     _sprite.setTexture(_text);
     _sprite.setTextureRect({7,209,17,22});
@@ -19,7 +21,35 @@ void Enemigo::draw(sf::RenderTarget& target,sf::RenderStates states)const //dibu
 
 void Enemigo::update()
 {
+    _timeMoov+=0.03;
     _timeRespawn --;
+    switch(_moovSelect)
+    {
+        case 1:
+        {
+            _velocity={0.25,0};
+        }
+    break;
+        case 2:
+        {
+            _velocity={-0.25,0};
+        }
+    break;
+        case 3:
+        {
+            _velocity={0,0.25};
+        }
+    break;
+        case 4:
+        {
+            _velocity={0,-0.25};
+        }
+}
+    if(_timeMoov>=15)
+    {
+        _moovSelect=std::rand()%4+1;
+        _timeMoov=0;
+    }
     if(_timeRespawn<0)
     {
         _newPosition={std::rand()%525+_sprite.getGlobalBounds().width,std::rand()%450+_sprite.getGlobalBounds().height};
