@@ -11,29 +11,40 @@ MainMenu::MainMenu(float ancho,float alto)
     {
         cout << "error"<< endl;
     }
+
+
+    ///sprite logo
+    if(!_text.loadFromFile("Logo.png")){
+        cout << "Error loading logo.png" << endl;
+    }
+    _sprite.setTexture(_text);
+    _sprite.setOrigin(_sprite.getGlobalBounds().width/2,0);
+    _sprite.setPosition(sf::Vector2f(ancho/2,0));
+    _sprite.setScale(0.5,0.5);
+
     _menu[0].setFont(_font);
     _menu[0].setFillColor(sf::Color::White);
     _menu[0].setString("PLAY");
-    _menu[0].setCharacterSize(70);
-    _menu[0].setPosition(sf::Vector2f(ancho/2-150,alto/(CANT_ITEMS+1)*1));
+    _menu[0].setCharacterSize(40);
+    _menu[0].setPosition(sf::Vector2f(ancho/2-150,_sprite.getGlobalBounds().height));
 
     _menu[1].setFont(_font);
     _menu[1].setFillColor(sf::Color::White);
-    _menu[1].setString("OPCIONES");
-    _menu[1].setCharacterSize(50);
-    _menu[1].setPosition(sf::Vector2f(ancho/2-150,alto/(CANT_ITEMS+1)*2));
+    _menu[1].setString("CARGAR PARTIDA");
+    _menu[1].setCharacterSize(40);
+    _menu[1].setPosition(sf::Vector2f(ancho/2-150,_sprite.getGlobalBounds().height+50));
 
     _menu[2].setFont(_font);
     _menu[2].setFillColor(sf::Color::White);
     _menu[2].setString("RANKING");
-    _menu[2].setCharacterSize(50);
-    _menu[2].setPosition(sf::Vector2f(ancho/2-150,alto/(CANT_ITEMS+1)*3));
+    _menu[2].setCharacterSize(40);
+    _menu[2].setPosition(sf::Vector2f(ancho/2-150,_sprite.getGlobalBounds().height+100));
 
     _menu[3].setFont(_font);
     _menu[3].setFillColor(sf::Color::White);
     _menu[3].setString("EXIT");
-    _menu[3].setCharacterSize(50);
-    _menu[3].setPosition(sf::Vector2f(ancho/2-150,alto/(CANT_ITEMS+1)*4));
+    _menu[3].setCharacterSize(40);
+    _menu[3].setPosition(sf::Vector2f(ancho/2-150,_sprite.getGlobalBounds().height+150));
 
     _selected=1;
 }
@@ -77,6 +88,7 @@ void MainMenu::draw(sf::RenderWindow& window)
     {
         window.draw(_menu[i]);
     }
+    window.draw(_sprite);
 }
 
 bool MainMenu::getState(){

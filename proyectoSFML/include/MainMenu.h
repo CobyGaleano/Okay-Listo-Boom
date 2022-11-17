@@ -18,6 +18,8 @@ class MainMenu
     private:
         sf::Font _font;
         sf::Text _menu[CANT_ITEMS];
+        sf::Sprite _sprite;
+        sf::Texture _text;
         int _selected;
         ESTADO _state;
 

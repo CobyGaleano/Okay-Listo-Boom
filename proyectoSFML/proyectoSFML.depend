@@ -461,7 +461,7 @@
 1667169945 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\proyectosfml\src\colisionable.cpp
 	"Colisionable.h"
 
-1668517058 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\main.cpp
+1668645171 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\main.cpp
 	"MainMenu.h"
 	"Aplicacion.h"
 	"Librerias.h"
@@ -902,17 +902,17 @@
 	<SFML/Graphics.hpp>
 	"Bloques.h"
 
-1668625528 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\enemigo.h
+1668645171 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\enemigo.h
 	"Personaje.h"
 	"Colisionable.h"
 
 1668517059 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\colisionable.cpp
 	"Colisionable.h"
 
-1668625528 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\enemigo.cpp
+1668645171 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\enemigo.cpp
 	"Enemigo.h"
 
-1668641717 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mapa.cpp
+1668641851 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mapa.cpp
 	"Mapa.h"
 
 1668635723 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\personaje.cpp
@@ -926,11 +926,11 @@
 	<SFML/Graphics.hpp>
 	"Colisionable.h"
 
-1668517058 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\mainmenu.h
+1668657265 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\mainmenu.h
 	<iostream>
 	"../Librerias.h"
 
-1668638279 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mainmenu.cpp
+1668658763 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mainmenu.cpp
 	"MainMenu.h"
 
 1667528620 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\gameplay.cpp
@@ -938,7 +938,7 @@
 
 1667528620 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\gameplay.h
 
-1668639835 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
+1668653935 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
 	"Aplicacion.h"
 
 1668639707 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\aplicacion.h
@@ -1944,7 +1944,7 @@
 	<SFML/Graphics.hpp>
 	"../Librerias.h"
 
-1668564790 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\bomba.cpp
+1668642277 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\bomba.cpp
 	"Bomba.h"
 
 1668585818 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\explosion.cpp
