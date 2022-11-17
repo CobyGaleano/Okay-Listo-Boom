@@ -21,6 +21,7 @@ class Aplicacion
         Gameplay* gamePlay;
 
         bool gameOver=false;
+
     public:
         Aplicacion(sf::Vector2u resolucion);
         ~Aplicacion();

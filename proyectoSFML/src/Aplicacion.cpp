@@ -9,6 +9,7 @@ Aplicacion::Aplicacion(sf::Vector2u resolucion)
     _window->setFramerateLimit(10);
     int opcion;
 
+
     while(_window->isOpen()){
         while (_window->pollEvent(*_evento))
         {
