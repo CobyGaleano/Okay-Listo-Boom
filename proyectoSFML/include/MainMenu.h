@@ -21,8 +21,10 @@ class MainMenu
         sf::Text _menu[CANT_ITEMS];
         sf::Sprite _sprite;
         sf::Texture _text;
+
         sf::SoundBuffer buffer;
         sf::Sound sound;
+
         int _selected;
         ESTADO _state;
 

@@ -12,20 +12,25 @@ Aplicacion::Aplicacion(sf::Vector2u resolucion)
     while(_window->isOpen()){
         while (_window->pollEvent(*_evento))
         {
+
             if (_evento->type == sf::Event::Closed){
                 _window->close();
                 ///guardar partida
             }
         }
         _menu.cmd();
+
         if(_menu.getState()){
+
             opcion=_menu.getSelected();
             switch(opcion){
             case 1:{///play
                 cout << "OPCION PLAY" << endl;
                 cout << "Cargando juego" << endl;
                 iniciar();
+
                 gameLoop();
+
 
             }
             break;
@@ -114,6 +119,8 @@ void Aplicacion::procesar_eventos (){
 }
 
 void Aplicacion::procesar_logic (){
+
+
     ///creo que aca habria que revisar las coliciones e interactuar lo que pasa con el juego para despues mostrarlo
     ///----UPDATES-----
     sf::Vector2f pos;
@@ -153,6 +160,7 @@ void Aplicacion::procesar_logic (){
     }
     chequearColisionExplosion();
     //std::cout<<std::endl<<_bomba->getPos().x<<" "<<_bomba->getPos().y;
+
 }
 
 void Aplicacion::chequearColisionPJ(){

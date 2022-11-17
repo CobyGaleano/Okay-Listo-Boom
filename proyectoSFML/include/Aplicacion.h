@@ -1,6 +1,7 @@
 #ifndef APLICACION_H
 #define APLICACION_H
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "MainMenu.h"
 #include "Personaje.h"
 #include "Enemigo.h"
@@ -18,6 +19,11 @@ class Aplicacion
         sf::RenderTarget* _target;
         sf::RenderStates* _state;
         sf::Event* _evento;
+
+
+
+
+
         MainMenu _menu;
 
         Personaje* _pj;

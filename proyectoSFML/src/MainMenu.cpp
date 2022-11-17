@@ -4,7 +4,9 @@ MainMenu::MainMenu(){
 
     buffer.loadFromFile("MenuTheme.wav");
     sound.setBuffer(buffer);
-    //sound.play();
+    sound.play();
+    sound.setVolume(4);
+
     ///ctor
 
 }
@@ -72,6 +74,7 @@ void MainMenu::update(){
         _selected--;
         if(_selected<1){
             _selected=1;
+
         }
         _state=WAITING;
     }
@@ -98,6 +101,7 @@ void MainMenu::draw(sf::RenderWindow& window)
 bool MainMenu::getState(){
     if(_state==SELECT){
         _state=WAITING;
+
         return true;
     }
     return false;
