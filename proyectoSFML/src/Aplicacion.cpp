@@ -74,7 +74,7 @@ void Aplicacion::procesar_logic (){
     _mapa->update();
     ///UPDATE DE PJ + CHECKEAR SUS COLISIONES
     _pj->update();
-    _vidasPJ->setVidas(_pj->getCantVidas());
+    ///_vidasPJ->setVidas(_pj->getCantVidas());
     chequearColisionPJ();
     ///UPDATE DE ENEMIGOS
     for(int i=0;i<_cantE;i++)
