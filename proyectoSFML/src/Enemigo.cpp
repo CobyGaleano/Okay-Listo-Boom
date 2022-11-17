@@ -2,11 +2,14 @@
 
 Enemigo::Enemigo()
 {
+    _estado=true;
     _frame=0;
     _velocity={2,0};
     _timeMoov=0;
     _moovSelect=std::rand()%4+1;
-    _text.loadFromFile("sprite_sheets3.png");
+    if(!_text.loadFromFile("sprite_sheets3.png")){
+       cout << "ERROR LEER SPRITE ENEMIGOS" <<endl;
+    }
     _sprite.setTexture(_text);
     _sprite.setTextureRect({7,209,17,22});
     ///_sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);

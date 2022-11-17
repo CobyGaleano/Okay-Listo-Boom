@@ -11,10 +11,11 @@
 #include "Bomba.h"
 #include "Explosion.h"
 #include "Vida.h"
+#include "Puntaje.h"
 
 class Gameplay
 {
-    protected:
+    private:
         char _nombreUsuario[30];
 
         sf::RenderWindow* _window;
@@ -24,6 +25,7 @@ class Gameplay
 
         Personaje* _pj;
         Vida* _vidasPJ;
+        Puntaje* _puntajePJ;
         sf::Vector2f posAnteriorPJ;
         int _contPasos;
         int _cantE;///cant de enemigos

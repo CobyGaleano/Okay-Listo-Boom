@@ -26,6 +26,7 @@ void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se 
     _pj = new Personaje(*_window);///inicializa personaje principal
     _vidasPJ=new Vida(*_window);
     _vidasPJ->setVidas(_pj->getCantVidas());
+    _puntajePJ=new Puntaje(*_window);
     _bomba=new Bomba(); ///inicializa la bomba
     _bombaActiva=false; ///estado de bomba en el mapa
     _explosion=new Explosion();///inicializa explosion
@@ -92,7 +93,10 @@ void Gameplay::procesar_logic (){
     ///UPDATE DE PJ + CHECKEAR SUS COLISIONES
     _pj->update();
     _vidasPJ->setVidas(_pj->getCantVidas());
-    ///comentado aca abajo .l.
+    if(_pj->getCantVidas()<=0){
+        gameOver=true;
+    }
+    _puntajePJ->setPuntaje(_pj->getPuntaje());
     chequearColisionPJ();
     ///UPDATE DE ENEMIGOS
     for(int i=0;i<_cantE;i++)
@@ -136,15 +140,15 @@ void Gameplay::chequearColisionPJ(){
         }
     }
     for(int i=0;i<_cantE;i++){
-        if(_pj->siColisiona(_vEnemigos[i])){
+        if(_pj->siColisiona(_vEnemigos[i])&&_vEnemigos[i].getEstado()==true){
             _pj->muere();
         }
     }
-    if(_pj->siColisiona(*_explosion)){
+    /*if(_pj->siColisiona(*_explosion)){
         _pj->muere();
         cout << "ESTA ACA?" << endl;
         _bombaActiva=false;
-    }
+    }*/
 }
 
 void Gameplay::chequearColisionExplosion(){
@@ -153,6 +157,15 @@ void Gameplay::chequearColisionExplosion(){
         if(_explosion->siColisiona(*_bloque)&& _bloque->getTipo()==2){
             _bloque->destruir();
             break;
+        }
+    }
+    for(int i=0;i<_cantE;i++){
+        for(int j=0; j<_cantE;j++){
+            if(_explosion->siColisiona(_vEnemigos[i])&&_vEnemigos[i].getEstado()==true){
+                _vEnemigos[j].setPos(posAnteriorEnemigo[j]);
+                _vEnemigos[j].setEstado(false);///si la explosion toca al enemigo, lo da de baja
+                _pj->setPuntaje(_pj->getPuntaje()+10);
+            }
         }
     }
 }
@@ -166,6 +179,7 @@ void Gameplay::chequearColisionEnemigo(){
             }
         }
     }
+
 }
 
 void Gameplay::renderizar(){///en esta funcion va todos los draw
@@ -182,14 +196,17 @@ void Gameplay::renderizar(){///en esta funcion va todos los draw
         _window->draw(*_explosion);
     }
     _window->draw(*_vidasPJ);
+    _window->draw(*_puntajePJ);
     _window->draw(*_pj);
+    cout << "Renderiza correctamente" << endl;
     for(int i=0;i<_cantE;i++)
     {
-        _window->draw(_vEnemigos[i]);
+        if(_vEnemigos[i].getEstado()==true){
+            _window->draw(_vEnemigos[i]);
+        }
     }
     ///------------
     _window->display();
-    cout << "Renderiza correctamente" << endl;
 }
 
 int Gameplay::getCantEnemigos(){
@@ -205,6 +222,7 @@ bool Gameplay::guardarPartida(){
     _pj->guardarPersonaje();
     _bomba->guardarBomba();
     _vidasPJ->guardarVida();
+    _puntajePJ->guardarPuntaje();
     _mapa->guardarMapa();
     for(int i=0;i<_cantE;i++){
         _vEnemigos[i].guardarEnemigo(i);
@@ -225,13 +243,14 @@ bool Gameplay::cargarJuego(){
     _pj->cargarPersonaje(1);
     _bomba->cargarBomba(1);
     _vidasPJ->cargarVida(1);
+    _puntajePJ->cargarPuntaje(1);
     _mapa->cargarMapa(1);
     _cantBloques = _mapa->getCantBloques();
-    posAnteriorEnemigo = new sf::Vector2f[_cantE];
     for(int i=0;i<_cantE;i++){
         _vEnemigos[i].cargarEnemigo(i);
-        _vEnemigos[i].respawn(posAnteriorEnemigo[i]);
+        posAnteriorEnemigo[i]=_vEnemigos[i].getPos();
     }
+
 }
 
 Gameplay::~Gameplay(){

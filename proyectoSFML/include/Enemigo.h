@@ -16,6 +16,8 @@ class Enemigo: public sf::Drawable, public Colisionable
         sf::FloatRect getBounds() const override;
 
         void setPos(sf::Vector2f p);
+        void setEstado(bool es){_estado=es;}
+        bool getEstado(){return _estado;}
 
         bool guardarEnemigo(int pos);
         bool cargarEnemigo(int pos);
@@ -29,6 +31,7 @@ class Enemigo: public sf::Drawable, public Colisionable
         int _moovSelect;
         float _timeMoov;
         float _frame;
+        bool _estado;
 
 };
 

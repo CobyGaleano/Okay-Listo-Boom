@@ -41,6 +41,9 @@ class Personaje: public sf::Drawable, public Colisionable
         bool cargarPersonaje(int pos);
         bool guardarPersonaje();
         int getCantVidas(){return _cantVidas;}
+
+        int getPuntaje(){return _puntaje;}
+        void setPuntaje(int p){_puntaje=p;}
     private:
         sf::Sprite _sprite;
         sf::Texture _texture;
@@ -56,6 +59,7 @@ class Personaje: public sf::Drawable, public Colisionable
         PersonajeState _state=PersonajeState::Idle;
 
         int _cantVidas;
+        int _puntaje;
         sf::RenderWindow * _ventana;
 };
 
