@@ -16,11 +16,11 @@ void Explosion::update()
 {
     if(_explosion==true)
     {
-        _frame+=0.02;
+        _frame+=0.15;
         _sprite.setTextureRect({0+int(_frame)*83,0,79,79});
         _sprite.setPosition(_posicion);
     }
-    if(_frame>=4)
+    if(_frame>=5)
     {
         _frame=0;
         _explosion=false;

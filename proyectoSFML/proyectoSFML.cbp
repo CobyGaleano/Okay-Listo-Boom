@@ -20,6 +20,7 @@
 					<Add library="sfml-graphics" />
 					<Add library="sfml-network" />
 					<Add library="sfml-system" />
+					<Add library="sfml-audio" />
 					<Add directory="SFML/lib" />
 				</Linker>
 			</Target>

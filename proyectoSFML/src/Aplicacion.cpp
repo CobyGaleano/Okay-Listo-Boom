@@ -59,7 +59,7 @@ Aplicacion::Aplicacion(sf::Vector2u resolucion)
 void Aplicacion::iniciar(){///aca se inicializan las variables y elementos que se utilizan dentro de la clase
     srand(time(0));
 
-    _window->setFramerateLimit(60); ///setea fps
+    _window->setFramerateLimit(20); ///setea fps
     ///PERSONAJE
     _pj = new Personaje(*_window);///inicializa personaje principal
     _vidasPJ=new Vida(*_window);
@@ -134,7 +134,6 @@ void Aplicacion::procesar_logic (){
     ///PJ PONE BOMBA -> Por ahora solo puede poner una por vez y recien cuando explota
      if(_pj->getPusoBomba()==true && _bomba->getEstado()==false)
     {
-        _pj->RestarBombas();
         pos=(_pj->getPos());
         _bomba->setEstado(_pj->getPusoBomba());
         _bomba->setPos(pos);
@@ -146,7 +145,7 @@ void Aplicacion::procesar_logic (){
     _explosion->setExplosion(_bomba->getExplosion());
     if(_explosion->getExplosion()==true)
     {
-        _explosion->setPos(_bomba->getPos());
+        _explosion->setPos(pos);
         _pj->SumarBomba();
         _explosion->update();
         _bomba->setExplosion(_explosion->getExplosion());

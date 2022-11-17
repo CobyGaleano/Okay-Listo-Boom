@@ -4,7 +4,7 @@ MainMenu::MainMenu(){
 
     buffer.loadFromFile("MenuTheme.wav");
     sound.setBuffer(buffer);
-    sound.play();
+    //sound.play();
     ///ctor
 
 }
