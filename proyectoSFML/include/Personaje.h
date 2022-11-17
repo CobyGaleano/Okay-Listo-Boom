@@ -42,6 +42,8 @@ class Personaje: public sf::Drawable, public Colisionable
         sf::Sprite _sprite;
         sf::Texture _texture;
         sf::Vector2f _velocity;
+        sf::SoundBuffer buffer;
+        sf::Sound sound;
 
         sf::Vector2f _movePosition={0,0};
 

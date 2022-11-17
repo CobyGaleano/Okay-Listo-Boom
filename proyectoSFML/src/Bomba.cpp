@@ -23,8 +23,9 @@ void Bomba::update()
         if (_frame>3){_frame=0;}
         _sprite.setTextureRect({114+int(_frame)*23,160,23,26});
         _sprite.setPosition(_posicion);
-        _tiempo-=0.05;
+        _tiempo-=0.26;
     }
+
     if(_tiempo<=0)
     {
         _explosion=true;

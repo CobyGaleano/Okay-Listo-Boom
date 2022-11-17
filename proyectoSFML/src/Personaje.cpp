@@ -7,7 +7,9 @@ Personaje::Personaje(sf::RenderWindow &ventana)
     _frame=0;
     _cantBombas=1;
     _pusoBomba=false;
-    _velocity={2,2};
+    _velocity={4,4};
+    buffer.loadFromFile("Pasos.wav");
+    sound.setBuffer(buffer);
     _texture.loadFromFile("sprite_sheets3.png");
     _sprite.setTexture(_texture);
     _sprite.setTextureRect({20,130,18,21});
@@ -29,7 +31,7 @@ void Personaje::update()
     case PersonajeState::m_up:
         {
             ///cambio sprite
-            _frame +=0.05;
+            _frame +=0.2;
 
             if(_frame>=3)
             {
@@ -37,13 +39,15 @@ void Personaje::update()
             }
             _sprite.setTextureRect({0+int(_frame)*20,76,20,21});
             _sprite.move(_movePosition);
+            if(_frame>=2.5){sound.play();}
+
 
             }
         break;
     case PersonajeState::m_down:
         {
             ///cambio sprite
-            _frame +=0.05;
+            _frame +=0.2;
 
             if(_frame>=3)
             {
@@ -51,15 +55,14 @@ void Personaje::update()
             }
             _sprite.setTextureRect({0+int(_frame)*20,130,20,21});
             _sprite.move(_movePosition);
-
-
+            if(_frame>=2.5){sound.play();}
 
         }
         break;
     case PersonajeState::m_left:
         {
             ///cambio sprite
-            _frame +=0.05;
+            _frame +=0.2;
 
             if(_frame>=3)
             {
@@ -67,7 +70,7 @@ void Personaje::update()
             }
             _sprite.setTextureRect({0+int(_frame)*20,103,20,21});
             _sprite.move(_movePosition);
-
+            if(_frame>=2.5){sound.play();}
 
             if(_movePosition.x<0)///que mire hacia donde corre
             {
@@ -82,7 +85,7 @@ void Personaje::update()
     case PersonajeState::m_right:
         {
             ///cambio sprite
-            _frame +=0.05;
+            _frame +=0.2;
 
             if(_frame>=3)
             {
@@ -90,6 +93,7 @@ void Personaje::update()
             }
             _sprite.setTextureRect({0+int(_frame)*20,103,20,21});
             _sprite.move(_movePosition);
+            if(_frame>=2.5){sound.play();}
 
             if(_movePosition.x<0)  ///que mire hacia donde corre
             {

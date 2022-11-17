@@ -3,7 +3,7 @@
 Enemigo::Enemigo()
 {
     _frame=0;
-    _velocity={0.25,0};
+    _velocity={2,0};
     _timeMoov=0;
     _moovSelect=std::rand()%4+1;
     _text.loadFromFile("sprite_sheets3.png");
@@ -21,28 +21,28 @@ void Enemigo::draw(sf::RenderTarget& target,sf::RenderStates states)const //dibu
 
 void Enemigo::update()
 {
-    _timeMoov+=0.03;
+    _timeMoov+=0.15;
     _timeRespawn --;
     switch(_moovSelect)
     {
         case 1:
         {
-            _velocity={0.25,0};
+            _velocity={3,0};
         }
     break;
         case 2:
         {
-            _velocity={-0.25,0};
+            _velocity={-3,0};
         }
     break;
         case 3:
         {
-            _velocity={0,0.25};
+            _velocity={0,3};
         }
     break;
         case 4:
         {
-            _velocity={0,-0.25};
+            _velocity={0,-3};
         }
 }
     if(_timeMoov>=15)
@@ -55,7 +55,7 @@ void Enemigo::update()
         _newPosition={std::rand()%525+_sprite.getGlobalBounds().width,std::rand()%450+_sprite.getGlobalBounds().height};
     }
 
-    _frame+=0.033;
+    _frame+=0.15;
 
     if (_frame>3){
         _frame=0;

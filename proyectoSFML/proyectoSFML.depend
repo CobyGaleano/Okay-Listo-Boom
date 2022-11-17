@@ -461,13 +461,14 @@
 1667169945 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\proyectosfml\src\colisionable.cpp
 	"Colisionable.h"
 
-1668645171 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\main.cpp
+1668666366 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\main.cpp
 	"MainMenu.h"
 	"Aplicacion.h"
 	"Librerias.h"
 
-1668517010 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\librerias.h
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\librerias.h
 	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
 	<iostream>
 	<ctime>
 	<stdlib.h>
@@ -479,7 +480,7 @@
 	"Explosion.h"
 	"Bomba.h"
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
 	<SFML/Graphics/BlendMode.hpp>
 	<SFML/Graphics/CircleShape.hpp>
@@ -508,7 +509,7 @@
 	<SFML/Graphics/VertexBuffer.hpp>
 	<SFML/Graphics/View.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window.hpp
 	<SFML/System.hpp>
 	<SFML/Window/Clipboard.hpp>
 	<SFML/Window/Context.hpp>
@@ -525,7 +526,7 @@
 	<SFML/Window/WindowHandle.hpp>
 	<SFML/Window/WindowStyle.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system.hpp
 	<SFML/Config.hpp>
 	<SFML/System/Clock.hpp>
 	<SFML/System/Err.hpp>
@@ -545,24 +546,24 @@
 	<SFML/System/Vector2.hpp>
 	<SFML/System/Vector3.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\config.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\config.hpp
 	"TargetConditionals.h"
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\clock.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\clock.hpp
 	<SFML/System/Export.hpp>
 	<SFML/System/Time.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\export.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\export.hpp
 	<SFML/Config.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\time.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\time.hpp
 	<SFML/System/Export.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\err.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\err.hpp
 	<SFML/System/Export.hpp>
 	<ostream>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\fileinputstream.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\fileinputstream.hpp
 	<SFML/Config.hpp>
 	<SFML/System/Export.hpp>
 	<SFML/System/InputStream.hpp>
@@ -570,32 +571,32 @@
 	<cstdio>
 	<string>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\inputstream.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\inputstream.hpp
 	<SFML/Config.hpp>
 	<SFML/System/Export.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\noncopyable.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\noncopyable.hpp
 	<SFML/System/Export.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\lock.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\lock.hpp
 	<SFML/System/Export.hpp>
 	<SFML/System/NonCopyable.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\memoryinputstream.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\memoryinputstream.hpp
 	<SFML/Config.hpp>
 	<SFML/System/InputStream.hpp>
 	<SFML/System/Export.hpp>
 	<cstdlib>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\mutex.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\mutex.hpp
 	<SFML/System/Export.hpp>
 	<SFML/System/NonCopyable.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\sleep.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\sleep.hpp
 	<SFML/System/Export.hpp>
 	<SFML/System/Time.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\string.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\string.hpp
 	<SFML/System/Export.hpp>
 	<SFML/System/Utf.hpp>
 	<iterator>
@@ -603,7 +604,7 @@
 	<string>
 	<SFML/System/String.inl>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\utf.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\utf.hpp
 	<SFML/Config.hpp>
 	<algorithm>
 	<locale>
@@ -611,96 +612,96 @@
 	<cstdlib>
 	<SFML/System/Utf.inl>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\utf.inl
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\utf.inl
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\string.inl
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\string.inl
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\thread.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\thread.hpp
 	<SFML/System/Export.hpp>
 	<SFML/System/NonCopyable.hpp>
 	<cstdlib>
 	<SFML/System/Thread.inl>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\thread.inl
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\thread.inl
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\threadlocal.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\threadlocal.hpp
 	<SFML/System/Export.hpp>
 	<SFML/System/NonCopyable.hpp>
 	<cstdlib>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\threadlocalptr.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\threadlocalptr.hpp
 	<SFML/System/ThreadLocal.hpp>
 	<SFML/System/ThreadLocalPtr.inl>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\threadlocalptr.inl
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\threadlocalptr.inl
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\vector2.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\vector2.hpp
 	<SFML/System/Vector2.inl>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\vector2.inl
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\vector2.inl
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\vector3.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\vector3.hpp
 	<SFML/System/Vector3.inl>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\vector3.inl
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\system\vector3.inl
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\clipboard.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\clipboard.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/System/String.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\export.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\export.hpp
 	<SFML/Config.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\context.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\context.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/Window/GlResource.hpp>
 	<SFML/Window/ContextSettings.hpp>
 	<SFML/System/NonCopyable.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\glresource.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\glresource.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/System/NonCopyable.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\contextsettings.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\contextsettings.hpp
 	<SFML/Config.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\cursor.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\cursor.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/System/NonCopyable.hpp>
 	<SFML/System/Vector2.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\event.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\event.hpp
 	<SFML/Config.hpp>
 	<SFML/Window/Joystick.hpp>
 	<SFML/Window/Keyboard.hpp>
 	<SFML/Window/Mouse.hpp>
 	<SFML/Window/Sensor.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\joystick.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\joystick.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/System/String.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\keyboard.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\keyboard.hpp
 	<SFML/Window/Export.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\mouse.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\mouse.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/System/Vector2.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\sensor.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\sensor.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/System/Vector3.hpp>
 	<SFML/System/Time.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\touch.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\touch.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/System/Vector2.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\videomode.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\videomode.hpp
 	<SFML/Window/Export.hpp>
 	<vector>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\window.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\window.hpp
 	<SFML/Window/ContextSettings.hpp>
 	<SFML/Window/Cursor.hpp>
 	<SFML/Window/Export.hpp>
@@ -713,54 +714,54 @@
 	<SFML/System/String.hpp>
 	<SFML/System/Vector2.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\windowhandle.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\windowhandle.hpp
 	<SFML/Config.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\windowstyle.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\window\windowstyle.hpp
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\blendmode.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\blendmode.hpp
 	<SFML/Graphics/Export.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\export.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\export.hpp
 	<SFML/Config.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\circleshape.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\circleshape.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Shape.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\shape.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\shape.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Graphics/Transformable.hpp>
 	<SFML/Graphics/VertexArray.hpp>
 	<SFML/System/Vector2.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\drawable.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\drawable.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/RenderStates.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\renderstates.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\renderstates.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/BlendMode.hpp>
 	<SFML/Graphics/Transform.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\transform.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\transform.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Rect.hpp>
 	<SFML/System/Vector2.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\rect.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\rect.hpp
 	<SFML/System/Vector2.hpp>
 	<algorithm>
 	<SFML/Graphics/Rect.inl>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\rect.inl
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\rect.inl
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\transformable.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\transformable.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Transform.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\vertexarray.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\vertexarray.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Vertex.hpp>
 	<SFML/Graphics/PrimitiveType.hpp>
@@ -768,22 +769,22 @@
 	<SFML/Graphics/Drawable.hpp>
 	<vector>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\vertex.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\vertex.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Color.hpp>
 	<SFML/System/Vector2.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\color.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\color.hpp
 	<SFML/Graphics/Export.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\primitivetype.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\primitivetype.hpp
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\convexshape.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\convexshape.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Shape.hpp>
 	<vector>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\font.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\font.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Glyph.hpp>
 	<SFML/Graphics/Texture.hpp>
@@ -794,27 +795,27 @@
 	<string>
 	<vector>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\glyph.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\glyph.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Rect.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\texture.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\texture.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Image.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\image.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\image.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Color.hpp>
 	<SFML/Graphics/Rect.hpp>
 	<string>
 	<vector>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\rectangleshape.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\rectangleshape.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Shape.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\rendertarget.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\rendertarget.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Color.hpp>
 	<SFML/Graphics/Rect.hpp>
@@ -826,26 +827,26 @@
 	<SFML/Graphics/Vertex.hpp>
 	<SFML/System/NonCopyable.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\view.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\view.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Rect.hpp>
 	<SFML/Graphics/Transform.hpp>
 	<SFML/System/Vector2.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\rendertexture.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\rendertexture.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Texture.hpp>
 	<SFML/Graphics/RenderTarget.hpp>
 	<SFML/Window/ContextSettings.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\renderwindow.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\renderwindow.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/RenderTarget.hpp>
 	<SFML/Graphics/Image.hpp>
 	<SFML/Window/Window.hpp>
 	<string>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\shader.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\shader.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Glsl.hpp>
 	<SFML/Window/GlResource.hpp>
@@ -855,23 +856,23 @@
 	<map>
 	<string>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\glsl.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\glsl.hpp
 	<SFML/Graphics/Transform.hpp>
 	<SFML/Graphics/Color.hpp>
 	<SFML/System/Vector2.hpp>
 	<SFML/System/Vector3.hpp>
 	<SFML/Graphics/Glsl.inl>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\glsl.inl
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\glsl.inl
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\sprite.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\sprite.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Graphics/Transformable.hpp>
 	<SFML/Graphics/Vertex.hpp>
 	<SFML/Graphics/Rect.hpp>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\text.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\text.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Graphics/Transformable.hpp>
@@ -882,68 +883,65 @@
 	<string>
 	<vector>
 
-1668517059 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\vertexbuffer.hpp
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\graphics\vertexbuffer.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/PrimitiveType.hpp>
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1668635655 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\personaje.h
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\personaje.h
 	<SFML/Graphics.hpp>
 	"Colisionable.h"
 	"Vida.h"
 	"../Librerias.h"
 
-1668517058 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\colisionable.h
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\colisionable.h
 	<SFML/Graphics.hpp>
 
-1668641717 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\mapa.h
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\mapa.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	"Bloques.h"
 
-1668645171 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\enemigo.h
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\enemigo.h
 	"Personaje.h"
 	"Colisionable.h"
 
-1668517059 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\colisionable.cpp
+1668666366 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\colisionable.cpp
 	"Colisionable.h"
 
-1668645171 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\enemigo.cpp
+1668666366 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\enemigo.cpp
 	"Enemigo.h"
 
-1668641851 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mapa.cpp
+1668666366 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mapa.cpp
 	"Mapa.h"
 
-1668635723 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\personaje.cpp
+1668666366 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\personaje.cpp
 	"Personaje.h"
 
-1668579817 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\bloques.cpp
+1668666366 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\bloques.cpp
 	"Bloques.h"
 
-1668579817 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\bloques.h
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\bloques.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	"Colisionable.h"
 
-1668657265 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\mainmenu.h
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\mainmenu.h
 	<iostream>
 	"../Librerias.h"
+	<SFML/Audio.hpp>
 
-1668658763 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mainmenu.cpp
+1668666366 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mainmenu.cpp
 	"MainMenu.h"
 
-1667528620 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\gameplay.cpp
-	"GamePlay.h"
+1668695754 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\gameplay.cpp
+	"Gameplay.h"
 
-1667528620 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\gameplay.h
-
-1668653935 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
-	"Aplicacion.h"
-
-1668639707 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\aplicacion.h
+1668695754 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\gameplay.h
 	<SFML/Graphics.hpp>
-	"MainMenu.h"
+	<SFML/Audio.hpp>
+	<ctime>
 	"Personaje.h"
 	"Enemigo.h"
 	"Mapa.h"
@@ -951,7 +949,17 @@
 	"Bomba.h"
 	"Explosion.h"
 	"Vida.h"
+
+1668666366 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
+	"Aplicacion.h"
+
+1668696078 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\aplicacion.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
 	<ctime>
+	"MainMenu.h"
+	"Gameplay.h"
 
 1668228772 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom-main\proyectosfml\main.cpp
 	"MainMenu.h"
@@ -1437,17 +1445,19 @@
 1668355321 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom-main\proyectosfml\src\bomba.cpp
 	"Bomba.h"
 
-1668642527 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\main.cpp
+1668661166 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\main.cpp
 	"MainMenu.h"
 	"Aplicacion.h"
 	"Librerias.h"
 
-1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\mainmenu.h
+1668666322 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\mainmenu.h
 	<iostream>
 	"../Librerias.h"
+	<SFML/Audio.hpp>
 
-1668384910 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\librerias.h
+1668661366 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\librerias.h
 	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
 	<iostream>
 	<ctime>
 	<stdlib.h>
@@ -1868,7 +1878,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1668640696 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\personaje.h
+1668663125 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\personaje.h
 	<SFML/Graphics.hpp>
 	"Colisionable.h"
 	"Vida.h"
@@ -1882,12 +1892,13 @@
 	<SFML/Graphics.hpp>
 	"Bloques.h"
 
-1668644657 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\enemigo.h
+1668660944 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\enemigo.h
 	"Personaje.h"
 	"Colisionable.h"
 
-1668642371 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\aplicacion.h
+1668666322 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\aplicacion.h
 	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
 	"MainMenu.h"
 	"Personaje.h"
 	"Enemigo.h"
@@ -1902,7 +1913,7 @@
 	<SFML/Graphics.hpp>
 	"../Librerias.h"
 
-1668642371 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\aplicacion.cpp
+1668666322 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\aplicacion.cpp
 	"Aplicacion.h"
 
 1668640696 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\bloques.cpp
@@ -1913,49 +1924,49 @@
 	<SFML/Graphics.hpp>
 	"Colisionable.h"
 
-1668385395 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\bomba.cpp
+1668664684 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\bomba.cpp
 	"Bomba.h"
 
 1668228772 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\colisionable.cpp
 	"Colisionable.h"
 
-1668644657 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\enemigo.cpp
+1668663846 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\enemigo.cpp
 	"Enemigo.h"
 
-1668640696 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\mainmenu.cpp
+1668666344 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\mainmenu.cpp
 	"MainMenu.h"
 
 1668642371 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\mapa.cpp
 	"Mapa.h"
 
-1668640696 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\personaje.cpp
+1668663945 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\personaje.cpp
 	"Personaje.h"
 
 1668640696 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\explosion.h
 	"../Librerias.h"
 
-1668640696 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\explosion.cpp
+1668664494 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\explosion.cpp
 	"Explosion.h"
 
-1668585793 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\explosion.h
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\explosion.h
 	"../Librerias.h"
 
-1668629519 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\bomba.h
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\bomba.h
 	<SFML/Graphics.hpp>
 	"../Librerias.h"
 
-1668642277 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\bomba.cpp
+1668666366 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\bomba.cpp
 	"Bomba.h"
 
-1668585818 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\explosion.cpp
+1668666366 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\explosion.cpp
 	"Explosion.h"
 
-1668638252 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\vida.h
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\vida.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	<sstream>
 
-1668638440 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\vida.cpp
+1668666366 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\vida.cpp
 	"Vida.h"
 
 1668640696 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\vida.h
@@ -1963,6 +1974,226 @@
 	<SFML/Graphics.hpp>
 	<sstream>
 
-1668642371 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\vida.cpp
+1668661274 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\vida.cpp
 	"Vida.h"
+
+1668660870 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\src\partida.cpp
+	"Partida.h"
+
+1668661040 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\include\partida.h
+	"Aplicacion.h"
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio.hpp
+	<SFML/System.hpp>
+	<SFML/Audio/InputSoundFile.hpp>
+	<SFML/Audio/Listener.hpp>
+	<SFML/Audio/Music.hpp>
+	<SFML/Audio/OutputSoundFile.hpp>
+	<SFML/Audio/Sound.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundBufferRecorder.hpp>
+	<SFML/Audio/SoundFileFactory.hpp>
+	<SFML/Audio/SoundFileReader.hpp>
+	<SFML/Audio/SoundFileWriter.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/Audio/SoundStream.hpp>
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\inputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<algorithm>
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\export.hpp
+	<SFML/Config.hpp>
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\listener.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/Vector3.hpp>
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\music.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundStream.hpp>
+	<SFML/Audio/InputSoundFile.hpp>
+	<SFML/System/Mutex.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<vector>
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundstream.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/Mutex.hpp>
+	<cstdlib>
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundsource.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Vector3.hpp>
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\alresource.hpp
+	<SFML/Audio/Export.hpp>
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\outputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<string>
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\sound.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Time.hpp>
+	<cstdlib>
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundbuffer.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<vector>
+	<set>
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundbufferrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<vector>
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/Time.hpp>
+	<vector>
+	<string>
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundfilefactory.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
+	<vector>
+	<SFML/Audio/SoundFileFactory.inl>
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundfilefactory.inl
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundfilereader.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
+
+1668228772 c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundfilewriter.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio.hpp
+	<SFML/System.hpp>
+	<SFML/Audio/InputSoundFile.hpp>
+	<SFML/Audio/Listener.hpp>
+	<SFML/Audio/Music.hpp>
+	<SFML/Audio/OutputSoundFile.hpp>
+	<SFML/Audio/Sound.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundBufferRecorder.hpp>
+	<SFML/Audio/SoundFileFactory.hpp>
+	<SFML/Audio/SoundFileReader.hpp>
+	<SFML/Audio/SoundFileWriter.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/Audio/SoundStream.hpp>
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\inputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<algorithm>
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\export.hpp
+	<SFML/Config.hpp>
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\listener.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/Vector3.hpp>
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\music.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundStream.hpp>
+	<SFML/Audio/InputSoundFile.hpp>
+	<SFML/System/Mutex.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<vector>
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundstream.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/Mutex.hpp>
+	<cstdlib>
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundsource.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Vector3.hpp>
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\alresource.hpp
+	<SFML/Audio/Export.hpp>
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\outputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<string>
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\sound.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Time.hpp>
+	<cstdlib>
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundbuffer.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<vector>
+	<set>
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundbufferrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<vector>
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/Time.hpp>
+	<vector>
+	<string>
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundfilefactory.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
+	<vector>
+	<SFML/Audio/SoundFileFactory.inl>
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundfilefactory.inl
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundfilereader.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\sfml\include\sfml\audio\soundfilewriter.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
+
+1668666366 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\partida.cpp
+	"Partida.h"
+
+1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\partida.h
+	"Aplicacion.h"
 

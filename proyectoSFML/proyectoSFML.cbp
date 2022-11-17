@@ -20,6 +20,7 @@
 					<Add library="sfml-graphics" />
 					<Add library="sfml-network" />
 					<Add library="sfml-system" />
+					<Add library="sfml-audio" />
 					<Add directory="SFML/lib" />
 				</Linker>
 			</Target>
@@ -55,6 +56,7 @@
 		<Unit filename="include/Colisionable.h" />
 		<Unit filename="include/Enemigo.h" />
 		<Unit filename="include/Explosion.h" />
+		<Unit filename="include/Gameplay.h" />
 		<Unit filename="include/MainMenu.h" />
 		<Unit filename="include/Mapa.h" />
 		<Unit filename="include/Partida.h" />
@@ -67,6 +69,7 @@
 		<Unit filename="src/Colisionable.cpp" />
 		<Unit filename="src/Enemigo.cpp" />
 		<Unit filename="src/Explosion.cpp" />
+		<Unit filename="src/Gameplay.cpp" />
 		<Unit filename="src/MainMenu.cpp" />
 		<Unit filename="src/Mapa.cpp" />
 		<Unit filename="src/Partida.cpp" />
