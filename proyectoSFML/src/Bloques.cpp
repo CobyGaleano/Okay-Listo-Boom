@@ -52,3 +52,21 @@ sf::FloatRect Bloques::getBounds() const
 {
     return _sprite.getGlobalBounds();
 }
+bool Bloques::guardarBloques(int pos){
+    FILE *p;
+    p=fopen("Bloques.dat","rb+");
+    if(p==NULL) return false;
+    fseek(p, pos * sizeof(Bloques), 0);
+    bool escribio=fwrite(this, sizeof (Bloques), 1, p);
+    fclose(p);
+    return escribio;
+}
+bool Bloques::cargarBloques(int pos){
+    FILE *p;
+    p=fopen("Bloques.dat","rb");
+    if(p==NULL) return false;
+    fseek(p, pos * sizeof (Bloques), 0);
+    bool leyo = fread(this, sizeof (Bloques), 1, p);
+    fclose(p);
+    return leyo;
+}

@@ -17,6 +17,9 @@ class Enemigo: public sf::Drawable, public Colisionable
 
         void setPos(sf::Vector2f p);
 
+        bool guardarEnemigo(int pos);
+        bool cargarEnemigo(int pos);
+
     private:
         sf::Sprite _sprite;
         sf::Texture _text;

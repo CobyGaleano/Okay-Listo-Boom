@@ -8,6 +8,14 @@ Gameplay::Gameplay(sf::Vector2u resolucion, sf::RenderWindow &window){
     iniciar();
     gameLoop();
 }
+void Gameplay::run(sf::Vector2u resolucion, sf::RenderWindow &window){
+    _window = &window;
+    _evento=new sf::Event;
+    cout << "ESTA EN RUN" <<endl;
+    iniciar();
+    cargarJuego();
+    gameLoop();
+}
 
 void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se utilizan dentro de la clase
     srand(time(0));
@@ -43,12 +51,18 @@ void Gameplay::gameLoop(){
         while (_window->pollEvent(*_evento))
         {
             if (_evento->type == sf::Event::Closed){
+                bool guardo=guardarPartida();
+                if(!guardo){
+                    cout << "Error al guardar partida"<<endl;
+                }else{
+                    cout << "Partida guardada con exito"<<endl;
+                }
                 _window->close();
-                ///guardar partida
                 gameOver=true;
             }
         }
             ///CMD CONTROLES
+            cout << "Iniciando gameLoop" << endl;
             procesar_eventos();
             ///UPDATES LOGICA DEL JUEGO
             procesar_logic();
@@ -61,13 +75,15 @@ void Gameplay::gameLoop(){
 void Gameplay::procesar_eventos (){
     ///aca habria que procesar todos los eventos por ejemplo los del teclado
     ///----CMD-----
+    cout << "Entra en procesar eventos" << endl;
     posAnteriorPJ=_pj->getPos();
     _pj->cmd();
-
+    cout << "Procesa eventos correctamente"<<endl;
 
 }
 
 void Gameplay::procesar_logic (){
+    cout << "Procesando logica" << endl;
     ///creo que aca habria que revisar las coliciones e interactuar lo que pasa con el juego para despues mostrarlo
     ///----UPDATES-----
     sf::Vector2f pos;
@@ -107,6 +123,7 @@ void Gameplay::procesar_logic (){
     }
     chequearColisionExplosion();
     //std::cout<<std::endl<<_bomba->getPos().x<<" "<<_bomba->getPos().y;
+    cout << "Procesa logica correctamente" <<endl;
 }
 
 void Gameplay::chequearColisionPJ(){
@@ -153,6 +170,7 @@ void Gameplay::chequearColisionEnemigo(){
 
 void Gameplay::renderizar(){///en esta funcion va todos los draw
     _window->clear();
+    cout << "RENDER" << endl;
     ///----DRAW-----
     _window->draw(*_mapa);
     if(_bomba->getEstado()==true)
@@ -165,18 +183,56 @@ void Gameplay::renderizar(){///en esta funcion va todos los draw
     }
     _window->draw(*_vidasPJ);
     _window->draw(*_pj);
-     for(int i=0;i<_cantE;i++)
+    for(int i=0;i<_cantE;i++)
     {
         _window->draw(_vEnemigos[i]);
     }
     ///------------
     _window->display();
+    cout << "Renderiza correctamente" << endl;
 }
 
 int Gameplay::getCantEnemigos(){
     return _cantE;  ///devuelve la cantidad de enemigos (creo que puede ser util mas adelante)
 }
 
+bool Gameplay::guardarPartida(){
+    FILE *p;
+    p=fopen("Partidas.dat","wb");
+    if(p==NULL) return false;
+    bool escribio = fwrite(this, sizeof (Gameplay), 1, p);
+    fclose(p);
+    _pj->guardarPersonaje();
+    _bomba->guardarBomba();
+    _vidasPJ->guardarVida();
+    _mapa->guardarMapa();
+    for(int i=0;i<_cantE;i++){
+        _vEnemigos[i].guardarEnemigo(i);
+    }
+    return escribio;
+}
+bool Gameplay::cargarPartida(int pos){
+    FILE *p;
+    p=fopen("Partidas.dat","rb");
+    if(p==NULL) return false;
+    fseek(p, pos * sizeof (Gameplay), 0);
+    bool leyo = fread(this, sizeof (Gameplay), 1, p);
+    fclose(p);
+    return leyo;
+}
+bool Gameplay::cargarJuego(){
+    ///va a cargar todos los archivos, iniciar los objetos y cargarlos desde el disco.
+    _pj->cargarPersonaje(1);
+    _bomba->cargarBomba(1);
+    _vidasPJ->cargarVida(1);
+    _mapa->cargarMapa(1);
+    _cantBloques = _mapa->getCantBloques();
+    posAnteriorEnemigo = new sf::Vector2f[_cantE];
+    for(int i=0;i<_cantE;i++){
+        _vEnemigos[i].cargarEnemigo(i);
+        _vEnemigos[i].respawn(posAnteriorEnemigo[i]);
+    }
+}
 
 Gameplay::~Gameplay(){
     delete _evento;

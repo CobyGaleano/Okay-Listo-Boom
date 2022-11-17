@@ -1,5 +1,8 @@
 #include "Personaje.h"
 
+Personaje::Personaje(){
+}
+
 Personaje::Personaje(sf::RenderWindow &ventana)
 {
     _ventana=&ventana;
@@ -193,6 +196,24 @@ void Personaje::muere()
 
 void Personaje::setPos(sf::Vector2f pos){
     _sprite.setPosition(pos);
+}
+
+bool Personaje::guardarPersonaje(){
+    FILE *p;
+    p=fopen("Personaje.dat","wb");
+    if(p==NULL) return false;
+    bool escribio = fwrite(this, sizeof (Personaje), 1, p);
+    fclose(p);
+    return escribio;
+}
+bool Personaje::cargarPersonaje(int pos){
+    FILE *p;
+    p=fopen("Personaje.dat","rb");
+    if(p==NULL) return false;
+    fseek(p, pos * sizeof (Personaje), 0);
+    bool leyo = fread(this, sizeof (Personaje), 1, p);
+    fclose(p);
+    return leyo;
 }
 
 Personaje::~Personaje(){

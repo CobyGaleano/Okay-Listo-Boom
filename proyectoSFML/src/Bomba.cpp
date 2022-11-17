@@ -44,3 +44,21 @@ sf::FloatRect Bomba::getBounds() const //obtiene coordenadas de personaje
 {                                          //para saber si colisiona
     return _sprite.getGlobalBounds();
 }
+
+bool Bomba::guardarBomba(){
+    FILE *p;
+    p=fopen("Bomba.dat","wb");
+    if(p==NULL) return false;
+    bool escribio = fwrite(this, sizeof (Bomba), 1, p);
+    fclose(p);
+    return escribio;
+}
+bool Bomba::cargarBomba(int pos){
+    FILE *p;
+    p=fopen("Bomba.dat","rb");
+    if(p==NULL) return false;
+    fseek(p, pos * sizeof (Bomba), 0);
+    bool leyo = fread(this, sizeof (Bomba), 1, p);
+    fclose(p);
+    return leyo;
+}

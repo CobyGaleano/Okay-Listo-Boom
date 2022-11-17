@@ -20,7 +20,8 @@ class Bomba: public sf::Drawable, public Colisionable
         bool getEstado(){return _estado;}
         bool getExplosion(){return _explosion;}
 
-
+        bool guardarBomba();
+        bool cargarBomba(int pos);
     private:
         sf::Sprite _sprite;
         sf::Texture _texture;

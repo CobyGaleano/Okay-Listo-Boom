@@ -1,19 +1,21 @@
+#pragma once
 #ifndef PARTIDA_H
 #define PARTIDA_H
-#include "Aplicacion.h"
+#include <cstring>
+#include "Gameplay.h"
 
 
-class Partida
+class Partida: public Gameplay
 {
     private:
-        char usuario[30];
+
 
     public:
         Partida();
         bool guardarPartida();
-        bool cargarPartida();
+        bool cargarPartida(int pos);
 
-        void operator=(Aplicacion &obj);
+        bool operator=(Gameplay &gp);
 };
 
 #endif // PARTIDA_H

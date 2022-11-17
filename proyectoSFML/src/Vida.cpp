@@ -41,3 +41,21 @@ void Vida::draw(sf::RenderTarget& target,sf::RenderStates states)const //enseña 
     target.draw(_sprite,states);
     _ventana->draw(_texto);
 }
+
+bool Vida::guardarVida(){
+    FILE *p;
+    p=fopen("Enemigo.dat","wb");
+    if(p==NULL) return false;
+    bool escribio = fwrite(this, sizeof (Vida), 1, p);
+    fclose(p);
+    return escribio;
+}
+bool Vida::cargarVida(int pos){
+    FILE *p;
+    p=fopen("Vida.dat","rb");
+    if(p==NULL) return false;
+    fseek(p, pos * sizeof (Vida), 0);
+    bool leyo = fread(this, sizeof (Vida), 1, p);
+    fclose(p);
+    return leyo;
+}

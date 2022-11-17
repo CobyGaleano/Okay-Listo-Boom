@@ -11,6 +11,7 @@ Enemigo::Enemigo()
     _sprite.setTextureRect({7,209,17,22});
     ///_sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);
     _sprite.setPosition(sf::Vector2f(float(std::rand()%5+35),float(std::rand()%5+30)));
+    _sprite.setScale(1.1f,1.1f);
     //ctor
 }
 
@@ -108,4 +109,23 @@ void Enemigo::damage()///acciones que realizar el enemigo al golpear
 sf::FloatRect Enemigo::getBounds() const
 {
     return _sprite.getGlobalBounds();
+}
+
+bool Enemigo::guardarEnemigo(int pos){
+    FILE *p;
+    p=fopen("Enemigo.dat","rb+");
+    if(p==NULL) return false;
+    fseek(p, pos * sizeof(Enemigo), 0);
+    bool escribio=fwrite(this, sizeof (Enemigo), 1, p);
+    fclose(p);
+    return escribio;
+}
+bool Enemigo::cargarEnemigo(int pos){
+    FILE *p;
+    p=fopen("Enemigo.dat","rb");
+    if(p==NULL) return false;
+    fseek(p, pos * sizeof (Enemigo), 0);
+    bool leyo = fread(this, sizeof (Enemigo), 1, p);
+    fclose(p);
+    return leyo;
 }

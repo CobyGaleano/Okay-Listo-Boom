@@ -38,6 +38,7 @@ class Mapa : public sf::Drawable, public sf::Transformable
             }
         }
     public:
+        Mapa();
         Mapa(sf::RenderWindow &window);
         void mostrar();
         void update();
@@ -46,6 +47,9 @@ class Mapa : public sf::Drawable, public sf::Transformable
         Bloques* getBloque(int pos);
 
         sf::Vector2f posicionarEnemigos(int cantE);
+
+        bool cargarMapa(int pos);
+        bool guardarMapa();
 
         ~Mapa();
 

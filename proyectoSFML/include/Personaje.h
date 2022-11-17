@@ -21,6 +21,7 @@ class Personaje: public sf::Drawable, public Colisionable
 {
     public:
         Personaje(sf::RenderWindow &ventana);
+        Personaje();
         ~Personaje();
         void cmd();
         void update();
@@ -37,6 +38,8 @@ class Personaje: public sf::Drawable, public Colisionable
         sf::FloatRect getBounds() const override;
         sf::Vector2f getPos(){return _sprite.getPosition();}
 
+        bool cargarPersonaje(int pos);
+        bool guardarPersonaje();
         int getCantVidas(){return _cantVidas;}
     private:
         sf::Sprite _sprite;

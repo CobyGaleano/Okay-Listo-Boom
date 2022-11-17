@@ -32,6 +32,8 @@ class Bloques : public sf::Drawable, public sf::Transformable, public Colisionab
         void draw(sf::RenderTarget& target,sf::RenderStates states)const;
 
         sf::FloatRect getBounds() const override; ///colision
+        bool guardarBloques(int pos);
+        bool cargarBloques(int pos);
 };
 
 #endif // BLOQUES_H

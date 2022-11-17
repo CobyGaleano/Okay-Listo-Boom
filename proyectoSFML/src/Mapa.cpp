@@ -1,4 +1,7 @@
 #include "Mapa.h"
+
+Mapa::Mapa(){
+}
 Mapa::Mapa(sf::RenderWindow &window)
 {
     srand(time(0));
@@ -152,6 +155,31 @@ Bloques* Mapa::getBloque(int pos){
     Bloques * bloq=&_vBloques[pos];
     return bloq;
 }
+
+bool Mapa::guardarMapa(){
+    FILE *p;
+    p=fopen("Mapa.dat","wb");
+    if(p==NULL) return false;
+    bool escribio = fwrite(this, sizeof (Mapa), 1, p);
+    fclose(p);
+    for(int i=0;i<_cantB;i++){
+        _vBloques[i].guardarBloques(i);
+    }
+    return escribio;
+}
+bool Mapa::cargarMapa(int pos){
+    FILE *p;
+    p=fopen("Mapa.dat","rb");
+    if(p==NULL) return false;
+    fseek(p, pos * sizeof (Mapa), 0);
+    bool leyo = fread(this, sizeof (Mapa), 1, p);
+    fclose(p);
+    for(int i=0;i<_cantB;i++){
+        _vBloques[i].cargarBloques(i);
+    }
+    return leyo;
+}
+
 
 Mapa::~Mapa()
 {

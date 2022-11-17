@@ -13,6 +13,9 @@ class Vida : public sf::Drawable
         void draw(sf::RenderTarget& target,sf::RenderStates states)const;
         void setVidas(int c);
 
+        bool guardarVida();
+        bool cargarVida(int pos);
+
 
     private:
         string _cantidad;

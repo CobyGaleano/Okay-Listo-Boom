@@ -20,6 +20,7 @@ class Aplicacion
 
         Gameplay* gamePlay;
 
+
         bool gameOver=false;
 
     public:

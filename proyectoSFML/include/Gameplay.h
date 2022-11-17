@@ -1,3 +1,4 @@
+#pragma once
 #ifndef GAMEPLAY_H
 #define GAMEPLAY_H
 #include <SFML/Graphics.hpp>
@@ -13,7 +14,7 @@
 
 class Gameplay
 {
-    private:
+    protected:
         char _nombreUsuario[30];
 
         sf::RenderWindow* _window;
@@ -41,6 +42,7 @@ class Gameplay
     public:
         Gameplay();
         Gameplay(sf::Vector2u resolucion,sf::RenderWindow &window);
+        void run(sf::Vector2u resolucion,sf::RenderWindow &window);
         ~Gameplay();
 
         void iniciar(); ///inicializar variables y otros elementos
@@ -55,6 +57,13 @@ class Gameplay
 
         int getCantEnemigos();
         int getCantBombas();
+
+        bool guardarPartida();
+        bool cargarPartida(int pos);
+
+        bool cargarJuego();
+
+        void setGameOver(bool go){gameOver=go;}
 };
 
 #endif // GAMEPLAY_H

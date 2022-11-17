@@ -36,6 +36,15 @@ Aplicacion::Aplicacion(sf::Vector2u resolucion)
             case 2:{///cargar partida
                 ///cargarPartida();
                 cout << "OPCION CARGAR PARTIDA" << endl;
+                gamePlay=new Gameplay;
+                bool cargo=gamePlay->cargarPartida(1);
+                if(!cargo){
+                    cout << "Error al cargar partida" << endl;
+                }else{
+                    cout << "Partida cargada con exito" << endl;
+                }
+                gamePlay->setGameOver(false);
+                gamePlay->run(resolucion,*_window);
             }
             break;
             case 3:{///ranking
