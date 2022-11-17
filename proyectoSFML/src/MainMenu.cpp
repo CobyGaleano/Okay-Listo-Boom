@@ -1,6 +1,10 @@
 #include "MainMenu.h"
 
 MainMenu::MainMenu(){
+
+    buffer.loadFromFile("MenuTheme.wav");
+    sound.setBuffer(buffer);
+    sound.play();
     ///ctor
 
 }

@@ -14,8 +14,8 @@ Vida::Vida(sf::RenderWindow &ventana)
     _texto.setFont(_font);
     _texto.setFillColor(sf::Color::White);
     _texto.setString("S/C");
-    _texto.setCharacterSize(10);
-    _texto.setPosition(_ventana->getSize().x-500,_ventana->getSize().y-250);
+    _texto.setCharacterSize(20);
+    _texto.setPosition(550,30);
 
     ///sprite corazon
     if(!_text.loadFromFile("corazon.png")){
@@ -23,7 +23,7 @@ Vida::Vida(sf::RenderWindow &ventana)
     }
     _sprite.setTexture(_text);
     _sprite.setTextureRect({2,2,23,23});
-    _sprite.setPosition({(float)_ventana->getSize().x-480,(float)_ventana->getSize().y-250});
+    _sprite.setPosition({_texto.getGlobalBounds().left+15,30});
 }
 
 void Vida::setVidas(int c){
