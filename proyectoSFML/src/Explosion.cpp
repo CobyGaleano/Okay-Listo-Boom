@@ -2,13 +2,14 @@
 
 Explosion::Explosion()
 {
+    _posicion={0,0};
     _frame=0;
     _tiempo=5;
-    _explosion=false;
     _texture.loadFromFile("fuego.png");
     _sprite.setTexture(_texture);
     _sprite.setTextureRect({0,0,79,79});
     _sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);
+    _sprite.setPosition(3000,3000);
     //ctor
 }
 
@@ -35,7 +36,7 @@ void Explosion::draw(sf::RenderTarget& target,sf::RenderStates states)const //di
     target.draw(_sprite,states);
 }
 
-sf::FloatRect Explosion::getBounds() const //obtiene coordenadas de personaje
+sf::FloatRect Explosion::getBounds() const //obtiene coordenadas de la explosion
 {                                          //para saber si colisiona
     return _sprite.getGlobalBounds();
 }

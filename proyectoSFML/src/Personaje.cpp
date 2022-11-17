@@ -11,8 +11,13 @@ Personaje::Personaje(sf::RenderWindow &ventana)
     _cantBombas=1;
     _pusoBomba=false;
     _velocity={4,4};
+    ///cuando camina
     buffer.loadFromFile("Pasos.wav");
     sound.setBuffer(buffer);
+    ///cuando planta
+    bufferMuerte.loadFromFile("muere.wav");
+    soundMuerte.setBuffer(bufferMuerte);
+    ///sprite
     _texture.loadFromFile("sprite_sheets3.png");
     _sprite.setTexture(_texture);
     _sprite.setTextureRect({20,130,18,21});
@@ -180,6 +185,8 @@ sf::FloatRect Personaje::getBounds() const //obtiene coordenadas de personaje
 
 void Personaje::muere()
 {
+    soundMuerte.play();
+    soundMuerte.setVolume(4);
     while(_frame<7)
     {
         _frame+=0.25;

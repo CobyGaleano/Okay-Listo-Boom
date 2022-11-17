@@ -20,7 +20,7 @@ void Gameplay::run(sf::Vector2u resolucion, sf::RenderWindow &window){
 void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se utilizan dentro de la clase
     srand(time(0));
 
-    _window->setFramerateLimit(60); ///setea fps
+    _window->setFramerateLimit(40); ///setea fps
     _evento = new sf::Event; ///inicializar evento
     ///PERSONAJE
     _pj = new Personaje(*_window);///inicializa personaje principal
@@ -37,6 +37,7 @@ void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se 
     ///ENEMIGOS
     _cantE=5+rand()%5;///random entre 5 y 10 creo
     cout << _cantE << endl;
+    _enemigosActivos=_cantE;
     _vEnemigos = new Enemigo[_cantE];///cantidad de enemigos
     posAnteriorEnemigo = new sf::Vector2f[_cantE]; ///vector para posiciones de enemigos
     for(int i=0;i<_cantE;i++)
@@ -63,7 +64,6 @@ void Gameplay::gameLoop(){
             }
         }
             ///CMD CONTROLES
-            cout << "Iniciando gameLoop" << endl;
             procesar_eventos();
             ///UPDATES LOGICA DEL JUEGO
             procesar_logic();
@@ -73,18 +73,15 @@ void Gameplay::gameLoop(){
 
     }
 }
-void Gameplay::procesar_eventos (){
+void Gameplay::procesar_eventos (){///procesa los ingresos por teclado
     ///aca habria que procesar todos los eventos por ejemplo los del teclado
     ///----CMD-----
-    cout << "Entra en procesar eventos" << endl;
     posAnteriorPJ=_pj->getPos();
     _pj->cmd();
-    cout << "Procesa eventos correctamente"<<endl;
 
 }
 
-void Gameplay::procesar_logic (){
-    cout << "Procesando logica" << endl;
+void Gameplay::procesar_logic (){///procesa la logica del juego
     ///creo que aca habria que revisar las coliciones e interactuar lo que pasa con el juego para despues mostrarlo
     ///----UPDATES-----
     sf::Vector2f pos;
@@ -127,14 +124,12 @@ void Gameplay::procesar_logic (){
     }
     chequearColisionExplosion();
     //std::cout<<std::endl<<_bomba->getPos().x<<" "<<_bomba->getPos().y;
-    cout << "Procesa logica correctamente" <<endl;
 }
 
-void Gameplay::chequearColisionPJ(){
+void Gameplay::chequearColisionPJ(){///chequea las colisiones del pj
     for(int i=0;i<_cantBloques;i++){
         _bloque=_mapa->getBloque(i);
         if(_pj->siColisiona(*_bloque)&&_bloque->getEstado()==true){
-            cout << "choca" << endl;
             _pj->setPos(posAnteriorPJ);
             break;
         }
@@ -144,14 +139,13 @@ void Gameplay::chequearColisionPJ(){
             _pj->muere();
         }
     }
-    /*if(_pj->siColisiona(*_explosion)){
+    if(_pj->siColisiona(*_explosion)){
         _pj->muere();
-        cout << "ESTA ACA?" << endl;
-        _bombaActiva=false;
-    }*/
+        _bombaActiva=false; ///aca tiene problemitas
+    }
 }
 
-void Gameplay::chequearColisionExplosion(){
+void Gameplay::chequearColisionExplosion(){///chequea las colisiones de las explosiones
     for(int i=0;i<_cantBloques;i++){
         _bloque=_mapa->getBloque(i);
         if(_explosion->siColisiona(*_bloque)&& _bloque->getTipo()==2){
@@ -165,12 +159,13 @@ void Gameplay::chequearColisionExplosion(){
                 _vEnemigos[j].setPos(posAnteriorEnemigo[j]);
                 _vEnemigos[j].setEstado(false);///si la explosion toca al enemigo, lo da de baja
                 _pj->setPuntaje(_pj->getPuntaje()+10);
+                _enemigosActivos--;
             }
         }
     }
 }
 
-void Gameplay::chequearColisionEnemigo(){
+void Gameplay::chequearColisionEnemigo(){///chequea las colisiones de los enemigos
     for(int i=0;i<_cantBloques;i++){
         _bloque=_mapa->getBloque(i);
         for(int j=0; j<_cantE;j++){
@@ -184,7 +179,6 @@ void Gameplay::chequearColisionEnemigo(){
 
 void Gameplay::renderizar(){///en esta funcion va todos los draw
     _window->clear();
-    cout << "RENDER" << endl;
     ///----DRAW-----
     _window->draw(*_mapa);
     if(_bomba->getEstado()==true)
@@ -198,7 +192,6 @@ void Gameplay::renderizar(){///en esta funcion va todos los draw
     _window->draw(*_vidasPJ);
     _window->draw(*_puntajePJ);
     _window->draw(*_pj);
-    cout << "Renderiza correctamente" << endl;
     for(int i=0;i<_cantE;i++)
     {
         if(_vEnemigos[i].getEstado()==true){

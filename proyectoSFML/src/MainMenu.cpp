@@ -5,7 +5,7 @@ MainMenu::MainMenu(){
     buffer.loadFromFile("MenuTheme.wav");
     sound.setBuffer(buffer);
     sound.play();
-    sound.setVolume(4);
+    sound.setVolume(1);
 
     ///ctor
 
@@ -85,7 +85,7 @@ void MainMenu::update(){
         }
         _state=WAITING;
     }
-    _menu[_selected-1].setFillColor(sf::Color::Blue);
+    _menu[_selected-1].setFillColor(sf::Color::Yellow);
 
 }
 
@@ -101,7 +101,7 @@ void MainMenu::draw(sf::RenderWindow& window)
 bool MainMenu::getState(){
     if(_state==SELECT){
         _state=WAITING;
-
+        sound.setVolume(0);
         return true;
     }
     return false;

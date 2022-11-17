@@ -51,6 +51,9 @@ class Personaje: public sf::Drawable, public Colisionable
         sf::SoundBuffer buffer;
         sf::Sound sound;
 
+        sf::SoundBuffer bufferMuerte;
+        sf::Sound soundMuerte;
+
         sf::Vector2f _movePosition={0,0};
 
         float _frame;

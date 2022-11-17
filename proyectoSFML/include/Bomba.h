@@ -13,7 +13,10 @@ class Bomba: public sf::Drawable, public Colisionable
         void update();
         void draw(sf::RenderTarget& target,sf::RenderStates states)const;
         void respawn();
-        void setPos(sf::Vector2f pos){_posicion=pos;}
+        void setPos(sf::Vector2f pos){
+            _posicion=pos;
+            sonido();
+        }
         void setEstado(bool estado){_estado=estado;}
         void setExplosion(bool explosion){_explosion=explosion;}
 
@@ -22,10 +25,16 @@ class Bomba: public sf::Drawable, public Colisionable
 
         bool guardarBomba();
         bool cargarBomba(int pos);
+
+        void sonido();
     private:
         sf::Sprite _sprite;
         sf::Texture _texture;
         sf::Vector2f _posicion;
+
+        sf::SoundBuffer buffer;
+        sf::Sound sound;
+
         bool _estado;
         float _frame;
         float _tiempo;

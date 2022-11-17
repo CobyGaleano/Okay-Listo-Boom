@@ -29,6 +29,7 @@ class Gameplay
         sf::Vector2f posAnteriorPJ;
         int _contPasos;
         int _cantE;///cant de enemigos
+        int _enemigosActivos;
         Enemigo* _vEnemigos;
         sf::Vector2f* posAnteriorEnemigo;
 

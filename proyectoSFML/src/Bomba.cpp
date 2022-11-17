@@ -6,6 +6,10 @@ Bomba::Bomba()
     _tiempo=10;
     _estado=false;
     _explosion=false;
+
+    buffer.loadFromFile("bomba.wav");
+    sound.setBuffer(buffer);
+
     _texture.loadFromFile("sprite_sheets3.png");
     _sprite.setTexture(_texture);
     _sprite.setTextureRect({119,165,26,43});
@@ -61,4 +65,9 @@ bool Bomba::cargarBomba(int pos){
     bool leyo = fread(this, sizeof (Bomba), 1, p);
     fclose(p);
     return leyo;
+}
+
+void Bomba::sonido(){
+    sound.play();
+    sound.setVolume(4);
 }
