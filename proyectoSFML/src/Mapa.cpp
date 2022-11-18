@@ -130,7 +130,7 @@ sf::Vector2f Mapa::posicionarEnemigos(int enemigo){
     {
         for(int i=rand()%CANT_COLUMNAS; i<CANT_COLUMNAS; i++)
         {
-            if(_matriz[i][j]==0&&(i!=1&&j!=1||i!=2&&j!=1||i!=1&&j!=2)){
+            if(_matriz[i][j]==0&&(i!=1&&j!=1)&&(i!=2&&j!=1)&&(i!=1&&j!=2)){
                 bool hayBloque=false;
                 for(int x=0;x<_cantB;x++){
                     if(_vBloques[x].getPos().x==i&& _vBloques[x].getPos().y==j){
