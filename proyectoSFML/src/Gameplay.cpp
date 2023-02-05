@@ -103,7 +103,7 @@ void Gameplay::procesar_logic (){///procesa la logica del juego
         chequearColisionEnemigo();
     }
     ///PJ PONE BOMBA -> Por ahora solo puede poner una por vez y recien cuando explota
-     if(_pj->getPusoBomba()==true && _bomba->getEstado()==false)
+    if(_pj->getPusoBomba()==true && _bomba->getEstado()==false)
     {
         pos=(_pj->getPos());
         _bomba->setEstado(_pj->getPusoBomba());
@@ -139,7 +139,8 @@ void Gameplay::chequearColisionPJ(){///chequea las colisiones del pj
             _pj->muere();
         }
     }
-    if(_pj->siColisiona(*_explosion)){
+    ///chequea colision con la explosion, si no chequea el estado siempre te mata en la posicion 0,0
+    if(_pj->siColisiona(*_explosion)&&_explosion->getExplosion()==true){
         _pj->muere();
         _bombaActiva=false; ///aca tiene problemitas
     }

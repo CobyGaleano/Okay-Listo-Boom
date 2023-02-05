@@ -9,6 +9,7 @@ Personaje::Personaje(sf::RenderWindow &ventana)
     _cantVidas=3;
     _frame=0;
     _cantBombas=1;
+    _puntaje=0;
     _pusoBomba=false;
     _velocity={4,4};
     ///cuando camina
