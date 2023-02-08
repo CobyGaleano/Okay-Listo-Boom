@@ -170,6 +170,7 @@ void Personaje::cmd()//controlador del personaje
             if(_cantBombas>0 && _pusoBomba==false){
                 _cantBombas--;
                 _pusoBomba=true;
+                _posBomba=_sprite.getPosition();
             }
         }
 }

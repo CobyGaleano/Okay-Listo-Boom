@@ -84,7 +84,6 @@ void Gameplay::procesar_eventos (){///procesa los ingresos por teclado
 void Gameplay::procesar_logic (){///procesa la logica del juego
     ///creo que aca habria que revisar las coliciones e interactuar lo que pasa con el juego para despues mostrarlo
     ///----UPDATES-----
-    sf::Vector2f pos;
     ///UPDATE MAPA -> chequea si se destruyo algun bloque
     _mapa->update();
     ///UPDATE DE PJ + CHECKEAR SUS COLISIONES
@@ -105,9 +104,9 @@ void Gameplay::procesar_logic (){///procesa la logica del juego
     ///PJ PONE BOMBA -> Por ahora solo puede poner una por vez y recien cuando explota
     if(_pj->getPusoBomba()==true && _bomba->getEstado()==false)
     {
-        pos=(_pj->getPos());
-        _bomba->setEstado(_pj->getPusoBomba());
-        _bomba->setPos(pos);
+
+        _bomba->setEstado(true);
+        _bomba->setPos(_pj->getPosBomba());
         std::cout<<_pj->getPos().x<<" "<<_pj->getPos().y<<endl;
         _pj->setPusoBomba(false);
 
@@ -116,7 +115,8 @@ void Gameplay::procesar_logic (){///procesa la logica del juego
     _explosion->setExplosion(_bomba->getExplosion());
     if(_explosion->getExplosion()==true)
     {
-        _explosion->setPos(pos);
+
+        _explosion->setPos(_bomba->getPos());
         _pj->SumarBomba();
         _explosion->update();
         _bomba->setExplosion(_explosion->getExplosion());

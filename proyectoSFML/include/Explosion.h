@@ -22,7 +22,7 @@ class Explosion: public sf::Drawable, public Colisionable
         sf::Texture _texture;
         sf::Vector2f _posicion;
 
-        bool _explosion=false;
+        bool _explosion;
 
         float _frame;
         float _tiempo;

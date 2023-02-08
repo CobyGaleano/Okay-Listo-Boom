@@ -33,6 +33,7 @@ class Personaje: public sf::Drawable, public Colisionable
         void SumarBomba(){_cantBombas++;}
         unsigned int getCantBombas(){return _cantBombas;}
         bool getPusoBomba(){return _pusoBomba;}
+        sf::Vector2f getPosBomba(){return _posBomba;}
 
         void muere();
         sf::FloatRect getBounds() const override;
@@ -55,6 +56,7 @@ class Personaje: public sf::Drawable, public Colisionable
         sf::Sound soundMuerte;
 
         sf::Vector2f _movePosition={0,0};
+        sf::Vector2f _posBomba;
 
         float _frame;
         unsigned int _cantBombas;
