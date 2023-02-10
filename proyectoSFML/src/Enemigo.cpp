@@ -13,7 +13,7 @@ Enemigo::Enemigo()
     _sprite.setTexture(_text);
     _sprite.setTextureRect({7,209,17,22});
     ///_sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);
-    _sprite.setPosition(sf::Vector2f(float(std::rand()%5+35),float(std::rand()%5+30)));
+    //_sprite.setPosition(sf::Vector2f(float(std::rand()%5+35),float(std::rand()%5+30)));
     _sprite.setScale(1.1f,1.1f);
     //ctor
 }

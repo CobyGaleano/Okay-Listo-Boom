@@ -19,7 +19,7 @@ Mapa::Mapa(sf::RenderWindow &window)
         {
             if(i==0||i==14||j==0||j==14)
             {
-                _matriz[i][j]=1;
+                _matriz[i][j]=1;///bloque indestructible - bordes
             }
             else
             {
@@ -124,6 +124,37 @@ void Mapa::update(){
         }
     }
 }
+
+/*sf::Vector2f Mapa::posicionarEnemigos(int enemigo){
+    bool hayBloque=false;
+//        for(int j=rand()%CANT_FILAS; j<CANT_FILAS; j++)
+            for(int j=1; j<CANT_FILAS; j++)
+        {
+                sf::Vector2f pos(0,0);
+                    int iRan=rand()%CANT_COLUMNAS;
+
+                    for(int i=rand()%CANT_COLUMNAS; i<CANT_COLUMNAS; i++)
+                    {
+                            if(_matriz[i][j]==0&&_matriz[i][j]!=1&&_matriz[i][j]!=2/*&&j!=0&&i!=0&&i!=14&&j!=14&&(i!=1&&j!=1)
+                               &&(i!=2&&j!=1)&&(i=!1&&j!=2)){
+                                for(int x=0;x<_cantB;x++){
+                                    if(_vBloques[x].getPos().x==i&& _vBloques[x].getPos().y==j){
+                                        hayBloque==true;
+                                    }
+                                    if(!hayBloque){
+                                        pos.x=j;
+                                        pos.y=i;
+                                        cout<<pos.x<<" "<<pos.y<<endl;
+                                        cout<<"encontro posicion"<<endl;
+                                        return pos;
+                                    }
+                                }
+                            }
+                    }
+
+        }
+
+}*/
 
 sf::Vector2f Mapa::posicionarEnemigos(int enemigo){
     for(int j=rand()%CANT_FILAS; j<CANT_FILAS; j++)

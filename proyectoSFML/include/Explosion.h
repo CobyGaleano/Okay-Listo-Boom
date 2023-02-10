@@ -10,6 +10,8 @@ class Explosion: public sf::Drawable, public Colisionable
         sf::FloatRect getBounds() const override;
         sf::Vector2f getPos(){return _sprite.getPosition();}
 
+
+
         void draw(sf::RenderTarget& target,sf::RenderStates states)const;
         void update();
         void setExplosion(bool flag){_explosion=flag;}

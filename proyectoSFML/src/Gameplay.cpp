@@ -20,7 +20,7 @@ void Gameplay::run(sf::Vector2u resolucion, sf::RenderWindow &window){
 void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se utilizan dentro de la clase
     srand(time(0));
 
-    _window->setFramerateLimit(40); ///setea fps
+    _window->setFramerateLimit(30); ///setea fps
     _evento = new sf::Event; ///inicializar evento
     ///PERSONAJE
     _pj = new Personaje(*_window);///inicializa personaje principal
@@ -118,11 +118,10 @@ void Gameplay::procesar_logic (){///procesa la logica del juego
 
         _explosion->setPos(_bomba->getPos());
         _pj->SumarBomba();
+        _bomba->setExplosion(false);
         _explosion->update();
-        _bomba->setExplosion(_explosion->getExplosion());
-
+        chequearColisionExplosion();
     }
-    chequearColisionExplosion();
     //std::cout<<std::endl<<_bomba->getPos().x<<" "<<_bomba->getPos().y;
 }
 
@@ -151,19 +150,23 @@ void Gameplay::chequearColisionExplosion(){///chequea las colisiones de las expl
         _bloque=_mapa->getBloque(i);
         if(_explosion->siColisiona(*_bloque)&& _bloque->getTipo()==2){
             _bloque->destruir();
-            break;
+            cout<< "destruido" << endl;
+            //break;
         }
     }
-    for(int i=0;i<_cantE;i++){
+    //for(int i=0;i<_cantE;i++){
         for(int j=0; j<_cantE;j++){
-            if(_explosion->siColisiona(_vEnemigos[i])&&_vEnemigos[i].getEstado()==true){
-                _vEnemigos[j].setPos(posAnteriorEnemigo[j]);
+            if(_explosion->siColisiona(_vEnemigos[j])&&_vEnemigos[j].getEstado()==true){
+                //_vEnemigos[j].setPos(posAnteriorEnemigo[j]);
                 _vEnemigos[j].setEstado(false);///si la explosion toca al enemigo, lo da de baja
                 _pj->setPuntaje(_pj->getPuntaje()+10);
                 _enemigosActivos--;
+                if(_vEnemigos[j].getEstado()==false){
+                    cout<<"toca enemigo"<<endl;
+                }
             }
         }
-    }
+    //}
 }
 
 void Gameplay::chequearColisionEnemigo(){///chequea las colisiones de los enemigos
@@ -175,7 +178,6 @@ void Gameplay::chequearColisionEnemigo(){///chequea las colisiones de los enemig
             }
         }
     }
-
 }
 
 void Gameplay::renderizar(){///en esta funcion va todos los draw

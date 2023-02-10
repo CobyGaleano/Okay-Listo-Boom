@@ -10,6 +10,7 @@ Explosion::Explosion()
     _sprite.setTextureRect({0,0,79,79});
     _sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);
     _explosion=false;
+    //_sprite.setScale(2,2);
     //_sprite.setPosition(3000,3000);
     //ctor
 }
@@ -21,11 +22,11 @@ void Explosion::update()
         _frame+=0.15;
         _sprite.setTextureRect({0+int(_frame)*83,0,79,79});
         _sprite.setPosition(_posicion);
-    }
-    if(_frame>=5)
-    {
-        _frame=0;
-        _explosion=false;
+        if(_frame>=5)
+        {
+            _frame=0;
+            _explosion=false;
+        }
     }
 }
 
