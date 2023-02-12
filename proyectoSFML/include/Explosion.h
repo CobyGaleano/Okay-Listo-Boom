@@ -8,9 +8,7 @@ class Explosion: public sf::Drawable, public Colisionable
         Explosion();
         ~Explosion();
         sf::FloatRect getBounds() const override;
-        sf::Vector2f getPos(){return _sprite.getPosition();}
-
-
+        ///sf::Vector2f getPos(){return _sprite.getPosition();}
 
         void draw(sf::RenderTarget& target,sf::RenderStates states)const;
         void update();
@@ -19,8 +17,11 @@ class Explosion: public sf::Drawable, public Colisionable
 
         bool getExplosion(){return _explosion;}
 
+        void rotar(){_sprite.rotate(90);};
+
     private:
-        sf::Sprite _sprite;
+        sf::Sprite _sprite;///horizontal 0 - vertical 1
+
         sf::Texture _texture;
         sf::Vector2f _posicion;
 

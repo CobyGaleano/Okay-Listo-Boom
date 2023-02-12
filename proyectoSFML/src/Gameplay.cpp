@@ -20,7 +20,7 @@ void Gameplay::run(sf::Vector2u resolucion, sf::RenderWindow &window){
 void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se utilizan dentro de la clase
     srand(time(0));
 
-    _window->setFramerateLimit(30); ///setea fps
+    _window->setFramerateLimit(60); ///setea fps
     _evento = new sf::Event; ///inicializar evento
     ///PERSONAJE
     _pj = new Personaje(*_window);///inicializa personaje principal
@@ -29,7 +29,8 @@ void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se 
     _puntajePJ=new Puntaje(*_window);
     _bomba=new Bomba(); ///inicializa la bomba
     _bombaActiva=false; ///estado de bomba en el mapa
-    _explosion=new Explosion();///inicializa explosion
+    _explosion=new Explosion[2];///inicializa explosion 0=vertical 1=horizontal
+    _explosion[1].rotar();
     ///MAPA
     _mapa = new Mapa(*_window);
     _cantBloques = _mapa->getCantBloques();
@@ -104,25 +105,31 @@ void Gameplay::procesar_logic (){///procesa la logica del juego
     ///PJ PONE BOMBA -> Por ahora solo puede poner una por vez y recien cuando explota
     if(_pj->getPusoBomba()==true && _bomba->getEstado()==false)
     {
-
-        _bomba->setEstado(true);
         _bomba->setPos(_pj->getPosBomba());
-        std::cout<<_pj->getPos().x<<" "<<_pj->getPos().y<<endl;
-        _pj->setPusoBomba(false);
-
+        _bomba->setEstado(true);
     }
+
     _bomba->update();
-    _explosion->setExplosion(_bomba->getExplosion());
-    if(_explosion->getExplosion()==true)
-    {
-
-        _explosion->setPos(_bomba->getPos());
-        _pj->SumarBomba();
+    if(_bomba->getExplosion()==true){
+        _explosion[0].setExplosion(true);
+        _explosion[1].setExplosion(true);
         _bomba->setExplosion(false);
-        _explosion->update();
-        chequearColisionExplosion();
     }
-    //std::cout<<std::endl<<_bomba->getPos().x<<" "<<_bomba->getPos().y;
+    /*for(int i=0;i<2;i++){
+        _explosion[i].setExplosion(_bomba->getExplosion());
+    }*/
+
+    if(_explosion[0].getExplosion()==true && _explosion[1].getExplosion()==true){
+        _bomba->setEstado(false);
+
+        for(int i=0;i<2;i++){
+            _explosion[i].setPos(_bomba->getPos());
+            _explosion[i].update();
+            chequearColisionExplosion();
+        }
+        _pj->SumarBomba();
+        _pj->setPusoBomba(false);
+    }
 }
 
 void Gameplay::chequearColisionPJ(){///chequea las colisiones del pj
@@ -138,35 +145,39 @@ void Gameplay::chequearColisionPJ(){///chequea las colisiones del pj
             _pj->muere();
         }
     }
-    ///chequea colision con la explosion, si no chequea el estado siempre te mata en la posicion 0,0
-    if(_pj->siColisiona(*_explosion)&&_explosion->getExplosion()==true){
-        _pj->muere();
-        _bombaActiva=false; ///aca tiene problemitas
-    }
 }
 
 void Gameplay::chequearColisionExplosion(){///chequea las colisiones de las explosiones
     for(int i=0;i<_cantBloques;i++){
         _bloque=_mapa->getBloque(i);
-        if(_explosion->siColisiona(*_bloque)&& _bloque->getTipo()==2){
-            _bloque->destruir();
-            cout<< "destruido" << endl;
-            //break;
+        for(int j=0;j<2;j++){
+            if(_explosion[j].siColisiona(*_bloque)&& _bloque->getTipo()==2&&_bloque->getEstado()==true){
+                _bloque->destruir();
+                cout<< "destruido" << endl;
+                //break;
+            }
         }
     }
     //for(int i=0;i<_cantE;i++){
         for(int j=0; j<_cantE;j++){
-            if(_explosion->siColisiona(_vEnemigos[j])&&_vEnemigos[j].getEstado()==true){
-                //_vEnemigos[j].setPos(posAnteriorEnemigo[j]);
-                _vEnemigos[j].setEstado(false);///si la explosion toca al enemigo, lo da de baja
-                _pj->setPuntaje(_pj->getPuntaje()+10);
-                _enemigosActivos--;
-                if(_vEnemigos[j].getEstado()==false){
-                    cout<<"toca enemigo"<<endl;
+            for(int i=0;i<2;i++){
+                if(_explosion[i].siColisiona(_vEnemigos[j])&&_vEnemigos[j].getEstado()==true){
+                    _vEnemigos[j].setEstado(false);///si la explosion toca al enemigo, lo da de baja
+                    _pj->setPuntaje(_pj->getPuntaje()+10);
+                    _enemigosActivos--;
+                    if(_vEnemigos[j].getEstado()==false){
+                        cout<<"toca enemigo"<<endl;
+                    }
                 }
             }
         }
-    //}
+    ///Chequea la colision entre el personaje y la explosion
+    for(int i=0;i<2;i++){
+        if(_explosion[i].siColisiona(*_pj)&&_explosion[i].getExplosion()==true){
+            _pj->muere();
+        }
+    }
+
 }
 
 void Gameplay::chequearColisionEnemigo(){///chequea las colisiones de los enemigos
@@ -188,9 +199,11 @@ void Gameplay::renderizar(){///en esta funcion va todos los draw
     {
         _window->draw(*_bomba);
     }
-    if(_explosion->getExplosion()==true)
-    {
-        _window->draw(*_explosion);
+    for(int i=0;i<2;i++){
+        if(_explosion[i].getExplosion()==true)
+        {
+            _window->draw(_explosion[i]);
+        }
     }
     _window->draw(*_vidasPJ);
     _window->draw(*_puntajePJ);
@@ -246,7 +259,6 @@ bool Gameplay::cargarJuego(){
         _vEnemigos[i].cargarEnemigo(i);
         posAnteriorEnemigo[i]=_vEnemigos[i].getPos();
     }
-
 }
 
 Gameplay::~Gameplay(){
@@ -257,7 +269,7 @@ Gameplay::~Gameplay(){
     delete[] _vEnemigos;
     delete _mapa;
     delete _bomba;
-    delete _explosion;
+    delete[] _explosion;
     delete _bloque;
     delete[] posAnteriorEnemigo;
 }

@@ -3,7 +3,7 @@
 Bomba::Bomba()
 {
     _frame=0;
-    _tiempo=10;
+    _tiempo=60;
     _estado=false;
     _explosion=false;
 
@@ -26,14 +26,14 @@ void Bomba::update()
         if (_frame>3){_frame=0;}
         _sprite.setTextureRect({114+int(_frame)*23,160,23,26});
         _sprite.setPosition(_posicion);
-        _tiempo-=0.26;
+        _tiempo-=1;
     }
 
     if(_tiempo<=0)
     {
         _explosion=true;
         _estado=false;
-        _tiempo=10;
+        _tiempo=60;
     }
 
 }

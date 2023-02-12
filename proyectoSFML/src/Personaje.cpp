@@ -24,6 +24,7 @@ Personaje::Personaje(sf::RenderWindow &ventana)
     _sprite.setTextureRect({20,130,18,21});
     _sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height);
     _sprite.setPosition(sf::Vector2f(53,58));
+
     //ctor
 }
 

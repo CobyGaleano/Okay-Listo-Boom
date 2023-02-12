@@ -5,14 +5,21 @@ Explosion::Explosion()
     //_posicion={0,0};
     _frame=0;
     _tiempo=5;
-    _texture.loadFromFile("fuego.png");
+    /*_texture.loadFromFile("fuego.png");
     _sprite.setTexture(_texture);
     _sprite.setTextureRect({0,0,79,79});
     _sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);
+    */
+
+    ///FUEGO HORIZONTAL
+    _texture.loadFromFile("Fuego_Largo.png");
+    _sprite.setTexture(_texture);
+    _sprite.setTextureRect({0,1,79,17});
+    _sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);
+
+
     _explosion=false;
-    //_sprite.setScale(2,2);
-    //_sprite.setPosition(3000,3000);
-    //ctor
+
 }
 
 void Explosion::update()
@@ -20,7 +27,7 @@ void Explosion::update()
     if(_explosion==true)
     {
         _frame+=0.15;
-        _sprite.setTextureRect({0+int(_frame)*83,0,79,79});
+        _sprite.setTextureRect({0+int(_frame)*83,1,79,17});
         _sprite.setPosition(_posicion);
         if(_frame>=5)
         {
@@ -42,3 +49,4 @@ sf::FloatRect Explosion::getBounds() const //obtiene coordenadas de la explosion
 {                                          //para saber si colisiona
     return _sprite.getGlobalBounds();
 }
+

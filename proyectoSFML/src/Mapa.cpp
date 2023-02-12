@@ -9,6 +9,7 @@ Mapa::Mapa(sf::RenderWindow &window)
     ///0= espacio transitable
     ///1= bloque no destruible
     ///2= bloque destruible
+    ///4= se posiciono un enemigo
 
     _ventana= &window;
 
@@ -170,6 +171,7 @@ sf::Vector2f Mapa::posicionarEnemigos(int enemigo){
                 }
                 if(!hayBloque){
                     sf::Vector2f pos(i,j);
+
                     return pos;
                 }
             }
