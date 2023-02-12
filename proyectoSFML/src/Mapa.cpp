@@ -9,7 +9,9 @@ Mapa::Mapa(sf::RenderWindow &window)
     ///0= espacio transitable
     ///1= bloque no destruible
     ///2= bloque destruible
+    ///3= se posicionara la puerta
     ///4= se posiciono un enemigo
+    ///5= se posicionara un buffo
 
     _ventana= &window;
 
@@ -24,7 +26,7 @@ Mapa::Mapa(sf::RenderWindow &window)
             }
             else
             {
-                if(i==1&&j==1||i==2&&j==1||i==1&&j==2)
+                if((i==1&&j==1)||(i==2&&j==1)||(i==1&&j==2))
                 {
                     ///espacio vacio zona spawn
                     _matriz[i][j]=0;
@@ -57,6 +59,8 @@ Mapa::Mapa(sf::RenderWindow &window)
             }
         }
     }
+    copiarMatriz();
+    mostrar();
 
     ///armar vector de bloques
     cout << "Cantidad de Bloques: " << _cantB << endl;
@@ -116,6 +120,16 @@ void Mapa::mostrar()
         }
         cout << endl;
     }
+
+    cout << "Matriz copiada para posiciones: " << endl;
+    for(int j=0; j<CANT_FILAS; j++)
+    {
+        for(int i=0; i<CANT_COLUMNAS; i++)
+        {
+            cout << _matrizPosiciones[i][j] << " " ;
+        }
+        cout << endl;
+    }
 }
 
 void Mapa::update(){
@@ -158,20 +172,29 @@ void Mapa::update(){
 }*/
 
 sf::Vector2f Mapa::posicionarEnemigos(int enemigo){
-    for(int j=rand()%CANT_FILAS; j<CANT_FILAS; j++)
-    {
-        for(int i=rand()%CANT_COLUMNAS; i<CANT_COLUMNAS; i++)
-        {
-            if(_matriz[i][j]==0&&(i!=1&&j!=1)&&(i!=2&&j!=1)&&(i!=1&&j!=2)){
-                bool hayBloque=false;
-                for(int x=0;x<_cantB;x++){
-                    if(_vBloques[x].getPos().x==i&& _vBloques[x].getPos().y==j){
-                        hayBloque==true;
-                    }
-                }
-                if(!hayBloque){
-                    sf::Vector2f pos(i,j);
 
+    for(int j=rand() % 13 + 1; j<CANT_FILAS; j++)
+    {
+        for(int i=rand() % 13 + 1; i<CANT_COLUMNAS; i++)
+        {
+            bool hayBloque=false;
+            bool hayEnemigo=false;
+            if(_matrizPosiciones[i][j]==0&&(i!=1&&j!=1)&&(i!=2&&j!=1)&&(i!=1&&j!=2)&&i!=0&&i!=14&&i!=14&&j!=0){
+
+                if(_matrizPosiciones[i][j]==4){
+                    hayEnemigo=true;
+                }
+                if(_matrizPosiciones[i][j]==1||_matrizPosiciones[i][j]==2){
+                    hayBloque=true;
+                }
+                /*for(int x=0;x<_cantB;x++){
+                    if(_vBloques[x].getPos().x==i&& _vBloques[x].getPos().y==j){
+                        hayBloque=true;
+                    }
+                }*/
+                if(!hayBloque && !hayEnemigo){
+                    sf::Vector2f pos(i,j);
+                    _matrizPosiciones[i][j]=4;
                     return pos;
                 }
             }
@@ -179,6 +202,47 @@ sf::Vector2f Mapa::posicionarEnemigos(int enemigo){
     }
 }
 
+sf::Vector2f Mapa::posicionarPuerta(){
+    sf::Vector2f pos(0,0);
+
+    while(pos.x==0&&pos.y==0){
+        int a=rand() % 13 + 1;
+        int b=rand() % 13 + 1;
+        if(a!=0 && a!=14 && b!=0 && b!=14){
+            if(_matrizPosiciones[a][b]!=0 && _matrizPosiciones[a][b]!=1 && _matrizPosiciones[a][b]!=4 && _matrizPosiciones[a][b]!=5){
+                pos.x=a;
+                pos.y=b;
+                _matrizPosiciones[a][b]=3;
+            }
+        }
+    }
+    return pos;
+}
+
+sf::Vector2f Mapa::posicionarBuffo(){
+    sf::Vector2f pos(0,0);
+
+    while(pos.x==0&&pos.y==0){
+        int a=rand() % 13 + 1;
+        int b=rand() % 13 + 1;
+        if(a!=0 && a!=14 && b!=0 && b!=14){
+            if(_matrizPosiciones[a][b]!=0 && _matrizPosiciones[a][b]!=1 && _matrizPosiciones[a][b]!=4 && _matrizPosiciones[a][b]!=3){
+                pos.x=a;
+                pos.y=b;
+                _matrizPosiciones[a][b]=5;
+            }
+        }
+    }
+    return pos;
+}
+
+void Mapa::copiarMatriz(){
+    for(int i=0;i<CANT_FILAS;i++){
+        for(int j=0;j<CANT_COLUMNAS;j++){
+            _matrizPosiciones[i][j]=_matriz[i][j];
+        }
+    }
+}
 
 int Mapa::getCantBloques(){
     return _cantB;
