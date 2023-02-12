@@ -202,6 +202,40 @@ sf::Vector2f Mapa::posicionarEnemigos(int enemigo){
     }
 }
 
+sf::Vector2f Mapa::posicionarPuerta(){
+    sf::Vector2f pos(0,0);
+
+    while(pos.x==0&&pos.y==0){
+        int a=rand() % 13 + 1;
+        int b=rand() % 13 + 1;
+        if(a!=0 && a!=14 && b!=0 && b!=14){
+            if(_matrizPosiciones[a][b]!=0 && _matrizPosiciones[a][b]!=1 && _matrizPosiciones[a][b]!=4 && _matrizPosiciones[a][b]!=5){
+                pos.x=a;
+                pos.y=b;
+                _matrizPosiciones[a][b]=3;
+            }
+        }
+    }
+    return pos;
+}
+
+sf::Vector2f Mapa::posicionarBuffo(){
+    sf::Vector2f pos(0,0);
+
+    while(pos.x==0&&pos.y==0){
+        int a=rand() % 13 + 1;
+        int b=rand() % 13 + 1;
+        if(a!=0 && a!=14 && b!=0 && b!=14){
+            if(_matrizPosiciones[a][b]!=0 && _matrizPosiciones[a][b]!=1 && _matrizPosiciones[a][b]!=4 && _matrizPosiciones[a][b]!=3){
+                pos.x=a;
+                pos.y=b;
+                _matrizPosiciones[a][b]=5;
+            }
+        }
+    }
+    return pos;
+}
+
 void Mapa::copiarMatriz(){
     for(int i=0;i<CANT_FILAS;i++){
         for(int j=0;j<CANT_COLUMNAS;j++){

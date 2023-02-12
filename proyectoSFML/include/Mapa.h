@@ -52,6 +52,8 @@ class Mapa : public sf::Drawable, public sf::Transformable
 
 
         sf::Vector2f posicionarEnemigos(int cantE);
+        sf::Vector2f posicionarPuerta();
+        sf::Vector2f posicionarBuffo();
 
 
         bool cargarMapa(int pos);
