@@ -31,11 +31,16 @@ class Personaje: public sf::Drawable, public Colisionable
         void setPusoBomba(bool estado){_pusoBomba=estado;}
         void RestarBombas(){_cantBombas--;}
         void SumarBomba(){_cantBombas++;}
+        void setMuerto(bool muerto){_muerto=muerto;}
+        void setRespawn(bool respawn){_respawn=respawn;}
         unsigned int getCantBombas(){return _cantBombas;}
         bool getPusoBomba(){return _pusoBomba;}
+        bool getMuerto(){return _muerto;}
+        bool getEstadoRespawn(){return _respawn;}
         sf::Vector2f getPosBomba(){return _posBomba;}
 
         void muere();
+        void respawn();
         sf::FloatRect getBounds() const override;
         sf::Vector2f getPos(){return _sprite.getPosition();}
 
@@ -45,6 +50,7 @@ class Personaje: public sf::Drawable, public Colisionable
 
         int getPuntaje(){return _puntaje;}
         void setPuntaje(int p){_puntaje=p;}
+
     private:
         sf::Sprite _sprite;
         sf::Texture _texture;
@@ -61,6 +67,8 @@ class Personaje: public sf::Drawable, public Colisionable
         float _frame;
         unsigned int _cantBombas;
         bool _pusoBomba;
+        bool _muerto;
+        bool _respawn;
         PersonajeState _state=PersonajeState::Idle;
 
         int _cantVidas;

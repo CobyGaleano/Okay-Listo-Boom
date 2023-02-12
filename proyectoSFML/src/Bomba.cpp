@@ -12,7 +12,7 @@ Bomba::Bomba()
 
     _texture.loadFromFile("sprite_sheets3.png");
     _sprite.setTexture(_texture);
-    _sprite.setTextureRect({119,165,26,43});
+    _sprite.setTextureRect({119,165,16,16});
     _sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);
 
     //ctor
@@ -24,7 +24,7 @@ void Bomba::update()
     {
         _frame+=0.10;
         if (_frame>3){_frame=0;}
-        _sprite.setTextureRect({114+int(_frame)*23,160,23,26});
+        _sprite.setTextureRect({119+int(_frame)*23,165,16,16});
         _sprite.setPosition(_posicion);
         _tiempo-=1;
     }

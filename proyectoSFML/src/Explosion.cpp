@@ -14,9 +14,8 @@ Explosion::Explosion()
     ///FUEGO HORIZONTAL
     _texture.loadFromFile("Fuego_Largo.png");
     _sprite.setTexture(_texture);
-    _sprite.setTextureRect({0,1,79,17});
+    _sprite.setTextureRect({1,1,79,17});
     _sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);
-
 
     _explosion=false;
 
@@ -27,7 +26,7 @@ void Explosion::update()
     if(_explosion==true)
     {
         _frame+=0.15;
-        _sprite.setTextureRect({0+int(_frame)*83,1,79,17});
+        _sprite.setTextureRect({0+int(_frame)*81,0,79,17});
         _sprite.setPosition(_posicion);
         if(_frame>=5)
         {

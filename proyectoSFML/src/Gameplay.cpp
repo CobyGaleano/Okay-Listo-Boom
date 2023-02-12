@@ -29,7 +29,7 @@ void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se 
     _puntajePJ=new Puntaje(*_window);
     _bomba=new Bomba(); ///inicializa la bomba
     _bombaActiva=false; ///estado de bomba en el mapa
-    _explosion=new Explosion[2];///inicializa explosion 0=vertical 1=horizontal
+    _explosion=new Explosion[2];///inicializa explosion 0=Horizontal, 1=Vertical
     _explosion[1].rotar();
     ///MAPA
     _mapa = new Mapa(*_window);
@@ -125,8 +125,9 @@ void Gameplay::procesar_logic (){///procesa la logica del juego
         for(int i=0;i<2;i++){
             _explosion[i].setPos(_bomba->getPos());
             _explosion[i].update();
-            chequearColisionExplosion();
         }
+        chequearColisionExplosion();///chequear posicion fuera del for sino toma
+                                    ///  la posicion de la bomba anterior
         _pj->SumarBomba();
         _pj->setPusoBomba(false);
     }
@@ -142,8 +143,10 @@ void Gameplay::chequearColisionPJ(){///chequea las colisiones del pj
     }
     for(int i=0;i<_cantE;i++){
         if(_pj->siColisiona(_vEnemigos[i])&&_vEnemigos[i].getEstado()==true){
-            _pj->muere();
-        }
+           _pj->muere();
+           // _pj->setMuerto(true);//setea el booleano de pj para saber si muere
+            cout<<endl<<"PJ TOCA ENEMIGO";
+            }
     }
 }
 
@@ -174,7 +177,11 @@ void Gameplay::chequearColisionExplosion(){///chequea las colisiones de las expl
     ///Chequea la colision entre el personaje y la explosion
     for(int i=0;i<2;i++){
         if(_explosion[i].siColisiona(*_pj)&&_explosion[i].getExplosion()==true){
+            cout<<endl<<_pj->getMuerto();
             _pj->muere();
+            //_pj->setMuerto(true);//setea el booleano de pj para saber si muere
+            cout<<endl<<"PJ TOCA EXPLOSION"<<endl<<_pj->getMuerto();//chequeo de entrada
+
         }
     }
 

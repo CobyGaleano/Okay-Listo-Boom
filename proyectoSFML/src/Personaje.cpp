@@ -11,6 +11,8 @@ Personaje::Personaje(sf::RenderWindow &ventana)
     _cantBombas=1;
     _puntaje=0;
     _pusoBomba=false;
+    _muerto=false;
+    _respawn=false;
     _velocity={4,4};
     ///cuando camina
     buffer.loadFromFile("Pasos.wav");
@@ -22,16 +24,16 @@ Personaje::Personaje(sf::RenderWindow &ventana)
     _texture.loadFromFile("sprite_sheets3.png");
     _sprite.setTexture(_texture);
     _sprite.setTextureRect({20,130,18,21});
-    _sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height);
-    _sprite.setPosition(sf::Vector2f(53,58));
+    _sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);
+    _sprite.setPosition(sf::Vector2f(50,50));
 
     //ctor
 }
 
 void Personaje::update()
 {
-        switch(_state)
-        {
+    switch(_state)
+    {
     case PersonajeState::Idle://si el personaje no se mueve carga dicha textura
         {
             _sprite.setTextureRect({20,130,18,21});
@@ -137,6 +139,7 @@ void Personaje::update()
         {
             _sprite.setPosition(_sprite.getPosition().x,450-(_sprite.getGlobalBounds().height-_sprite.getOrigin().y));
         }
+
 }
 
 void Personaje::cmd()//controlador del personaje
@@ -177,7 +180,8 @@ void Personaje::cmd()//controlador del personaje
 }
 
 void Personaje::draw(sf::RenderTarget& target,sf::RenderStates states)const //enseña a window como dibujar
-{                                                                           //un personaje
+//un personaje
+{
     target.draw(_sprite,states);
 }
 
@@ -186,6 +190,30 @@ sf::FloatRect Personaje::getBounds() const //obtiene coordenadas de personaje
     return _sprite.getGlobalBounds();
 }
 
+/*void Personaje::muere()
+{
+    soundMuerte.play();
+    soundMuerte.setVolume(4);
+    _frame +=0.2;
+
+    if(_frame>=3)
+    {
+        _frame=0;
+    }
+    _sprite.setTextureRect({72+int(_frame)*16,41,15,21});
+    cout<<endl<<"ENTRA A DIBUJAR";
+}
+
+void Personaje::respawn()
+{
+    _sprite.setPosition(50,50);
+    _cantVidas--;
+    if(_cantVidas<0){
+        _cantVidas=0;
+    }
+    setMuerto(false);
+    setRespawn(false);
+}*/
 void Personaje::muere()
 {
     soundMuerte.play();
