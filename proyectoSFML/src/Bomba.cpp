@@ -14,7 +14,7 @@ Bomba::Bomba()
     _sprite.setTexture(_texture);
     _sprite.setTextureRect({119,165,16,16});
     _sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);
-    _sprite.setScale(1.35,1.35);
+    _sprite.setScale(1.5,1.5);
 
     //ctor
 }

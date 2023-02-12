@@ -2758,7 +2758,7 @@
 	<SFML/Graphics.hpp>
 	<sstream>
 
-1675819061 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\include\mapa.h
+1676236892 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\include\mapa.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	"Bloques.h"
@@ -2775,7 +2775,7 @@
 1676203820 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\include\explosion.h
 	"../Librerias.h"
 
-1675819061 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\include\bomba.h
+1676236892 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\include\bomba.h
 	<SFML/Graphics.hpp>
 	"../Librerias.h"
 
@@ -2808,10 +2808,10 @@
 1675819061 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\src\aplicacion.cpp
 	"Aplicacion.h"
 
-1675819061 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\src\bloques.cpp
+1676236893 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\src\bloques.cpp
 	"Bloques.h"
 
-1676235453 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\src\bomba.cpp
+1676237050 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\src\bomba.cpp
 	"Bomba.h"
 
 1675819061 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\src\colisionable.cpp
@@ -2820,16 +2820,16 @@
 1676236829 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\src\enemigo.cpp
 	"Enemigo.h"
 
-1676235974 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\src\explosion.cpp
+1676237094 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\src\explosion.cpp
 	"Explosion.h"
 
-1676232548 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\src\gameplay.cpp
+1676236893 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\src\gameplay.cpp
 	"Gameplay.h"
 
 1675819061 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\src\mainmenu.cpp
 	"MainMenu.h"
 
-1676203820 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\src\mapa.cpp
+1676236893 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\src\mapa.cpp
 	"Mapa.h"
 
 1676235791 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\proyectosfml\src\personaje.cpp
