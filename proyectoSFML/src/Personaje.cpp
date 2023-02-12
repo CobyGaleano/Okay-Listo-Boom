@@ -13,7 +13,7 @@ Personaje::Personaje(sf::RenderWindow &ventana)
     _pusoBomba=false;
     _muerto=false;
     _respawn=false;
-    _velocity={4,4};
+    _velocity={2,2};
     ///cuando camina
     buffer.loadFromFile("Pasos.wav");
     sound.setBuffer(buffer);
@@ -25,7 +25,8 @@ Personaje::Personaje(sf::RenderWindow &ventana)
     _sprite.setTexture(_texture);
     _sprite.setTextureRect({20,130,18,21});
     _sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);
-    _sprite.setPosition(sf::Vector2f(50,50));
+    _sprite.setScale(1.44,1.3);
+    _sprite.setPosition(sf::Vector2f(52.5,45));
 
     //ctor
 }
@@ -37,13 +38,14 @@ void Personaje::update()
     case PersonajeState::Idle://si el personaje no se mueve carga dicha textura
         {
             _sprite.setTextureRect({20,130,18,21});
+            _sprite.setScale(1.44,1.3);
 
         }
         break;
     case PersonajeState::m_up:
         {
             ///cambio sprite
-            _frame +=0.2;
+            _frame +=0.1;
 
             if(_frame>=3)
             {
@@ -59,13 +61,13 @@ void Personaje::update()
     case PersonajeState::m_down:
         {
             ///cambio sprite
-            _frame +=0.2;
+            _frame +=0.1;
 
             if(_frame>=3)
             {
                 _frame=0;
             }
-            _sprite.setTextureRect({0+int(_frame)*20,130,20,21});
+            _sprite.setTextureRect({0+int(_frame)*20,130,18,21});
             _sprite.move(_movePosition);
             if(_frame>=2.5){sound.play();}
 
@@ -74,46 +76,46 @@ void Personaje::update()
     case PersonajeState::m_left:
         {
             ///cambio sprite
-            _frame +=0.2;
+            _frame +=0.1;
 
             if(_frame>=3)
             {
                 _frame=0;
             }
-            _sprite.setTextureRect({0+int(_frame)*20,103,20,21});
+            _sprite.setTextureRect({0+int(_frame)*20,103,18,21});
             _sprite.move(_movePosition);
             if(_frame>=2.5){sound.play();}
 
             if(_movePosition.x<0)///que mire hacia donde corre
             {
-                _sprite.setScale(1,1);
+                _sprite.setScale(1.44,1.30);
             }
             else if(_movePosition.x>0)
             {
-                _sprite.setScale(-1,1);
+                _sprite.setScale(-1.44,1.30);
             }
         }
         break;
     case PersonajeState::m_right:
         {
             ///cambio sprite
-            _frame +=0.2;
+            _frame +=0.1;
 
             if(_frame>=3)
             {
                 _frame=0;
             }
-            _sprite.setTextureRect({0+int(_frame)*20,103,20,21});
+            _sprite.setTextureRect({0+int(_frame)*20,103,18,21});
             _sprite.move(_movePosition);
             if(_frame>=2.5){sound.play();}
 
             if(_movePosition.x<0)  ///que mire hacia donde corre
             {
-                _sprite.setScale(1,1);
+                _sprite.setScale(1.44,1.3);
             }
             else if(_movePosition.x>0)
             {
-                _sprite.setScale(-1,1);
+                _sprite.setScale(-1.44,1.30);
             }
         }
         break;
@@ -224,7 +226,7 @@ void Personaje::muere()
 
         _sprite.setTextureRect({72+int(_frame)*14,41,14,20});
     }
-    _sprite.setPosition(53,58);
+    _sprite.setPosition(52.5,45);
     _cantVidas--;
     if(_cantVidas<0){
         _cantVidas=0;

@@ -3,7 +3,7 @@
 Bomba::Bomba()
 {
     _frame=0;
-    _tiempo=60;
+    _tiempo=120;
     _estado=false;
     _explosion=false;
 
@@ -14,6 +14,7 @@ Bomba::Bomba()
     _sprite.setTexture(_texture);
     _sprite.setTextureRect({119,165,16,16});
     _sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);
+    _sprite.setScale(1.35,1.35);
 
     //ctor
 }
@@ -33,7 +34,7 @@ void Bomba::update()
     {
         _explosion=true;
         _estado=false;
-        _tiempo=60;
+        _tiempo=120;
     }
 
 }

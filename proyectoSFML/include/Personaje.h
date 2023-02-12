@@ -63,7 +63,6 @@ class Personaje: public sf::Drawable, public Colisionable
 
         sf::Vector2f _movePosition={0,0};
         sf::Vector2f _posBomba;
-
         float _frame;
         unsigned int _cantBombas;
         bool _pusoBomba;

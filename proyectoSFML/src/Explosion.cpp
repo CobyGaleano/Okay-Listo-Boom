@@ -26,7 +26,7 @@ void Explosion::update()
     if(_explosion==true)
     {
         _frame+=0.15;
-        _sprite.setTextureRect({0+int(_frame)*81,0,79,17});
+        _sprite.setTextureRect({5+int(_frame)*80,2,79,17});
         _sprite.setPosition(_posicion);
         if(_frame>=5)
         {

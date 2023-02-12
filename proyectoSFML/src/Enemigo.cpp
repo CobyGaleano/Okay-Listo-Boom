@@ -4,17 +4,17 @@ Enemigo::Enemigo()
 {
     _estado=true;
     _frame=0;
-    _velocity={2,0};
+    _velocity={1,0};
     _timeMoov=0;
     _moovSelect=std::rand()%4+1;
     if(!_text.loadFromFile("sprite_sheets3.png")){
        cout << "ERROR LEER SPRITE ENEMIGOS" <<endl;
     }
     _sprite.setTexture(_text);
-    _sprite.setTextureRect({7,209,17,22});
-    ///_sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);
+    _sprite.setTextureRect({7,206,17,17});
+    //_sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);
     //_sprite.setPosition(sf::Vector2f(float(std::rand()%5+35),float(std::rand()%5+30)));
-    _sprite.setScale(1.1f,1.1f);
+    _sprite.setScale(1.5f,1.5f);
     //ctor
 }
 
@@ -25,28 +25,28 @@ void Enemigo::draw(sf::RenderTarget& target,sf::RenderStates states)const //dibu
 
 void Enemigo::update()
 {
-    _timeMoov+=0.15;
+    _timeMoov+=0.05;
     _timeRespawn --;
     switch(_moovSelect)
     {
         case 1:
         {
-            _velocity={3,0};
+            _velocity={1,0};
         }
     break;
         case 2:
         {
-            _velocity={-3,0};
+            _velocity={-1,0};
         }
     break;
         case 3:
         {
-            _velocity={0,3};
+            _velocity={0,1};
         }
     break;
         case 4:
         {
-            _velocity={0,-3};
+            _velocity={0,-1};
         }
 }
     if(_timeMoov>=15)
@@ -59,7 +59,7 @@ void Enemigo::update()
         _newPosition={std::rand()%525+_sprite.getGlobalBounds().width,std::rand()%450+_sprite.getGlobalBounds().height};
     }
 
-    _frame+=0.15;
+    _frame+=0.05;
 
     if (_frame>3){
         _frame=0;
