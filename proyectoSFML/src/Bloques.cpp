@@ -5,20 +5,20 @@ Bloques::Bloques(){
     }
     _text.setRepeated(false);
     _sprite.setTexture(_text);
-}
+
+    }
 void Bloques::armar(int t, sf::Vector2f pos)
 {
     _pos=pos;
     _tipo=t;
     int a;
-
+    _estado=true;
+    ///a= 0 bloque indestruible - a=35 bloque destruible
     if(_tipo==1){
         a=0;
-        _estado=true;
     }
     else if(_tipo==2){
         a=35;
-        _estado=true;
     }
 
     _sprite.setTextureRect({a,0,35,30});

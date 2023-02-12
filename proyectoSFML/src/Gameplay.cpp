@@ -46,7 +46,7 @@ void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se 
         sf::Vector2f posE(_mapa->posicionarEnemigos(i));
         _vEnemigos[i].respawn(posE);///ubica al enemigo en el mapa
     }
-
+    _mapa->mostrar();
 }
 
 void Gameplay::gameLoop(){

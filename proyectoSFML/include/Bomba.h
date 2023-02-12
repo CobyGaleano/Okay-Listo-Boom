@@ -37,7 +37,7 @@ class Bomba: public sf::Drawable, public Colisionable
 
         bool _estado;
         float _frame;
-        float _tiempo;
+        int _tiempo;
         bool _explosion;
 
 
