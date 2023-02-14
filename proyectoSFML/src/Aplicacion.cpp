@@ -6,7 +6,7 @@ Aplicacion::Aplicacion(sf::Vector2u resolucion)
     _window = new sf::RenderWindow (sf::VideoMode(resolucion.x,resolucion.y), "BomberMan by:CompumundoHiperMegaDev");
     MainMenu _menu(_window->getSize().x, _window->getSize().y);///inicializar menu
     _evento = new sf::Event; ///inicializar evento
-    _window->setFramerateLimit(10);
+    _window->setFramerateLimit(20);
     int opcion;
 
 
@@ -36,6 +36,7 @@ Aplicacion::Aplicacion(sf::Vector2u resolucion)
                             pantallaDelNivel->update();
                             _window->clear();
                             _window->draw(*pantallaDelNivel);
+                            _window->display();
                         }
                         delete pantallaDelNivel;
                         gamePlay=new Gameplay(resolucion,*_window);
@@ -98,4 +99,7 @@ Aplicacion::Aplicacion(sf::Vector2u resolucion)
 
 Aplicacion::~Aplicacion(){
     delete gamePlay;
+    delete pantallaDelNivel;
+    delete _evento;
+    delete _window;
 }

@@ -20,7 +20,7 @@ void Gameplay::run(sf::Vector2u resolucion, sf::RenderWindow &window){
 void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se utilizan dentro de la clase
     srand(time(0));
 
-    _window->setFramerateLimit(10); ///setea fps
+    _window->setFramerateLimit(60); ///setea fps
     _evento = new sf::Event; ///inicializar evento
     ///PERSONAJE
     _pj = new Personaje(*_window);///inicializa personaje principal
@@ -48,11 +48,11 @@ void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se 
     }
     _mapa->posicionarPuerta();
     _mapa->posicionarBuffo();
-    _mapa->mostrar();
+    _mapa->mostrar();///muestra las matrices
 }
 
 void Gameplay::gameLoop(){
-    while(!gameOver||_levelUp){ ///Mientras gameover sea falso, ejecuta el juego
+    while(!gameOver){ ///Mientras gameover sea falso, ejecuta el juego
         while (_window->pollEvent(*_evento))
         {
             if (_evento->type == sf::Event::Closed){

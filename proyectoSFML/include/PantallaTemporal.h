@@ -32,6 +32,7 @@ class PantallaTemporal: public sf::Drawable
         bool _estado;
     public:
         PantallaTemporal();
+        ~PantallaTemporal();
         void Armar(int fSize,string nombreArch,string titulo,int duracion,POSICION pos, float ancho, float alto);
 
         bool getEstado();

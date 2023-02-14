@@ -20,6 +20,7 @@ void PantallaTemporal::Armar(int fSize,string nombreArch,string titulo,int durac
     _titulo.setFont(_font);
     _titulo.setFillColor(sf::Color::Yellow);
     _titulo.setCharacterSize(fSize);
+    _titulo.setString(titulo);
 
     _logo.setTexture(_logoTexture);
     ///Seteo de la posicion del logo segun el valor recibido:
@@ -69,4 +70,7 @@ void PantallaTemporal::draw(sf::RenderTarget& target,sf::RenderStates states)con
 {
     target.draw(_logo,states);
     target.draw(_titulo,states);
+}
+PantallaTemporal::~PantallaTemporal(){
+
 }
