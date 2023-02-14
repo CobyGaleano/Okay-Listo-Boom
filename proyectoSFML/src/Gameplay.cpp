@@ -20,7 +20,7 @@ void Gameplay::run(sf::Vector2u resolucion, sf::RenderWindow &window){
 void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se utilizan dentro de la clase
     srand(time(0));
 
-    _window->setFramerateLimit(60); ///setea fps
+    _window->setFramerateLimit(10); ///setea fps
     _evento = new sf::Event; ///inicializar evento
     ///PERSONAJE
     _pj = new Personaje(*_window);///inicializa personaje principal
@@ -52,7 +52,7 @@ void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se 
 }
 
 void Gameplay::gameLoop(){
-    while(!gameOver){ ///Mientras gameover sea falso, ejecuta el juego
+    while(!gameOver||_levelUp){ ///Mientras gameover sea falso, ejecuta el juego
         while (_window->pollEvent(*_evento))
         {
             if (_evento->type == sf::Event::Closed){
@@ -170,6 +170,9 @@ void Gameplay::chequearColisionExplosion(){///chequea las colisiones de las expl
                     _vEnemigos[j].setEstado(false);///si la explosion toca al enemigo, lo da de baja
                     _pj->setPuntaje(_pj->getPuntaje()+10);
                     _enemigosActivos--;
+                    if(_enemigosActivos<=0){
+                        _levelUp=true;
+                    }
                     if(_vEnemigos[j].getEstado()==false){
                         cout<<"toca enemigo"<<endl;
                     }
@@ -229,6 +232,10 @@ void Gameplay::renderizar(){///en esta funcion va todos los draw
 
 int Gameplay::getCantEnemigos(){
     return _cantE;  ///devuelve la cantidad de enemigos (creo que puede ser util mas adelante)
+}
+
+bool Gameplay::getLevelUp(){
+    return _levelUp;
 }
 
 bool Gameplay::guardarPartida(){

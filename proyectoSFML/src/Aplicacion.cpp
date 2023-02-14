@@ -28,7 +28,36 @@ Aplicacion::Aplicacion(sf::Vector2u resolucion)
             case 1:{///play
                 cout << "OPCION PLAY" << endl;
                 cout << "Cargando juego" << endl;
-                gamePlay=new Gameplay(resolucion,*_window);
+                int nivel=1;
+                switch(nivel){
+                    case 1:{
+                        pantallaDelNivel= new PantallaNivel(600,450,1);
+                        while(pantallaDelNivel->getEstado()==true){
+                            pantallaDelNivel->update();
+                            _window->clear();
+                            _window->draw(*pantallaDelNivel);
+                        }
+                        delete pantallaDelNivel;
+                        gamePlay=new Gameplay(resolucion,*_window);
+                        if(gamePlay->getLevelUp()==true){
+                            nivel++;
+                        }
+                    };
+                    break;
+                    case 2:{
+                        gamePlay=new Gameplay(resolucion,*_window);
+                        if(gamePlay->getLevelUp()==true){
+                            nivel++;
+                        }
+                    }
+                    break;
+                    case 3:{
+                        gamePlay=new Gameplay(resolucion,*_window);
+                        if(gamePlay->getLevelUp()==true){
+                            nivel++;
+                        }
+                    }
+                }
 
 
             }

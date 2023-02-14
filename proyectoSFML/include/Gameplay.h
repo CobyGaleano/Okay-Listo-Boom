@@ -13,6 +13,7 @@
 #include "Vida.h"
 #include "Puntaje.h"
 
+
 class Gameplay
 {
     private:
@@ -42,6 +43,9 @@ class Gameplay
         bool _bombaActiva;
 
         bool gameOver=false;
+        bool _levelUp=false;
+
+
     public:
         Gameplay();
         Gameplay(sf::Vector2u resolucion,sf::RenderWindow &window);
@@ -67,6 +71,8 @@ class Gameplay
         bool cargarJuego();
 
         void setGameOver(bool go){gameOver=go;}
+
+        bool getLevelUp();
 };
 
 #endif // GAMEPLAY_H
