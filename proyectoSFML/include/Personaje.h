@@ -29,6 +29,7 @@ class Personaje: public sf::Drawable, public Colisionable
         void setPos(sf::Vector2f pos);
 
         void setPusoBomba(bool estado){_pusoBomba=estado;}
+        void setCantBombas(int cant){_cantBombas=cant;}
         void RestarBombas(){_cantBombas--;}
         void SumarBomba(){_cantBombas++;}
         void setMuerto(bool muerto){_muerto=muerto;}

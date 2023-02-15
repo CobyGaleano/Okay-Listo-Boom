@@ -12,6 +12,8 @@
 #include "Explosion.h"
 #include "Vida.h"
 #include "Puntaje.h"
+#include "Buffos.h"
+#include "Puerta.h"
 
 
 class Gameplay
@@ -45,6 +47,9 @@ class Gameplay
         bool gameOver=false;
         bool _levelUp=false;
 
+        Buffos _buffo;
+        Puerta _puerta;
+
 
     public:
         Gameplay();
@@ -61,6 +66,8 @@ class Gameplay
         void chequearColisionPJ();
         void chequearColisionExplosion();
         void chequearColisionEnemigo();
+        void chequearColisionBuffo();
+        void chequearColisionPuerta();
 
         int getCantEnemigos();
         int getCantBombas();

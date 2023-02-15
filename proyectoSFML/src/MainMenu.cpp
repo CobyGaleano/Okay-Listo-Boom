@@ -2,10 +2,7 @@
 
 MainMenu::MainMenu(){
 
-    buffer.loadFromFile("MenuTheme.wav");
-    sound.setBuffer(buffer);
-    sound.play();
-    sound.setVolume(1);
+    _tiempo=0;
 
     ///ctor
 
@@ -69,6 +66,12 @@ void MainMenu::cmd()
 }
 
 void MainMenu::update(){
+
+    buffer.loadFromFile("MenuTheme.wav");
+    sound.setBuffer(buffer);
+    sound.play();
+    sound.setVolume(1);
+
     _menu[_selected-1].setFillColor(sf::Color::White);
     if(_state==ARRIBA){
         _selected--;
@@ -86,6 +89,12 @@ void MainMenu::update(){
         _state=WAITING;
     }
     _menu[_selected-1].setFillColor(sf::Color::Yellow);
+
+    _tiempo ++;
+
+    if (_tiempo>=12){
+        sound.pause();
+    }
 
 }
 

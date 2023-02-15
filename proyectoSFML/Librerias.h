@@ -17,5 +17,6 @@ using namespace std;
 #include "MainMenu.h"
 #include "Explosion.h"
 #include "Bomba.h"
+#include "Buffos.h"
 
 #endif // LIBRERIAS_H_INCLUDED

@@ -27,6 +27,7 @@ class MainMenu
 
         int _selected;
         ESTADO _state;
+        int _tiempo;
 
     public:
         MainMenu();

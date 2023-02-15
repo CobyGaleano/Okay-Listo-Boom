@@ -46,8 +46,10 @@ void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se 
         sf::Vector2f posE(_mapa->posicionarEnemigos(i));
         _vEnemigos[i].respawn(posE);///ubica al enemigo en el mapa
     }
-    _mapa->posicionarPuerta();
-    _mapa->posicionarBuffo();
+    _buffo.setPos(_mapa->posicionarBuffo());//posiciona el buffo dentro de un bloque
+    _buffo.respawn();//centra el buffo en el bloque
+    _puerta.setPos(_mapa->posicionarPuerta());
+    _puerta.respawn();
     _mapa->mostrar();///muestra las matrices
 }
 
@@ -97,6 +99,7 @@ void Gameplay::procesar_logic (){///procesa la logica del juego
     }
     _puntajePJ->setPuntaje(_pj->getPuntaje());
     chequearColisionPJ();
+    chequearColisionBuffo();
     ///UPDATE DE ENEMIGOS
     for(int i=0;i<_cantE;i++)
     {
@@ -133,6 +136,8 @@ void Gameplay::procesar_logic (){///procesa la logica del juego
         _pj->SumarBomba();
         _pj->setPusoBomba(false);
     }
+    _buffo.update();
+    chequearColisionPuerta();
 }
 
 void Gameplay::chequearColisionPJ(){///chequea las colisiones del pj
@@ -203,6 +208,26 @@ void Gameplay::chequearColisionEnemigo(){///chequea las colisiones de los enemig
     }
 }
 
+void Gameplay::chequearColisionBuffo()///chequea la colision del buffo y el pj
+{
+    if(_pj->siColisiona(_buffo))
+    {
+        cout<<endl<<"TOCO BUFFO :"<<_buffo.getTocoBuffo();
+        cout<<endl<<"ESTADO     :"<<_buffo.getEstado();
+        _buffo.setEstado(false);
+        _buffo.setTocoBuffo(true);
+    }
+}
+
+void Gameplay::chequearColisionPuerta()
+{
+    if(_cantE<=0 && _puerta.getEstado()==true)
+    {
+        cout<<endl<<"COLISIONA CON PUERTA";
+        _levelUp=true;
+    }
+}
+
 void Gameplay::renderizar(){///en esta funcion va todos los draw
     _window->clear();
     ///----DRAW-----
@@ -220,6 +245,11 @@ void Gameplay::renderizar(){///en esta funcion va todos los draw
     _window->draw(*_vidasPJ);
     _window->draw(*_puntajePJ);
     _window->draw(*_pj);
+    if(_buffo.getEstado()==true)
+    {
+    _window->draw(_buffo);
+    }
+        _window->draw(_puerta);
     for(int i=0;i<_cantE;i++)
     {
         if(_vEnemigos[i].getEstado()==true){

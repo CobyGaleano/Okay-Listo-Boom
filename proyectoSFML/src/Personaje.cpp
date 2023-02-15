@@ -15,8 +15,6 @@ Personaje::Personaje(sf::RenderWindow &ventana)
     _respawn=false;
     _velocity={2,2};
     ///cuando camina
-    buffer.loadFromFile("Pasos.wav");
-    sound.setBuffer(buffer);
     ///cuando planta
     bufferMuerte.loadFromFile("muere.wav");
     soundMuerte.setBuffer(bufferMuerte);
