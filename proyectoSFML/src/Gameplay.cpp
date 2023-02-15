@@ -3,8 +3,10 @@
 Gameplay::Gameplay(){
 }
 
-Gameplay::Gameplay(sf::Vector2u resolucion, sf::RenderWindow &window){
+Gameplay::Gameplay(sf::Vector2u resolucion, sf::RenderWindow &window,int nivel){
     _window = &window;
+    _resolucion = resolucion;
+    _nivel=nivel;
     iniciar();
     gameLoop();
 }
@@ -27,6 +29,33 @@ void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se 
     _vidasPJ=new Vida(*_window);
     _vidasPJ->setVidas(_pj->getCantVidas());
     _puntajePJ=new Puntaje(*_window);
+    /*
+    _bomba=new Bomba(); ///inicializa la bomba
+    _bombaActiva=false; ///estado de bomba en el mapa
+    _explosion=new Explosion[2];///inicializa explosion 0=Horizontal, 1=Vertical
+    _explosion[1].rotar();
+    ///MAPA
+    _mapa = new Mapa(*_window);
+    _cantBloques = _mapa->getCantBloques();
+    _bloque=new Bloques;
+    ///ENEMIGOS
+    _cantE=5+rand()%5;///random entre 5 y 10 creo
+    cout << _cantE << endl;
+    _enemigosActivos=_cantE;
+    _vEnemigos = new Enemigo[_cantE];///cantidad de enemigos
+    posAnteriorEnemigo = new sf::Vector2f[_cantE]; ///vector para posiciones de enemigos
+    for(int i=0;i<_cantE;i++)
+    {
+        sf::Vector2f posE(_mapa->posicionarEnemigos(i));
+        _vEnemigos[i].respawn(posE);///ubica al enemigo en el mapa
+    }
+    _mapa->posicionarPuerta();
+    _mapa->posicionarBuffo();
+    _mapa->mostrar();///muestra las matrices*/
+    armarNivel(_nivel);
+}
+void Gameplay::armarNivel(int lvl){
+    ///BOMBA Y EXPLOSION
     _bomba=new Bomba(); ///inicializa la bomba
     _bombaActiva=false; ///estado de bomba en el mapa
     _explosion=new Explosion[2];///inicializa explosion 0=Horizontal, 1=Vertical
@@ -134,7 +163,7 @@ void Gameplay::procesar_logic (){///procesa la logica del juego
         _pj->setPusoBomba(false);
     }
 }
-
+///----------------------COLISIONES
 void Gameplay::chequearColisionPJ(){///chequea las colisiones del pj
     for(int i=0;i<_cantBloques;i++){
         _bloque=_mapa->getBloque(i);
@@ -146,12 +175,12 @@ void Gameplay::chequearColisionPJ(){///chequea las colisiones del pj
     for(int i=0;i<_cantE;i++){
         if(_pj->siColisiona(_vEnemigos[i])&&_vEnemigos[i].getEstado()==true){
            _pj->muere();
+           resetLevel();
            // _pj->setMuerto(true);//setea el booleano de pj para saber si muere
             cout<<endl<<"PJ TOCA ENEMIGO";
             }
     }
 }
-
 void Gameplay::chequearColisionExplosion(){///chequea las colisiones de las explosiones
     for(int i=0;i<_cantBloques;i++){
         _bloque=_mapa->getBloque(i);
@@ -184,6 +213,7 @@ void Gameplay::chequearColisionExplosion(){///chequea las colisiones de las expl
         if(_explosion[i].siColisiona(*_pj)&&_explosion[i].getExplosion()==true){
             cout<<endl<<_pj->getMuerto();
             _pj->muere();
+            resetLevel();
             //_pj->setMuerto(true);//setea el booleano de pj para saber si muere
             cout<<endl<<"PJ TOCA EXPLOSION"<<endl<<_pj->getMuerto();//chequeo de entrada
 
@@ -191,7 +221,6 @@ void Gameplay::chequearColisionExplosion(){///chequea las colisiones de las expl
     }
 
 }
-
 void Gameplay::chequearColisionEnemigo(){///chequea las colisiones de los enemigos
     for(int i=0;i<_cantBloques;i++){
         _bloque=_mapa->getBloque(i);
@@ -201,6 +230,20 @@ void Gameplay::chequearColisionEnemigo(){///chequea las colisiones de los enemig
             }
         }
     }
+}
+
+void Gameplay:: resetLevel(){
+    pMuertePJ = new PantallaMuerte(_resolucion.x,_resolucion.y);
+    while(pMuertePJ->getEstado()==true){
+        pMuertePJ->update();
+        _window->clear();
+        _window->draw(*pMuertePJ);
+        _window->display();
+    }
+    delete pMuertePJ;
+
+    ///REARMAR MAPA Y POSICIONAR TODO NUEVAMENTE
+    armarNivel(_nivel);
 }
 
 void Gameplay::renderizar(){///en esta funcion va todos los draw
@@ -233,7 +276,6 @@ void Gameplay::renderizar(){///en esta funcion va todos los draw
 int Gameplay::getCantEnemigos(){
     return _cantE;  ///devuelve la cantidad de enemigos (creo que puede ser util mas adelante)
 }
-
 bool Gameplay::getLevelUp(){
     return _levelUp;
 }

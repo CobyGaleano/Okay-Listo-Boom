@@ -935,10 +935,10 @@
 1668716347 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mainmenu.cpp
 	"MainMenu.h"
 
-1676413623 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\gameplay.cpp
+1676427291 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\gameplay.cpp
 	"Gameplay.h"
 
-1676339455 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\gameplay.h
+1676422893 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\gameplay.h
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	<ctime>
@@ -950,8 +950,9 @@
 	"Explosion.h"
 	"Vida.h"
 	"Puntaje.h"
+	"PantallaMuerte.h"
 
-1676413952 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
+1676422880 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
 	"Aplicacion.h"
 
 1676346025 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\aplicacion.h
@@ -2855,4 +2856,11 @@
 
 1676411863 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\pantallatemporal.cpp
 	"PantallaTemporal.h"
+
+1676415405 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\pantallamuerte.h
+	"../Librerias.h"
+	"PantallaTemporal.h"
+
+1676415598 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\pantallamuerte.cpp
+	"PantallaMuerte.h"
 
