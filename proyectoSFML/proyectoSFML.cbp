@@ -60,6 +60,7 @@
 		<Unit filename="include/Gameplay.h" />
 		<Unit filename="include/MainMenu.h" />
 		<Unit filename="include/Mapa.h" />
+		<Unit filename="include/PantallaMuerte.h" />
 		<Unit filename="include/PantallaNivel.h" />
 		<Unit filename="include/PantallaTemporal.h" />
 		<Unit filename="include/Personaje.h" />
@@ -77,6 +78,7 @@
 		<Unit filename="src/Gameplay.cpp" />
 		<Unit filename="src/MainMenu.cpp" />
 		<Unit filename="src/Mapa.cpp" />
+		<Unit filename="src/PantallaMuerte.cpp" />
 		<Unit filename="src/PantallaNivel.cpp" />
 		<Unit filename="src/PantallaTemporal.cpp" />
 		<Unit filename="src/Personaje.cpp" />

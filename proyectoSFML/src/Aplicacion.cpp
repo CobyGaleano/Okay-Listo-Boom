@@ -39,21 +39,21 @@ Aplicacion::Aplicacion(sf::Vector2u resolucion)
                             _window->display();
                         }
                         delete pantallaDelNivel;
-                        gamePlay=new Gameplay(resolucion,*_window);
+                        gamePlay=new Gameplay(resolucion,*_window,nivel);
                         if(gamePlay->getLevelUp()==true){
                             nivel++;
                         }
                     };
                     break;
                     case 2:{
-                        gamePlay=new Gameplay(resolucion,*_window);
+                        gamePlay=new Gameplay(resolucion,*_window,nivel);
                         if(gamePlay->getLevelUp()==true){
                             nivel++;
                         }
                     }
                     break;
                     case 3:{
-                        gamePlay=new Gameplay(resolucion,*_window);
+                        gamePlay=new Gameplay(resolucion,*_window,nivel);
                         if(gamePlay->getLevelUp()==true){
                             nivel++;
                         }
