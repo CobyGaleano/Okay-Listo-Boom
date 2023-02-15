@@ -25,7 +25,7 @@ void Enemigo::draw(sf::RenderTarget& target,sf::RenderStates states)const //dibu
 
 void Enemigo::update()
 {
-    _timeMoov+=0.05;
+    _timeMoov+=1;
     _timeRespawn --;
     switch(_moovSelect)
     {
@@ -49,7 +49,7 @@ void Enemigo::update()
             _velocity={0,-1};
         }
 }
-    if(_timeMoov>=15)
+    if(_timeMoov>=180)
     {
         _moovSelect=std::rand()%4+1;
         _timeMoov=0;
