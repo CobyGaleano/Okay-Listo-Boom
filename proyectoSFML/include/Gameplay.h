@@ -32,6 +32,7 @@ class Gameplay
         int _nivel;
 
 
+
         Personaje* _pj;
         Vida* _vidasPJ;
         Puntaje* _puntajePJ;
