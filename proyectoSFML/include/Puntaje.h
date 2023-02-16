@@ -16,8 +16,6 @@ class Puntaje : public sf::Drawable
         bool guardarPuntaje();
         bool cargarPuntaje(int pos);
 
-        string getPuntaje();
-
 
     private:
         string _cantidad;

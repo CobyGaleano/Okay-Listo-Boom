@@ -3,10 +3,10 @@
 Gameplay::Gameplay(){
 }
 
-Gameplay::Gameplay(sf::Vector2u resolucion, sf::RenderWindow &window,int nivel){
+Gameplay::Gameplay(sf::Vector2u resolucion, sf::RenderWindow &window, int nivel){
     _window = &window;
-    _resolucion = resolucion;
     _nivel=nivel;
+    _resolucion=resolucion;
     iniciar();
     gameLoop();
 }
@@ -29,8 +29,30 @@ void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se 
     _vidasPJ=new Vida(*_window);
     _vidasPJ->setVidas(_pj->getCantVidas());
     _puntajePJ=new Puntaje(*_window);
-
-    armarNivel(_nivel);
+    _bomba=new Bomba(); ///inicializa la bomba
+    _bombaActiva=false; ///estado de bomba en el mapa
+    _explosion=new Explosion[2];///inicializa explosion 0=Horizontal, 1=Vertical
+    _explosion[1].rotar();
+    ///MAPA
+    _mapa = new Mapa(*_window);
+    _cantBloques = _mapa->getCantBloques();
+    _bloque=new Bloques;
+    ///ENEMIGOS
+    _cantE=5+rand()%5;///random entre 5 y 10 creo
+    cout << _cantE << endl;
+    _enemigosActivos=_cantE;
+    _vEnemigos = new Enemigo[_cantE];///cantidad de enemigos
+    posAnteriorEnemigo = new sf::Vector2f[_cantE]; ///vector para posiciones de enemigos
+    for(int i=0;i<_cantE;i++)
+    {
+        sf::Vector2f posE(_mapa->posicionarEnemigos(i));
+        _vEnemigos[i].respawn(posE);///ubica al enemigo en el mapa
+    }
+    _buffo.setPos(_mapa->posicionarBuffo());//posiciona el buffo dentro de un bloque
+    _buffo.respawn();//centra el buffo en el bloque
+    _puerta.setPos(_mapa->posicionarPuerta());
+    _puerta.respawn();
+    _mapa->mostrar();///muestra las matrices
 }
 
 void Gameplay::gameLoop(){
@@ -56,16 +78,6 @@ void Gameplay::gameLoop(){
             ///DRAWS - RENDERS
             renderizar();
 
-        if(gameOver){
-            pGameOver=new PantallaGameOver(_resolucion.x,_resolucion.y,_puntajePJ->getPuntaje(),"Jugador 1");
-            while(pGameOver->getEstado()==true){
-                pGameOver->update();
-                _window->clear();
-                _window->draw(*pGameOver);
-                _window->display();
-            }
-            delete pGameOver;
-        }
     }
 }
 void Gameplay::procesar_eventos (){///procesa los ingresos por teclado
@@ -143,15 +155,9 @@ void Gameplay::chequearColisionPJ(){///chequea las colisiones del pj
     }
     for(int i=0;i<_cantE;i++){
         if(_pj->siColisiona(_vEnemigos[i])&&_vEnemigos[i].getEstado()==true){
-            cout<<endl<<"PJ TOCA ENEMIGO";
            _pj->muere();
-           if(_pj->getCantVidas()<=0){
-                gameOver=true;
-            }
-           if(!gameOver){
-                resetLevel();
-           }
            // _pj->setMuerto(true);//setea el booleano de pj para saber si muere
+            cout<<endl<<"PJ TOCA ENEMIGO";
             }
     }
 }
@@ -188,12 +194,6 @@ void Gameplay::chequearColisionExplosion(){///chequea las colisiones de las expl
         if(_explosion[i].siColisiona(*_pj)&&_explosion[i].getExplosion()==true){
             cout<<endl<<_pj->getMuerto();
             _pj->muere();
-            if(_pj->getCantVidas()<=0){
-                    gameOver=true;
-            }
-            if(!gameOver){
-                    resetLevel();
-            }
             //_pj->setMuerto(true);//setea el booleano de pj para saber si muere
             cout<<endl<<"PJ TOCA EXPLOSION"<<endl<<_pj->getMuerto();//chequeo de entrada
 
@@ -232,56 +232,6 @@ void Gameplay::chequearColisionPuerta()
         cout<<endl<<"COLISIONA CON PUERTA";
         _levelUp=true;
     }
-}
-
-void Gameplay:: resetLevel(){
-    pMuertePJ = new PantallaMuerte(_resolucion.x,_resolucion.y);
-    while(pMuertePJ->getEstado()==true){
-        pMuertePJ->update();
-        _window->clear();
-        _window->draw(*pMuertePJ);
-        _window->display();
-    }
-    delete pMuertePJ;
-
-    ///REARMAR MAPA Y POSICIONAR TODO NUEVAMENTE
-    armarNivel(_nivel);
-
-}
-
-void Gameplay::armarNivel(int lvl){
-    _bomba=new Bomba(); ///inicializa la bomba
-    _bombaActiva=false; ///estado de bomba en el mapa
-    _explosion=new Explosion[2];///inicializa explosion 0=Horizontal, 1=Vertical
-    _explosion[1].rotar();
-    ///MAPA
-    _mapa = new Mapa(*_window);
-    _cantBloques = _mapa->getCantBloques();
-    _bloque=new Bloques;
-    ///ENEMIGOS
-    _cantE=5+rand()%5;///random entre 5 y 10 creo
-    cout << _cantE << endl;
-    _enemigosActivos=_cantE;
-    _vEnemigos = new Enemigo[_cantE];///cantidad de enemigos
-    posAnteriorEnemigo = new sf::Vector2f[_cantE]; ///vector para posiciones de enemigos
-    for(int i=0;i<_cantE;i++)
-    {
-        sf::Vector2f posE(_mapa->posicionarEnemigos(i));
-        _vEnemigos[i].respawn(posE);///ubica al enemigo en el mapa
-    }
-    _buffo.setPos(_mapa->posicionarBuffo());//posiciona el buffo dentro de un bloque
-    _buffo.respawn();//centra el buffo en el bloque
-    _puerta.setPos(_mapa->posicionarPuerta());
-    _puerta.respawn();
-    _mapa->mostrar();///muestra las matrices
-    pantallaDelNivel= new PantallaNivel(600,450,1);
-    while(pantallaDelNivel->getEstado()==true){
-        pantallaDelNivel->update();
-        _window->clear();
-        _window->draw(*pantallaDelNivel);
-        _window->display();
-    }
-    delete pantallaDelNivel;
 }
 
 void Gameplay::renderizar(){///en esta funcion va todos los draw
