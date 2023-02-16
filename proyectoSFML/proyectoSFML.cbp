@@ -60,6 +60,7 @@
 		<Unit filename="include/Gameplay.h" />
 		<Unit filename="include/MainMenu.h" />
 		<Unit filename="include/Mapa.h" />
+		<Unit filename="include/PantallaCargaNombre.h" />
 		<Unit filename="include/PantallaGameOver.h" />
 		<Unit filename="include/PantallaMuerte.h" />
 		<Unit filename="include/PantallaNivel.h" />
@@ -67,6 +68,7 @@
 		<Unit filename="include/Personaje.h" />
 		<Unit filename="include/Puerta.h" />
 		<Unit filename="include/Puntaje.h" />
+		<Unit filename="include/Ranking.h" />
 		<Unit filename="include/Vida.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Aplicacion.cpp" />
@@ -79,6 +81,7 @@
 		<Unit filename="src/Gameplay.cpp" />
 		<Unit filename="src/MainMenu.cpp" />
 		<Unit filename="src/Mapa.cpp" />
+		<Unit filename="src/PantallaCargaNombre.cpp" />
 		<Unit filename="src/PantallaGameOver.cpp" />
 		<Unit filename="src/PantallaMuerte.cpp" />
 		<Unit filename="src/PantallaNivel.cpp" />
@@ -86,6 +89,7 @@
 		<Unit filename="src/Personaje.cpp" />
 		<Unit filename="src/Puerta.cpp" />
 		<Unit filename="src/Puntaje.cpp" />
+		<Unit filename="src/Ranking.cpp" />
 		<Unit filename="src/Vida.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

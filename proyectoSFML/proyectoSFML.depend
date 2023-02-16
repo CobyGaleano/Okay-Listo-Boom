@@ -911,13 +911,13 @@
 1668666366 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\colisionable.cpp
 	"Colisionable.h"
 
-1676465826 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\enemigo.cpp
+1676523156 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\enemigo.cpp
 	"Enemigo.h"
 
 1676236286 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mapa.cpp
 	"Mapa.h"
 
-1676511167 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\personaje.cpp
+1676523156 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\personaje.cpp
 	"Personaje.h"
 
 1676232595 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\bloques.cpp
@@ -936,10 +936,10 @@
 1676465826 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mainmenu.cpp
 	"MainMenu.h"
 
-1676511246 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\gameplay.cpp
+1676566554 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\gameplay.cpp
 	"Gameplay.h"
 
-1676512146 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\gameplay.h
+1676533967 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\gameplay.h
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	<ctime>
@@ -957,16 +957,17 @@
 	"PantallaMuerte.h"
 	"PantallaNivel.h"
 
-1676511779 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
+1676566514 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
 	"Aplicacion.h"
 
-1676511951 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\aplicacion.h
+1676565701 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\aplicacion.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	<ctime>
 	"MainMenu.h"
 	"Gameplay.h"
+	"Ranking.h"
 
 1668228772 source:c:\users\brian\onedrive\documentos\programacion\utn\primer aÑo\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom-main\proyectosfml\main.cpp
 	"MainMenu.h"
@@ -3558,10 +3559,24 @@
 	"../Librerias.h"
 	"PantallaTemporal.h"
 
-1676511649 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\pantallagameover.cpp
+1676524431 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\pantallagameover.cpp
 	"PantallaGameOver.h"
 
 1676511958 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\pantallagameover.h
 	"../Librerias.h"
 	"PantallaTemporal.h"
+
+1676527387 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\ranking.h
+	"../Librerias.h"
+	<SFML/Graphics.hpp>
+
+1676528789 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\ranking.cpp
+	"Ranking.h"
+
+1676565030 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\pantallacarganombre.cpp
+	"PantallaCargaNombre.h"
+
+1676565030 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\pantallacarganombre.h
+	"../Librerias.h"
+	<SFML/Graphics.hpp>
 

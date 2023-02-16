@@ -7,6 +7,8 @@ using namespace std;
 #include <ctime>
 #include "MainMenu.h"
 #include "Gameplay.h"
+#include "Ranking.h"
+
 
 
 class Aplicacion
@@ -16,16 +18,24 @@ class Aplicacion
         sf::RenderTarget* _target;
         sf::RenderStates* _state;
         sf::Event* _evento;
+        sf::Vector2u _resolucion;
 
         MainMenu _menu;
 
         Gameplay* gamePlay;
 
+        Ranking* _ranking;
+
         bool gameOver=false;
+
+        string _nombre;
 
     public:
         Aplicacion(sf::Vector2u resolucion);
         ~Aplicacion();
+        string cargarNombre();
+
+
 
 };
 

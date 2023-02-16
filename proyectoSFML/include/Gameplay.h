@@ -22,7 +22,7 @@
 class Gameplay
 {
     private:
-        char _nombreUsuario[30];
+        string _nombre;
 
         sf::RenderWindow* _window;
         sf::RenderTarget* _target;
@@ -62,7 +62,7 @@ class Gameplay
 
     public:
         Gameplay();
-        Gameplay(sf::Vector2u resolucion,sf::RenderWindow &window, int nivel);
+        Gameplay(sf::Vector2u resolucion,sf::RenderWindow &window, int nivel,string nombre);
         void run(sf::Vector2u resolucion,sf::RenderWindow &window);
         ~Gameplay();
 

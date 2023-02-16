@@ -3,10 +3,11 @@
 Gameplay::Gameplay(){
 }
 
-Gameplay::Gameplay(sf::Vector2u resolucion, sf::RenderWindow &window,int nivel){
+Gameplay::Gameplay(sf::Vector2u resolucion, sf::RenderWindow &window,int nivel,string nombre){
     _window = &window;
     _resolucion = resolucion;
     _nivel=nivel;
+    _nombre=nombre;
     iniciar();
     gameLoop();
 }
@@ -57,7 +58,7 @@ void Gameplay::gameLoop(){
             renderizar();
 
         if(gameOver){
-            pGameOver=new PantallaGameOver(_resolucion.x,_resolucion.y,_puntajePJ->getPuntaje(),"Jugador 1");
+            pGameOver=new PantallaGameOver(_resolucion.x,_resolucion.y,_puntajePJ->getPuntaje(),_nombre);
             while(pGameOver->getEstado()==true){
                 pGameOver->update();
                 _window->clear();
@@ -257,7 +258,7 @@ void Gameplay::armarNivel(int lvl){
     _cantBloques = _mapa->getCantBloques();
     _bloque=new Bloques;
     ///ENEMIGOS
-    _cantE=5+rand()%5;///random entre 5 y 10 creo
+    _cantE=5+rand()%5;///random entre 5 y 10
     cout << _cantE << endl;
     _enemigosActivos=_cantE;
     _vEnemigos = new Enemigo[_cantE];///cantidad de enemigos
