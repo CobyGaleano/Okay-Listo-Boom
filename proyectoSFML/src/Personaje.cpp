@@ -22,7 +22,7 @@ Personaje::Personaje(sf::RenderWindow &ventana)
     ///sprite
     _texture.loadFromFile("sprite_sheets3.png");
     _sprite.setTexture(_texture);
-    _sprite.setTextureRect({20,130,18,21});
+    _sprite.setTextureRect({20,130,18,19});
     _sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);
     _sprite.setScale(1.44,1.3);
     _sprite.setPosition(sf::Vector2f(52.5,45));
@@ -36,7 +36,7 @@ void Personaje::update()
     {
     case PersonajeState::Idle://si el personaje no se mueve carga dicha textura
         {
-            _sprite.setTextureRect({20,130,18,21});
+            _sprite.setTextureRect({20,130,18,19});
             _sprite.setScale(1.44,1.3);
 
         }
@@ -50,7 +50,7 @@ void Personaje::update()
             {
             _frame=0;
             }
-            _sprite.setTextureRect({0+int(_frame)*20,76,20,21});
+            _sprite.setTextureRect({0+int(_frame)*20,76,20,19});
             _sprite.move(_movePosition);
             if(_frame>=2.5){sound.play();}
 
@@ -66,7 +66,7 @@ void Personaje::update()
             {
                 _frame=0;
             }
-            _sprite.setTextureRect({0+int(_frame)*20,130,18,21});
+            _sprite.setTextureRect({0+int(_frame)*20,130,18,19});
             _sprite.move(_movePosition);
             if(_frame>=2.5){sound.play();}
 
@@ -81,7 +81,7 @@ void Personaje::update()
             {
                 _frame=0;
             }
-            _sprite.setTextureRect({0+int(_frame)*20,103,18,21});
+            _sprite.setTextureRect({0+int(_frame)*20,103,18,19});
             _sprite.move(_movePosition);
             if(_frame>=2.5){sound.play();}
 
@@ -104,7 +104,7 @@ void Personaje::update()
             {
                 _frame=0;
             }
-            _sprite.setTextureRect({0+int(_frame)*20,103,18,21});
+            _sprite.setTextureRect({0+int(_frame)*20,103,18,19});
             _sprite.move(_movePosition);
             if(_frame>=2.5){sound.play();}
 
@@ -141,7 +141,7 @@ void Personaje::update()
             _sprite.setPosition(_sprite.getPosition().x,450-(_sprite.getGlobalBounds().height-_sprite.getOrigin().y));
         }
         if(_chupoFernet){
-            _cantBombas=4;
+            _velocity={4,4};
             _chupoFernet=false;
         }
 }

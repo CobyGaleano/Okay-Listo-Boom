@@ -11,10 +11,10 @@ Enemigo::Enemigo()
        cout << "ERROR LEER SPRITE ENEMIGOS" <<endl;
     }
     _sprite.setTexture(_text);
-    _sprite.setTextureRect({7,206,17,17});
+    _sprite.setTextureRect({5,204,20,18});
     //_sprite.setOrigin(_sprite.getGlobalBounds().width/2,_sprite.getGlobalBounds().height/2);
     //_sprite.setPosition(sf::Vector2f(float(std::rand()%5+35),float(std::rand()%5+30)));
-    _sprite.setScale(1.5f,1.5f);
+    _sprite.setScale(1.6f,1.6f);
     //ctor
 }
 
@@ -49,7 +49,7 @@ void Enemigo::update()
             _velocity={0,-1};
         }
 }
-    if(_timeMoov>=180)
+    if(_timeMoov>=150)
     {
         _moovSelect=std::rand()%4+1;
         _timeMoov=0;
@@ -64,7 +64,7 @@ void Enemigo::update()
     if (_frame>3){
         _frame=0;
     }
-    _sprite.setTextureRect({7+int(_frame)*24,209,17,22});
+    _sprite.setTextureRect({5+int(_frame)*24,207,20,18});
     _sprite.move(_velocity);
 
     ///evitar que se vaya de la pantalla
