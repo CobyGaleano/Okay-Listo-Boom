@@ -899,10 +899,13 @@
 1668666366 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\colisionable.h
 	<SFML/Graphics.hpp>
 
-1676234848 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\mapa.h
+1676578876 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\mapa.h
 	<iostream>
+	"../Librerias.h"
 	<SFML/Graphics.hpp>
 	"Bloques.h"
+	"Buffos.h"
+	"Puerta.h"
 
 1668710113 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\enemigo.h
 	"Personaje.h"
@@ -914,7 +917,7 @@
 1676523156 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\enemigo.cpp
 	"Enemigo.h"
 
-1676236286 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mapa.cpp
+1676578821 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mapa.cpp
 	"Mapa.h"
 
 1676523156 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\personaje.cpp
@@ -936,10 +939,10 @@
 1676465826 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\mainmenu.cpp
 	"MainMenu.h"
 
-1676566554 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\gameplay.cpp
+1676578245 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\gameplay.cpp
 	"Gameplay.h"
 
-1676533967 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\gameplay.h
+1676575143 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\gameplay.h
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	<ctime>
@@ -957,7 +960,7 @@
 	"PantallaMuerte.h"
 	"PantallaNivel.h"
 
-1676566514 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
+1676575219 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\aplicacion.cpp
 	"Aplicacion.h"
 
 1676565701 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\aplicacion.h
@@ -3540,16 +3543,16 @@
 	"../Librerias.h"
 	"PantallaTemporal.h"
 
-1676465825 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\buffos.h
+1676578594 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\buffos.h
 	<../Librerias.h>
 
-1676465825 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\puerta.h
+1676575818 s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\include\puerta.h
 	<../Librerias.h>
 
-1676511167 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\buffos.cpp
+1676571644 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\buffos.cpp
 	"Buffos.h"
 
-1676511167 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\puerta.cpp
+1676571765 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\puerta.cpp
 	"Puerta.h"
 
 1676511769 source:s:\utn\laboratorio de computación 2\pojects\git\okay-listo-boom\proyectosfml\src\pantallamuerte.cpp

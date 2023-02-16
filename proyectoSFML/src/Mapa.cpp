@@ -108,6 +108,14 @@ Mapa::Mapa(sf::RenderWindow &window)
             quad[3].texCoords = sf::Vector2f(tu * tileSize.x, (tv + 1) * tileSize.y);
         }
     }
+    ///inicializar buffo y puerta
+    cout << "aca" << endl;
+    _buffo=new Buffos();
+    _buffo->setPos(posicionarBuffo());//posiciona el buffo dentro de un bloque
+    _buffo->respawn();
+    _puerta=new Puerta();
+    _puerta->setPos(posicionarPuerta());
+    _puerta->respawn();
 }
 
 void Mapa::mostrar()
@@ -252,6 +260,8 @@ Bloques* Mapa::getBloque(int pos){
     Bloques * bloq=&_vBloques[pos];
     return bloq;
 }
+
+
 
 bool Mapa::guardarMapa(){
     FILE *p;

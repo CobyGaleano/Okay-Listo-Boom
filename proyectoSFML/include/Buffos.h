@@ -4,6 +4,16 @@
 
 class Buffos: public sf::Drawable, public Colisionable
 {
+    private:
+        sf::Sprite _sprite;
+        sf::Texture _texture;
+        sf::Vector2f _posicion;
+
+        sf::SoundBuffer bufferDaleBoca;
+        sf::Sound soundDaleBoca;
+
+        bool _estado;
+        bool _TocoBuffo;
     public:
         Buffos();
         sf::FloatRect getBounds() const override;
@@ -17,16 +27,10 @@ class Buffos: public sf::Drawable, public Colisionable
 
         bool getEstado(){return _estado;}
         bool getTocoBuffo(){return _TocoBuffo;}
-    private:
-        sf::Sprite _sprite;
-        sf::Texture _texture;
-        sf::Vector2f _posicion;
+        Buffos& getBuffo();
 
-        sf::SoundBuffer bufferDaleBoca;
-        sf::Sound soundDaleBoca;
-
-        bool _estado;
-        bool _TocoBuffo;
+        bool guardarBuffos();
+        bool cargarBuffos(int pos);
 };
 
 #endif // BUFFOS_H

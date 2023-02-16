@@ -6,20 +6,25 @@
 
 #include <iostream>
 using namespace std;
+#include "../Librerias.h"
 #include <SFML/Graphics.hpp>
 #include "Bloques.h"
+#include "Buffos.h"
+#include "Puerta.h"
 
 class Mapa : public sf::Drawable, public sf::Transformable
 {
-
     private:
+        sf::RenderWindow * _ventana;
         int _matriz[CANT_COLUMNAS][CANT_FILAS];
         int _matrizPosiciones[CANT_COLUMNAS][CANT_FILAS];
+        Buffos* _buffo;
+        Puerta* _puerta;
         sf::VertexArray m_vertices;
         sf::Texture m_tileset;
         int _cantB=0;
         Bloques * _vBloques;
-        sf::RenderWindow * _ventana;
+
 
         virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
         {
@@ -33,6 +38,11 @@ class Mapa : public sf::Drawable, public sf::Transformable
             // draw the vertex array
             target.draw(m_vertices, states);
 
+            ///SE DIBUJAN EL BUFFO Y LA PUERTA
+            if(_buffo->getEstado()){
+                _ventana->draw(*_buffo);
+            }
+            _ventana->draw(*_puerta);
             ///Dibuja los bloques
             for(int i=0;i<_cantB;i++){
                 if(_vBloques[i].getEstado()==true){
@@ -40,6 +50,9 @@ class Mapa : public sf::Drawable, public sf::Transformable
                 }
             }
         }
+
+
+
     public:
         Mapa();
         Mapa(sf::RenderWindow &window);
@@ -50,6 +63,8 @@ class Mapa : public sf::Drawable, public sf::Transformable
         int getCantBloques();
         Bloques* getBloque(int pos);
 
+        Buffos* getbuffo(){return _buffo;}
+        Puerta* getPuerta(){return _puerta;}
 
         sf::Vector2f posicionarEnemigos(int cantE);
         sf::Vector2f posicionarPuerta();

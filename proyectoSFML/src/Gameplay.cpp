@@ -35,7 +35,7 @@ void Gameplay::iniciar(){///aca se inicializan las variables y elementos que se 
 }
 
 void Gameplay::gameLoop(){
-    while(!gameOver){ ///Mientras gameover sea falso, ejecuta el juego
+    while(!gameOver&&!_levelUp){ ///Mientras gameover sea falso, ejecuta el juego
         while (_window->pollEvent(*_evento))
         {
             if (_evento->type == sf::Event::Closed){
@@ -90,7 +90,7 @@ void Gameplay::procesar_logic (){///procesa la logica del juego
     }
     _puntajePJ->setPuntaje(_pj->getPuntaje());
     chequearColisionPJ();
-    if(_buffo.getEstado()){
+    if(_buffo->getEstado()){
         chequearColisionBuffo();
     }
     ///UPDATE DE ENEMIGOS
@@ -129,8 +129,9 @@ void Gameplay::procesar_logic (){///procesa la logica del juego
         _pj->SumarBomba();
         _pj->setPusoBomba(false);
     }
-    _buffo.update();
+    _buffo->update();
     chequearColisionPuerta();
+    _puerta->update(_cantE);
 }
 
 void Gameplay::chequearColisionPJ(){///chequea las colisiones del pj
@@ -215,21 +216,27 @@ void Gameplay::chequearColisionEnemigo(){///chequea las colisiones de los enemig
 
 void Gameplay::chequearColisionBuffo()///chequea la colision del buffo y el pj
 {
-    if(_pj->siColisiona(_buffo))
+    _buffo=_mapa->getbuffo();
+    if(_pj->siColisiona(*_buffo))
     {
         //cout<<endl<<"TOCO BUFFO :"<<_buffo.getTocoBuffo();
-        cout<<endl<<"ESTADO     :"<<_buffo.getEstado();
-        _buffo.setEstado(false);
+        cout<<endl<<"ESTADO     :"<<_buffo->getEstado();
+        _buffo->setEstado(false);
         _pj->setChupoFernet(true);
     }
 }
 
 void Gameplay::chequearColisionPuerta()
 {
-    if(_cantE<=0 && _puerta.getEstado()==true)
-    {
-        cout<<endl<<"COLISIONA CON PUERTA";
-        _levelUp=true;
+
+    if(_mapa->getPuerta()->siColisiona(*_pj)){
+        if(_cantE<=0 && _puerta->getEstado()==true)
+        {
+            cout<<endl<<"COLISIONA CON PUERTA";
+            _levelUp=true;
+        }else{
+            cout << "NO HABILITADA AUN" << endl;
+        }
     }
 }
 
@@ -257,6 +264,8 @@ void Gameplay::armarNivel(int lvl){
     _mapa = new Mapa(*_window);
     _cantBloques = _mapa->getCantBloques();
     _bloque=new Bloques;
+    _buffo=new Buffos();
+    _puerta=new Puerta;
     ///ENEMIGOS
     _cantE=5+rand()%5;///random entre 5 y 10
     cout << _cantE << endl;
@@ -268,10 +277,8 @@ void Gameplay::armarNivel(int lvl){
         sf::Vector2f posE(_mapa->posicionarEnemigos(i));
         _vEnemigos[i].respawn(posE);///ubica al enemigo en el mapa
     }
-    _buffo.setPos(_mapa->posicionarBuffo());//posiciona el buffo dentro de un bloque
-    _buffo.respawn();//centra el buffo en el bloque
-    _puerta.setPos(_mapa->posicionarPuerta());
-    _puerta.respawn();
+
+
     _mapa->mostrar();///muestra las matrices
     pantallaDelNivel= new PantallaNivel(600,450,1);
     while(pantallaDelNivel->getEstado()==true){
@@ -300,11 +307,6 @@ void Gameplay::renderizar(){///en esta funcion va todos los draw
     _window->draw(*_vidasPJ);
     _window->draw(*_puntajePJ);
     _window->draw(*_pj);
-    if(_buffo.getEstado()==true)
-    {
-    _window->draw(_buffo);
-    }
-        _window->draw(_puerta);
     for(int i=0;i<_cantE;i++)
     {
         if(_vEnemigos[i].getEstado()==true){
@@ -360,6 +362,8 @@ bool Gameplay::cargarJuego(){
         _vEnemigos[i].cargarEnemigo(i);
         posAnteriorEnemigo[i]=_vEnemigos[i].getPos();
     }
+    _buffo->cargarBuffos(1);
+    _puerta->cargarPuerta(1);
 }
 
 Gameplay::~Gameplay(){
@@ -373,4 +377,6 @@ Gameplay::~Gameplay(){
     delete[] _explosion;
     delete _bloque;
     delete[] posAnteriorEnemigo;
+    delete _buffo;
+    delete _puerta;
 }

@@ -16,6 +16,10 @@ Buffos::Buffos()
    // _sprite.setPosition(70,30);
 }
 
+Buffos& Buffos::getBuffo(){
+    return *this;
+}
+
 void Buffos::update()
 {
     if(_TocoBuffo==true)
@@ -39,4 +43,21 @@ sf::FloatRect Buffos::getBounds() const //obtiene coordenadas de los buffos//par
 void Buffos::respawn()
 {
     _sprite.setPosition((float)_posicion.x*35,(float)_posicion.y*30);
+}
+bool Buffos::guardarBuffos(){
+    FILE *p;
+    p=fopen("Buffos.dat","wb");
+    if(p==NULL) return false;
+    bool escribio = fwrite(this, sizeof (Buffos), 1, p);
+    fclose(p);
+    return escribio;
+}
+bool Buffos::cargarBuffos(int pos){
+    FILE *p;
+    p=fopen("Buffos.dat","rb");
+    if(p==NULL) return false;
+    fseek(p, pos * sizeof (Buffos), 0);
+    bool leyo = fread(this, sizeof (Buffos), 1, p);
+    fclose(p);
+    return leyo;
 }

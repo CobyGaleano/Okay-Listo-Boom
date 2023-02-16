@@ -52,8 +52,8 @@ class Gameplay
         bool gameOver=false;
         bool _levelUp=false;
 
-        Buffos _buffo;
-        Puerta _puerta;
+        Buffos* _buffo;
+        Puerta* _puerta;
 
         PantallaMuerte* pMuertePJ;
         PantallaGameOver* pGameOver;
@@ -89,6 +89,7 @@ class Gameplay
         void setGameOver(bool go){gameOver=go;}
 
         bool getLevelUp();
+        bool getGameOver(){return gameOver;}
 
         void armarNivel(int lvl);
         void resetLevel();

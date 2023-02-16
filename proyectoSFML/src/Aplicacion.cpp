@@ -31,30 +31,35 @@ Aplicacion::Aplicacion(sf::Vector2u resolucion)
                 cout << "Cargando juego" << endl;
                 _nombre=cargarNombre();
                 int nivel=1;
-                switch(nivel){
-                    case 1:{
-                        _window->clear();
-                        gamePlay=new Gameplay(resolucion,*_window,nivel,_nombre);
-                        if(gamePlay->getLevelUp()==true){
-                            nivel++;
+                bool salirAlMenu=false;
+                while(!salirAlMenu){
+                    switch(nivel){
+                        case 1:{
+                            _window->clear();
+                            gamePlay=new Gameplay(resolucion,*_window,nivel,_nombre);
+                            if(gamePlay->getGameOver()){
+                                salirAlMenu=true;
+                            }
+                            if(gamePlay->getLevelUp()==true){
+                                nivel++;
+                            }
+                        };
+                        break;
+                        case 2:{
+                            gamePlay=new Gameplay(resolucion,*_window,nivel,_nombre);
+                            if(gamePlay->getLevelUp()==true){
+                                nivel++;
+                            }
                         }
-                    };
-                    break;
-                    case 2:{
-                        gamePlay=new Gameplay(resolucion,*_window,nivel,_nombre);
-                        if(gamePlay->getLevelUp()==true){
-                            nivel++;
-                        }
-                    }
-                    break;
-                    case 3:{
-                        gamePlay=new Gameplay(resolucion,*_window,nivel,_nombre);
-                        if(gamePlay->getLevelUp()==true){
-                            nivel++;
+                        break;
+                        case 3:{
+                            gamePlay=new Gameplay(resolucion,*_window,nivel,_nombre);
+                            if(gamePlay->getLevelUp()==true){
+                                nivel++;
+                            }
                         }
                     }
                 }
-
 
             }
             break;

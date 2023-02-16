@@ -16,6 +16,10 @@ class Puerta: public sf::Drawable, public Colisionable
         void setEstado(bool estado){_estado=estado;}
 
         bool getEstado(){return _estado;}
+        Puerta& getPuerta();
+
+        bool guardarPuerta();
+        bool cargarPuerta(int pos);
 
     private:
 
