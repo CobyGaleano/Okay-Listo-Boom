@@ -34,10 +34,12 @@ class Personaje: public sf::Drawable, public Colisionable
         void SumarBomba(){_cantBombas++;}
         void setMuerto(bool muerto){_muerto=muerto;}
         void setRespawn(bool respawn){_respawn=respawn;}
+        void setChupoFernet(bool fernet){_chupoFernet=fernet;}
         unsigned int getCantBombas(){return _cantBombas;}
         bool getPusoBomba(){return _pusoBomba;}
         bool getMuerto(){return _muerto;}
         bool getEstadoRespawn(){return _respawn;}
+        bool getChupoFernet(){return _chupoFernet;}
         sf::Vector2f getPosBomba(){return _posBomba;}
 
         void muere();
@@ -66,6 +68,7 @@ class Personaje: public sf::Drawable, public Colisionable
         sf::Vector2f _posBomba;
         float _frame;
         unsigned int _cantBombas;
+        bool _chupoFernet;
         bool _pusoBomba;
         bool _muerto;
         bool _respawn;

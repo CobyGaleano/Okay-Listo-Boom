@@ -5,7 +5,7 @@ Buffos::Buffos()
     //ctor
     _texture.loadFromFile("FERNET.png");
     _sprite.setTexture(_texture);
-    _sprite.setTextureRect({0,0,37,30});
+    _sprite.setTextureRect({0,0,34,29});
 
     bufferDaleBoca.loadFromFile("DaleBoca.wav");
     soundDaleBoca.setBuffer(bufferDaleBoca);

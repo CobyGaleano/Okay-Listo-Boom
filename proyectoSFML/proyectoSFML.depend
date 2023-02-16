@@ -3398,7 +3398,7 @@
 	<SFML/Audio/Export.hpp>
 	<string>
 
-1676430126 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\include\personaje.h
+1676504909 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\include\personaje.h
 	<SFML/Graphics.hpp>
 	"Colisionable.h"
 	"Vida.h"
@@ -3470,7 +3470,7 @@
 1676420079 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\include\pantallatemporal.h
 	"../Librerias.h"
 
-1676436305 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\aplicacion.cpp
+1676505143 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\aplicacion.cpp
 	"Aplicacion.h"
 
 1676420079 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\bloques.cpp
@@ -3488,7 +3488,7 @@
 1676420079 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\explosion.cpp
 	"Explosion.h"
 
-1676436755 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\gameplay.cpp
+1676504933 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\gameplay.cpp
 	"Gameplay.h"
 
 1676436112 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\mainmenu.cpp
@@ -3503,7 +3503,7 @@
 1676420079 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\pantallatemporal.cpp
 	"PantallaTemporal.h"
 
-1676430682 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\personaje.cpp
+1676504909 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\personaje.cpp
 	"Personaje.h"
 
 1676420079 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\puntaje.cpp
@@ -3515,10 +3515,10 @@
 1676432130 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\include\buffos.h
 	<../Librerias.h>
 
-1676436036 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\buffos.cpp
+1676504365 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\buffos.cpp
 	"Buffos.h"
 
-1676435897 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\puerta.cpp
+1676504365 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\puerta.cpp
 	"Puerta.h"
 
 1676434760 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\include\puerta.h
@@ -3527,7 +3527,14 @@
 1676436305 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\pantallamuerte.cpp
 	"PantallaMuerte.h"
 
-1676436305 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\include\pantallamuerte.h
+1676503641 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\include\pantallamuerte.h
+	"../Librerias.h"
+	"PantallaTemporal.h"
+
+1676503661 source:c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\src\pantallagameover.cpp
+	"PantallaGameOver.h"
+
+1676503479 c:\users\brian\onedrive\documentos\programacion\utn\primer a—o\segundo cuatrimestre\lab. de computacion 2\okay-listo-boom\okay-listo-boom\okay-listo-boom\proyectosfml\include\pantallagameover.h
 	"../Librerias.h"
 	"PantallaTemporal.h"
 

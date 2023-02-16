@@ -5,7 +5,7 @@ Puerta::Puerta()
     //ctor
     _texture.loadFromFile("PUERTA.png");
     _sprite.setTexture(_texture);
-    _sprite.setTextureRect({0,0,36,30});
+    _sprite.setTextureRect({0,0,34,29});
 
     _estado=false;
 
