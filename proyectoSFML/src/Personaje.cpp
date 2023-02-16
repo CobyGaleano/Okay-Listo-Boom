@@ -10,6 +10,7 @@ Personaje::Personaje(sf::RenderWindow &ventana)
     _frame=0;
     _cantBombas=1;
     _puntaje=0;
+    _chupoFernet=false;
     _pusoBomba=false;
     _muerto=false;
     _respawn=false;
@@ -139,6 +140,12 @@ void Personaje::update()
         {
             _sprite.setPosition(_sprite.getPosition().x,450-(_sprite.getGlobalBounds().height-_sprite.getOrigin().y));
         }
+
+    if(_chupoFernet)
+    {
+        _cantBombas=4;
+        _chupoFernet=false;
+    }
 
 }
 

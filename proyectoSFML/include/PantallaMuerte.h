@@ -10,6 +10,9 @@ class PantallaMuerte: public PantallaTemporal
         PantallaMuerte(float ancho, float alto);
         ~PantallaMuerte();
         virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+
+
+
     private:
 
 };

@@ -7,7 +7,7 @@ PantallaGameOver::~PantallaGameOver()
 {
     //dtor
 }
-void PantallaMuerte::draw(sf::RenderTarget& target, sf::RenderStates states) const
+void PantallaGameOver::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
     PantallaTemporal::draw(target,states);
 }

@@ -99,7 +99,10 @@ void Gameplay::procesar_logic (){///procesa la logica del juego
     }
     _puntajePJ->setPuntaje(_pj->getPuntaje());
     chequearColisionPJ();
-    chequearColisionBuffo();
+    if(_buffo.getEstado())///chequea la colision solo si el buffo esta activo
+    {
+        chequearColisionBuffo();
+    }
     ///UPDATE DE ENEMIGOS
     for(int i=0;i<_cantE;i++)
     {
@@ -212,10 +215,11 @@ void Gameplay::chequearColisionBuffo()///chequea la colision del buffo y el pj
 {
     if(_pj->siColisiona(_buffo))
     {
-        cout<<endl<<"TOCO BUFFO :"<<_buffo.getTocoBuffo();
+       //cout<<endl<<"TOCO BUFFO :"<<_buffo.getTocoBuffo();
         cout<<endl<<"ESTADO     :"<<_buffo.getEstado();
         _buffo.setEstado(false);
-        _buffo.setTocoBuffo(true);
+        _pj->setChupoFernet(true);
+        //_buffo.setTocoBuffo(true);
     }
 }
 
