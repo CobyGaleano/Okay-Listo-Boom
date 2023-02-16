@@ -14,6 +14,9 @@
 #include "Puntaje.h"
 #include "Buffos.h"
 #include "Puerta.h"
+#include "PantallaGameOver.h"
+#include "PantallaMuerte.h"
+#include "PantallaNivel.h"
 
 
 class Gameplay
@@ -52,6 +55,10 @@ class Gameplay
         Buffos _buffo;
         Puerta _puerta;
 
+        PantallaMuerte* pMuertePJ;
+        PantallaGameOver* pGameOver;
+        PantallaNivel* pantallaDelNivel;
+
 
     public:
         Gameplay();
@@ -82,6 +89,9 @@ class Gameplay
         void setGameOver(bool go){gameOver=go;}
 
         bool getLevelUp();
+
+        void armarNivel(int lvl);
+        void resetLevel();
 };
 
 #endif // GAMEPLAY_H

@@ -68,11 +68,12 @@ class Personaje: public sf::Drawable, public Colisionable
         sf::Vector2f _posBomba;
         float _frame;
         unsigned int _cantBombas;
-        bool _chupoFernet;
         bool _pusoBomba;
         bool _muerto;
         bool _respawn;
         PersonajeState _state=PersonajeState::Idle;
+
+        bool _chupoFernet;
 
         int _cantVidas;
         int _puntaje;

@@ -45,7 +45,7 @@ void PantallaTemporal::Armar(int fSize,string nombreArch,string titulo,int durac
         break;
         case CENTRO:{
             _logo.setOrigin(_logo.getGlobalBounds().width/2,_logo.getGlobalBounds().height/2);
-            _logo.setPosition(sf::Vector2f(_anchoP/2,_altoP/2));
+            _logo.setPosition(_anchoP/2,_altoP/2);
         }
         break;
     }

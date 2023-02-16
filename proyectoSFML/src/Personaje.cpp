@@ -140,13 +140,10 @@ void Personaje::update()
         {
             _sprite.setPosition(_sprite.getPosition().x,450-(_sprite.getGlobalBounds().height-_sprite.getOrigin().y));
         }
-
-    if(_chupoFernet)
-    {
-        _cantBombas=4;
-        _chupoFernet=false;
-    }
-
+        if(_chupoFernet){
+            _cantBombas=4;
+            _chupoFernet=false;
+        }
 }
 
 void Personaje::cmd()//controlador del personaje
