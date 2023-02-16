@@ -90,9 +90,9 @@ void Gameplay::procesar_logic (){///procesa la logica del juego
     }
     _puntajePJ->setPuntaje(_pj->getPuntaje());
     chequearColisionPJ();
-    /*if(_buffo->getEstado()){
+    if(_buffo->getEstado()){
         chequearColisionBuffo();
-    }*/
+    }
     ///UPDATE DE ENEMIGOS
     for(int i=0;i<_cantE;i++)
     {
@@ -129,9 +129,9 @@ void Gameplay::procesar_logic (){///procesa la logica del juego
         _pj->SumarBomba();
         _pj->setPusoBomba(false);
     }
-    //_buffo->update();
-    //chequearColisionPuerta();
-    //_puerta->update(_cantE);
+    _buffo->update();
+    chequearColisionPuerta();
+    _puerta->update(_cantE);
 }
 
 void Gameplay::chequearColisionPJ(){///chequea las colisiones del pj
@@ -145,10 +145,10 @@ void Gameplay::chequearColisionPJ(){///chequea las colisiones del pj
     if(_pj->siColisiona(*_bomba)&&_pj->getSeMueve()&&_bomba->getEstado()){
         _pj->setPos(posAnteriorPJ);
     }
-    for(int i=0;i<_cantE;i++){
+    /*for(int i=0;i<_cantE;i++){
         if(_pj->siColisiona(_vEnemigos[i])&&_vEnemigos[i].getEstado()==true){
             cout<<endl<<"PJ TOCA ENEMIGO";
-           _pj->muere();
+           //_pj->muere();
            if(_pj->getCantVidas()<=0){
                 gameOver=true;
             }
@@ -157,7 +157,7 @@ void Gameplay::chequearColisionPJ(){///chequea las colisiones del pj
            }
            // _pj->setMuerto(true);//setea el booleano de pj para saber si muere
             }
-    }
+    }*/
 }
 
 void Gameplay::chequearColisionExplosion(){///chequea las colisiones de las explosiones
@@ -188,7 +188,7 @@ void Gameplay::chequearColisionExplosion(){///chequea las colisiones de las expl
             }
         }
     ///Chequea la colision entre el personaje y la explosion
-    for(int i=0;i<2;i++){
+    /*for(int i=0;i<2;i++){
         if(_explosion[i].siColisiona(*_pj)&&_explosion[i].getExplosion()==true){
             cout<<endl<<_pj->getMuerto();
             _pj->muere();
@@ -202,7 +202,7 @@ void Gameplay::chequearColisionExplosion(){///chequea las colisiones de las expl
             cout<<endl<<"PJ TOCA EXPLOSION"<<endl<<_pj->getMuerto();//chequeo de entrada
 
         }
-    }
+    }*/
 
 }
 
@@ -224,19 +224,19 @@ void Gameplay::chequearColisionEnemigo(){///chequea las colisiones de los enemig
 
 void Gameplay::chequearColisionBuffo()///chequea la colision del buffo y el pj
 {
-    /*_buffo=_mapa->getbuffo();
+    _buffo=_mapa->getbuffo();
     if(_pj->siColisiona(*_buffo))
     {
         //cout<<endl<<"TOCO BUFFO :"<<_buffo.getTocoBuffo();
         cout<<endl<<"ESTADO     :"<<_buffo->getEstado();
         _buffo->setEstado(false);
         _pj->setChupoFernet(true);
-    }*/
+    }
 }
 
 void Gameplay::chequearColisionPuerta()
 {
-    /*
+
     if(_mapa->getPuerta()->siColisiona(*_pj)){
         if(_cantE<=0 && _puerta->getEstado()==true)
         {
@@ -245,7 +245,7 @@ void Gameplay::chequearColisionPuerta()
         }else{
             cout << "NO HABILITADA AUN" << endl;
         }
-    }*/
+    }
 }
 
 void Gameplay:: resetLevel(){
@@ -272,8 +272,8 @@ void Gameplay::armarNivel(int lvl){
     _mapa = new Mapa(*_window);
     _cantBloques = _mapa->getCantBloques();
     _bloque=new Bloques;
-    //_buffo=new Buffos;
-    //_puerta=new Puerta;
+    _buffo=new Buffos;
+    _puerta=new Puerta;
     ///ENEMIGOS
     _cantE=5+rand()%5;///random entre 5 y 10
     cout << _cantE << endl;
@@ -347,8 +347,8 @@ bool Gameplay::guardarPartida(){
     for(int i=0;i<_cantE;i++){
         _vEnemigos[i].guardarEnemigo(i);
     }
-    //_buffo->guardarBuffos();
-    //_puerta->guardarPuerta();
+    _buffo->guardarBuffos();
+    _puerta->guardarPuerta();
     return escribio;
 }
 bool Gameplay::cargarPartida(int pos){
@@ -372,8 +372,8 @@ bool Gameplay::cargarJuego(){
         _vEnemigos[i].cargarEnemigo(i);
         posAnteriorEnemigo[i]=_vEnemigos[i].getPos();
     }
-    //_buffo->cargarBuffos(1);
-    //_puerta->cargarPuerta(1);
+    _buffo->cargarBuffos(1);
+    _puerta->cargarPuerta(1);
 }
 
 Gameplay::~Gameplay(){
@@ -387,6 +387,6 @@ Gameplay::~Gameplay(){
     delete[] _explosion;
     delete _bloque;
     delete[] posAnteriorEnemigo;
-    //delete _buffo;
-    //delete _puerta;
+    delete _buffo;
+    delete _puerta;
 }

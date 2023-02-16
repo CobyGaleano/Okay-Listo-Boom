@@ -17,8 +17,8 @@ class Mapa : public sf::Drawable, public sf::Transformable
         sf::RenderWindow * _ventana;
         int _matriz[CANT_COLUMNAS][CANT_FILAS];
         int _matrizPosiciones[CANT_COLUMNAS][CANT_FILAS];
-        //Buffos* _buffo1;
-        //Puerta* _puerta1;
+        Buffos* _buffo1;
+        Puerta* _puerta1;
         sf::VertexArray m_vertices;
         sf::Texture m_tileset;
         int _cantB=0;
@@ -38,10 +38,10 @@ class Mapa : public sf::Drawable, public sf::Transformable
             target.draw(m_vertices, states);
 
             ///SE DIBUJAN EL BUFFO Y LA PUERTA
-            /*if(_buffo1->getEstado()){
+            if(_buffo1->getEstado()){
                 _ventana->draw(*_buffo1);
             }
-            _ventana->draw(*_puerta1);*/
+            _ventana->draw(*_puerta1);
             ///Dibuja los bloques
             for(int i=0;i<_cantB;i++){
                 if(_vBloques[i].getEstado()==true){
@@ -62,8 +62,8 @@ class Mapa : public sf::Drawable, public sf::Transformable
         int getCantBloques();
         Bloques* getBloque(int pos);
 
-        /*Buffos* getbuffo(){return _buffo1;}
-        Puerta* getPuerta(){return _puerta1;}*/
+        Buffos* getbuffo(){return _buffo1;}
+        Puerta* getPuerta(){return _puerta1;}
 
         sf::Vector2f posicionarEnemigos(int cantE);
         sf::Vector2f posicionarPuerta();

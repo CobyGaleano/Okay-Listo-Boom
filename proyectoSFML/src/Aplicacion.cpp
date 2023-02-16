@@ -46,6 +46,7 @@ Aplicacion::Aplicacion(sf::Vector2u resolucion)
                         };
                         break;
                         case 2:{
+
                             gamePlay=new Gameplay(resolucion,*_window,nivel,_nombre);
                             if(gamePlay->getLevelUp()==true){
                                 nivel++;

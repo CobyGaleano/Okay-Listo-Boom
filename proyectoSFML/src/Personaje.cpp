@@ -235,7 +235,7 @@ void Personaje::respawn()
 }*/
 void Personaje::muere()
 {
-    soundMuerte.play();
+   /* soundMuerte.play();
     soundMuerte.setVolume(4);
     while(_frame<7)
     {
@@ -247,7 +247,7 @@ void Personaje::muere()
     _cantVidas--;
     if(_cantVidas<0){
         _cantVidas=0;
-    }
+    }*/
 }
 
 void Personaje::setPos(sf::Vector2f pos){
