@@ -2,6 +2,7 @@
 
 PantallaMuerte::PantallaMuerte(float ancho, float alto){
     Armar(40,"","Moriste",60,CENTRO, ancho,alto);
+
 }
 
 PantallaMuerte::~PantallaMuerte()

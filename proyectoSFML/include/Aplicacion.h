@@ -7,8 +7,7 @@ using namespace std;
 #include <ctime>
 #include "MainMenu.h"
 #include "Gameplay.h"
-#include "PantallaNivel.h"
-#include "PantallaTemporal.h"
+
 
 class Aplicacion
 {
@@ -21,7 +20,6 @@ class Aplicacion
         MainMenu _menu;
 
         Gameplay* gamePlay;
-        PantallaNivel* pantallaDelNivel;
 
         bool gameOver=false;
 

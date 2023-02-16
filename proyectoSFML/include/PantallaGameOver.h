@@ -7,13 +7,17 @@
 class PantallaGameOver: public PantallaTemporal
 {
     public:
-        PantallaGameOver(float ancho, float alto);
+        PantallaGameOver(float ancho, float alto, string puntos, string nJugador);
         ~PantallaGameOver();
         virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
-
-    protected:
-
     private:
+        string _puntuacion;
+        string _jugador;
+
+        sf::Text _tPuntuacion;
+        sf::Text _tJugador;
+        sf::Font _fontNombre;
+        sf::Font _fontPuntos;
 };
 
 #endif // PANTALLAGAMEOVER_H

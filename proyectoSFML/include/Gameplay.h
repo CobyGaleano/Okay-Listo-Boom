@@ -14,6 +14,9 @@
 #include "Puntaje.h"
 #include "Buffos.h"
 #include "Puerta.h"
+#include "PantallaGameOver.h"
+#include "PantallaMuerte.h"
+#include "PantallaNivel.h"
 
 
 class Gameplay
@@ -25,6 +28,9 @@ class Gameplay
         sf::RenderTarget* _target;
         sf::RenderStates* _state;
         sf::Event* _evento;
+        sf::Vector2u _resolucion;
+        int _nivel;
+
 
         Personaje* _pj;
         Vida* _vidasPJ;
@@ -47,13 +53,17 @@ class Gameplay
         bool gameOver=false;
         bool _levelUp=false;
 
+        PantallaMuerte* pMuertePJ;
+        PantallaGameOver* pGameOver;
+        PantallaNivel* pantallaDelNivel;
+
         Buffos _buffo;
         Puerta _puerta;
 
 
     public:
         Gameplay();
-        Gameplay(sf::Vector2u resolucion,sf::RenderWindow &window);
+        Gameplay(sf::Vector2u resolucion,sf::RenderWindow &window,int nivel);
         void run(sf::Vector2u resolucion,sf::RenderWindow &window);
         ~Gameplay();
 
@@ -80,6 +90,9 @@ class Gameplay
         void setGameOver(bool go){gameOver=go;}
 
         bool getLevelUp();
+
+        void armarNivel(int lvl);
+        void resetLevel();
 };
 
 #endif // GAMEPLAY_H

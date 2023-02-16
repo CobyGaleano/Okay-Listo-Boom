@@ -31,14 +31,6 @@ Aplicacion::Aplicacion(sf::Vector2u resolucion)
                 int nivel=1;
                 switch(nivel){
                     case 1:{
-                        pantallaDelNivel= new PantallaNivel(600,450,1);
-                        while(pantallaDelNivel->getEstado()==true){
-                            pantallaDelNivel->update();
-                            _window->clear();
-                            _window->draw(*pantallaDelNivel);
-                            _window->display();
-                        }
-                        delete pantallaDelNivel;
                         gamePlay=new Gameplay(resolucion,*_window,nivel);
                         if(gamePlay->getLevelUp()==true){
                             nivel++;
@@ -99,7 +91,6 @@ Aplicacion::Aplicacion(sf::Vector2u resolucion)
 
 Aplicacion::~Aplicacion(){
     delete gamePlay;
-    delete pantallaDelNivel;
     delete _evento;
     delete _window;
 }

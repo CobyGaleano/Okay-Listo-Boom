@@ -34,6 +34,9 @@ void Puntaje::setPuntaje(int c){
     _texto.setString(_cantidad);
 
 }
+string Puntaje::getPuntaje(){
+    return _cantidad;
+}
 
 void Puntaje::draw(sf::RenderTarget& target,sf::RenderStates states)const //enseña a window como dibujar
 {                                                                           //un personaje
