@@ -110,12 +110,12 @@ Mapa::Mapa(sf::RenderWindow &window)
     }
     ///inicializar buffo y puerta
     cout << "aca" << endl;
-    _buffo=new Buffos();
-    _buffo->setPos(posicionarBuffo());//posiciona el buffo dentro de un bloque
-    _buffo->respawn();
-    _puerta=new Puerta();
-    _puerta->setPos(posicionarPuerta());
-    _puerta->respawn();
+    /*_buffo1=new Buffos();
+    _buffo1->setPos(posicionarBuffo());//posiciona el buffo dentro de un bloque
+    _buffo1->respawn();
+    _puerta1=new Puerta();
+    _puerta1->setPos(posicionarPuerta());
+    _puerta1->respawn();*/
 }
 
 void Mapa::mostrar()
@@ -291,4 +291,6 @@ bool Mapa::cargarMapa(int pos){
 Mapa::~Mapa()
 {
     delete[] _vBloques;
+    //delete _buffo1;
+    //delete _puerta1;
 }

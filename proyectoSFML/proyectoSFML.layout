@@ -7,49 +7,9 @@
 			<Cursor1 position="766" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\PantallaMuerte.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Mapa.h" open="1" top="1" tabpos="7" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="334" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Aplicacion.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2281" topLine="31" />
-		</Cursor>
-	</File>
-	<File name="include\Puerta.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="586" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Mapa.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3445" topLine="102" />
-		</Cursor>
-	</File>
-	<File name="src\Personaje.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4824" topLine="160" />
-		</Cursor>
-	</File>
-	<File name="include\Aplicacion.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="587" topLine="15" />
-		</Cursor>
-	</File>
-	<File name="include\Explosion.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="42" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\PantallaTemporal.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="690" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="include\Vida.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="399" topLine="0" />
+			<Cursor1 position="1629" topLine="39" />
 		</Cursor>
 	</File>
 	<File name="include\PantallaTemporal.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -57,19 +17,24 @@
 			<Cursor1 position="0" topLine="10" />
 		</Cursor>
 	</File>
-	<File name="include\PantallaGameOver.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
+	<File name="src\PantallaMuerte.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="451" topLine="0" />
+			<Cursor1 position="334" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Buffos.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="9" zoom_2="0">
+	<File name="src\Personaje.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="720" topLine="20" />
+			<Cursor1 position="4824" topLine="160" />
 		</Cursor>
 	</File>
-	<File name="src\Puntaje.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\PantallaMuerte.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1227" topLine="29" />
+			<Cursor1 position="390" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Aplicacion.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="587" topLine="15" />
 		</Cursor>
 	</File>
 	<File name="src\Bloques.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
@@ -82,16 +47,6 @@
 			<Cursor1 position="123" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Vida.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="27" />
-		</Cursor>
-	</File>
-	<File name="include\Personaje.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2211" topLine="52" />
-		</Cursor>
-	</File>
 	<File name="src\Gameplay.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="8567" topLine="255" />
@@ -101,34 +56,24 @@
 			<Collapse line="368" />
 		</Folding>
 	</File>
-	<File name="include\PantallaMuerte.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Puerta.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="390" topLine="0" />
+			<Cursor1 position="586" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Puerta.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+	<File name="src\Puntaje.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1015" topLine="35" />
+			<Cursor1 position="1227" topLine="29" />
 		</Cursor>
 	</File>
-	<File name="include\Mapa.h" open="1" top="1" tabpos="7" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+	<File name="include\PantallaGameOver.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="237" topLine="0" />
+			<Cursor1 position="451" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\PantallaGameOver.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+	<File name="include\Personaje.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1325" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Bloques.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="620" topLine="13" />
-		</Cursor>
-	</File>
-	<File name="src\Ranking.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="874" topLine="7" />
+			<Cursor1 position="2211" topLine="52" />
 		</Cursor>
 	</File>
 	<File name="include\Bomba.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -136,9 +81,64 @@
 			<Cursor1 position="0" topLine="6" />
 		</Cursor>
 	</File>
+	<File name="src\PantallaGameOver.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1325" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Buffos.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="308" topLine="4" />
+		</Cursor>
+	</File>
+	<File name="src\Buffos.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="9" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="459" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Explosion.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="42" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Ranking.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="874" topLine="7" />
+		</Cursor>
+	</File>
+	<File name="include\Bloques.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="620" topLine="13" />
+		</Cursor>
+	</File>
+	<File name="src\Puerta.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1015" topLine="23" />
+		</Cursor>
+	</File>
 	<File name="include\Ranking.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="284" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Vida.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="27" />
+		</Cursor>
+	</File>
+	<File name="src\Aplicacion.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2281" topLine="31" />
+		</Cursor>
+	</File>
+	<File name="src\PantallaTemporal.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="690" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="src\PantallaNivel.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="574" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\Gameplay.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
@@ -146,14 +146,14 @@
 			<Cursor1 position="1224" topLine="33" />
 		</Cursor>
 	</File>
-	<File name="include\Buffos.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+	<File name="src\Mapa.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="306" topLine="2" />
+			<Cursor1 position="5368" topLine="148" />
 		</Cursor>
 	</File>
-	<File name="src\PantallaNivel.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+	<File name="include\Vida.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="574" topLine="0" />
+			<Cursor1 position="399" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

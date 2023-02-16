@@ -50,7 +50,7 @@ class Personaje: public sf::Drawable, public Colisionable
         bool cargarPersonaje(int pos);
         bool guardarPersonaje();
         int getCantVidas(){return _cantVidas;}
-
+        bool getSeMueve(){return _semueve;}
         int getPuntaje(){return _puntaje;}
         void setPuntaje(int p){_puntaje=p;}
 
@@ -69,6 +69,8 @@ class Personaje: public sf::Drawable, public Colisionable
         float _frame;
         unsigned int _cantBombas;
         bool _pusoBomba;
+        bool _semueve;
+        int _contMov;
         bool _muerto;
         bool _respawn;
         PersonajeState _state=PersonajeState::Idle;

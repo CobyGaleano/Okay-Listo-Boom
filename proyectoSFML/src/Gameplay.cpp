@@ -90,9 +90,9 @@ void Gameplay::procesar_logic (){///procesa la logica del juego
     }
     _puntajePJ->setPuntaje(_pj->getPuntaje());
     chequearColisionPJ();
-    if(_buffo->getEstado()){
+    /*if(_buffo->getEstado()){
         chequearColisionBuffo();
-    }
+    }*/
     ///UPDATE DE ENEMIGOS
     for(int i=0;i<_cantE;i++)
     {
@@ -129,9 +129,9 @@ void Gameplay::procesar_logic (){///procesa la logica del juego
         _pj->SumarBomba();
         _pj->setPusoBomba(false);
     }
-    _buffo->update();
-    chequearColisionPuerta();
-    _puerta->update(_cantE);
+    //_buffo->update();
+    //chequearColisionPuerta();
+    //_puerta->update(_cantE);
 }
 
 void Gameplay::chequearColisionPJ(){///chequea las colisiones del pj
@@ -141,6 +141,9 @@ void Gameplay::chequearColisionPJ(){///chequea las colisiones del pj
             _pj->setPos(posAnteriorPJ);
             break;
         }
+    }
+    if(_pj->siColisiona(*_bomba)&&_pj->getSeMueve()&&_bomba->getEstado()){
+        _pj->setPos(posAnteriorPJ);
     }
     for(int i=0;i<_cantE;i++){
         if(_pj->siColisiona(_vEnemigos[i])&&_vEnemigos[i].getEstado()==true){
@@ -212,23 +215,28 @@ void Gameplay::chequearColisionEnemigo(){///chequea las colisiones de los enemig
             }
         }
     }
+    for(int j=0; j<_cantE;j++){
+        if(_vEnemigos[j].siColisiona(*_bomba)&&_bomba->getEstado()){
+            _vEnemigos[j].setPos(posAnteriorEnemigo[j]);
+        }
+    }
 }
 
 void Gameplay::chequearColisionBuffo()///chequea la colision del buffo y el pj
 {
-    _buffo=_mapa->getbuffo();
+    /*_buffo=_mapa->getbuffo();
     if(_pj->siColisiona(*_buffo))
     {
         //cout<<endl<<"TOCO BUFFO :"<<_buffo.getTocoBuffo();
         cout<<endl<<"ESTADO     :"<<_buffo->getEstado();
         _buffo->setEstado(false);
         _pj->setChupoFernet(true);
-    }
+    }*/
 }
 
 void Gameplay::chequearColisionPuerta()
 {
-
+    /*
     if(_mapa->getPuerta()->siColisiona(*_pj)){
         if(_cantE<=0 && _puerta->getEstado()==true)
         {
@@ -237,7 +245,7 @@ void Gameplay::chequearColisionPuerta()
         }else{
             cout << "NO HABILITADA AUN" << endl;
         }
-    }
+    }*/
 }
 
 void Gameplay:: resetLevel(){
@@ -264,8 +272,8 @@ void Gameplay::armarNivel(int lvl){
     _mapa = new Mapa(*_window);
     _cantBloques = _mapa->getCantBloques();
     _bloque=new Bloques;
-    _buffo=new Buffos();
-    _puerta=new Puerta;
+    //_buffo=new Buffos;
+    //_puerta=new Puerta;
     ///ENEMIGOS
     _cantE=5+rand()%5;///random entre 5 y 10
     cout << _cantE << endl;
@@ -339,6 +347,8 @@ bool Gameplay::guardarPartida(){
     for(int i=0;i<_cantE;i++){
         _vEnemigos[i].guardarEnemigo(i);
     }
+    //_buffo->guardarBuffos();
+    //_puerta->guardarPuerta();
     return escribio;
 }
 bool Gameplay::cargarPartida(int pos){
@@ -362,8 +372,8 @@ bool Gameplay::cargarJuego(){
         _vEnemigos[i].cargarEnemigo(i);
         posAnteriorEnemigo[i]=_vEnemigos[i].getPos();
     }
-    _buffo->cargarBuffos(1);
-    _puerta->cargarPuerta(1);
+    //_buffo->cargarBuffos(1);
+    //_puerta->cargarPuerta(1);
 }
 
 Gameplay::~Gameplay(){
@@ -377,6 +387,6 @@ Gameplay::~Gameplay(){
     delete[] _explosion;
     delete _bloque;
     delete[] posAnteriorEnemigo;
-    delete _buffo;
-    delete _puerta;
+    //delete _buffo;
+    //delete _puerta;
 }

@@ -5,6 +5,7 @@ Personaje::Personaje(){
 
 Personaje::Personaje(sf::RenderWindow &ventana)
 {
+    _contMov=0;
     _ventana=&ventana;
     _cantVidas=3;
     _frame=0;
@@ -148,6 +149,7 @@ void Personaje::update()
 
 void Personaje::cmd()//controlador del personaje
 {
+
     _movePosition= {0,0};
     _state=PersonajeState::Idle;
 
@@ -155,23 +157,34 @@ void Personaje::cmd()//controlador del personaje
         {
             _movePosition.y=-_velocity.y;
             _state=PersonajeState::m_up;
+            _contMov++;
+
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
         {
             _movePosition.x=-_velocity.x;
             _state=PersonajeState::m_left;
+            _contMov++;
+
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
         {
             _movePosition.y=_velocity.y;
             _state=PersonajeState::m_down;
+            _contMov++;
+
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
         {
             _movePosition.x=_velocity.x;
             _state=PersonajeState::m_right;
+            _contMov++;
+
         }
 
+        if(_contMov>=40){
+            _semueve=true;
+        }
         ///soltar bomba
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::B))
         {
@@ -179,6 +192,8 @@ void Personaje::cmd()//controlador del personaje
                 _cantBombas--;
                 _pusoBomba=true;
                 _posBomba=_sprite.getPosition();
+                _semueve=false;
+                _contMov=0;
             }
         }
 }
